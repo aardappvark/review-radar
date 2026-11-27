@@ -4,7 +4,7 @@ Every recent written App Store review of an app, read by a local model and turne
 
 Live: https://aardappvark.github.io/review-radar/
 
-First version built in one sitting (27 Nov 2026, 1:53–2:28 pm Melbourne) on Letterboxd and Serato DJ, then extended the same day to every Tiny company with public app reviews: Stamped, KNO, Foursixty and Out of the Sandbox (Shopify App Store). BeFunky and Visionn come through the iTunes store's own review endpoint (`fetch.py`, source "itunes"), because Apple's customer-review RSS went empty for every app on 27 Nov 2026; it carries developer replies but no app version. Letterboxd also gets **Around the world**: 12 more countries' App Stores (`fetch.py --intl`, `tag.py --intl`, `world.py`), kept apart from its English analysis. Independent; not affiliated with Tiny or any of these companies.
+First version built in one sitting (27 Nov 2026, 1:53–2:28 pm Melbourne) on Letterboxd and Serato DJ, then extended the same day to all eight of Tiny's public apps: BeFunky and Visionn (App Store) and Stamped, KNO, Foursixty and Out of the Sandbox (Shopify App Store). BeFunky and Visionn come through the iTunes store's own review endpoint, because Apple's customer-review RSS went empty for every app on 27 Nov 2026 (it carries developer replies but no app version). Letterboxd also gets **Around the world**: 12 more countries' App Stores, kept apart from its English analysis. Independent; not affiliated with Tiny or any of these companies.
 
 **For agents:** `claude mcp add --transport http review-radar https://review-radar.aardappvark.workers.dev/mcp` (source in `mcp/`; tools: list_apps, top_problems, incidents, versions, did_the_fix_work, review_stats, themes, draft_reply).
 
