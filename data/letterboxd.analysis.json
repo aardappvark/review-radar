@@ -1,13 +1,17 @@
 {
  "slug": "letterboxd",
  "name": "Letterboxd",
- "generated": "2026-11-27 03:26 UTC",
+ "company": "Letterboxd",
+ "store_kind": "apple",
+ "generated": "2026-11-27 06:41 UTC",
  "window": {
   "from": "2025-03-01",
-  "to": "2026-11-24",
+  "to": "2026-11-27",
   "n": 700,
-  "recent_n": 101,
-  "prior_n": 109,
+  "recent_n": 99,
+  "prior_n": 108,
+  "recent_days": 90,
+  "recent_label": "90 days",
   "countries": [
    "AU",
    "CA",
@@ -19,11 +23,13 @@
  },
  "store": {
   "avg": 4.82,
-  "count": 88436,
+  "count": 88438,
   "version": "4.13.12",
   "version_date": "2026-11-23",
   "released": "2016-03-15",
-  "notes": "– Miscellaneous bug fixes and improvements"
+  "notes": "– Miscellaneous bug fixes and improvements",
+  "store": "apple",
+  "url": "https://apps.apple.com/us/app/letterboxd/id1054271011"
  },
  "written_avg_recent": 2.91,
  "bug_share_recent": 0.12,
@@ -33,14 +39,15 @@
    "label": "Ad Overload/Intrusiveness",
    "describe": "Users complain about the frequency, type (video/full-screen), and general annoyance of advertisements.",
    "n": 149,
-   "n_recent": 26,
+   "n_recent": 25,
    "n_prior": 6,
-   "low_recent": 24,
+   "low_recent": 23,
+   "pos_recent": 1,
    "avg": 1.66,
-   "avg_recent": 1.31,
+   "avg_recent": 1.32,
    "bug_share": 0.13,
    "last_seen": "2026-11-19",
-   "share_recent": 0.257,
+   "share_recent": 0.253,
    "quotes": [
     {
      "stars": 1,
@@ -91,8 +98,7 @@
     "Unskippable ads upon opening negatively impact user experience.",
     "Frustrated by a full-page ad appearing immediately upon opening.",
     "Video ads obstructing the screen upon opening are very annoying.",
-    "Full-screen pop-up ads are extremely annoying and disruptive.",
-    "Complains about constant, annoying, and repetitive video ads."
+    "Full-screen pop-up ads are extremely annoying and disruptive."
    ],
    "ids_recent": [
     "14808836088",
@@ -119,16 +125,15 @@
     "14545781602",
     "14544337880",
     "14543643322",
-    "14503070447",
-    "14476313476"
+    "14503070447"
    ],
    "brief": {
-    "headline": "Increase in reports of intrusive full-screen advertisements",
-    "happening": "Users are reporting a rise in unskippable video ads and full-screen pop-ups that disrupt the core experience. These advertisements are frequently appearing upon opening the app and during the movie logging process.",
+    "headline": "Increase in reports of intrusive advertisement formats",
+    "happening": "Users are reporting a rise in unskippable, full-screen, and video advertisements. These ads are described as disruptive to the core experience, particularly when appearing during app launch or while posting reviews.",
     "where_to_look": "The app launch sequence and the movie logging flow.",
-    "action": "Review the frequency and placement of interstitial video ads in recent builds.",
-    "reply_to": 0,
-    "reply": "We are sorry to hear that the recent changes to our ad experience have been frustrating. We appreciate you sharing this feedback regarding the unskippable video ads on the landing page, as it helps us understand how these updates impact the app's usability. Please feel free to reach out to support with more details.",
+    "action": "Review the frequency and placement of full-screen video ad units in recent builds.",
+    "reply_to": 2,
+    "reply": "Thank you for being a part of the Letterboxd community. We are sorry to hear that the recent changes to our ad experience have impacted your enjoyment of the app. We appreciate your feedback regarding the visibility of ads and will share this with our product team.",
     "checked": true
    }
   },
@@ -138,13 +143,14 @@
    "describe": "Complaints regarding confusing navigation, clunky interfaces, or poor design elements.",
    "n": 108,
    "n_recent": 17,
-   "n_prior": 21,
+   "n_prior": 20,
    "low_recent": 12,
+   "pos_recent": 2,
    "avg": 2.45,
    "avg_recent": 1.88,
    "bug_share": 0.2,
    "last_seen": "2026-11-23",
-   "share_recent": 0.168,
+   "share_recent": 0.172,
    "quotes": [
     {
      "stars": 1,
@@ -208,12 +214,12 @@
     "14503070447"
    ],
    "brief": {
-    "headline": "Navigation and display scaling issues on iOS",
-    "happening": "Users report difficulty navigating the interface and finding specific sections like likes or following. There are also significant complaints regarding poor scaling and lack of support for iPhone Duo displays.",
-    "where_to_look": "The display scaling logic and navigation menu architecture.",
-    "action": "Review the layout implementation for iPhone Duo and assess the impact of the refresh animation.",
+    "headline": "Navigation and display scaling concerns",
+    "happening": "Users report difficulty navigating the interface and finding specific sections like likes or following. There are also recurring reports regarding poor scaling and lack of support for iPhone Duo displays.",
+    "where_to_look": "The display scaling logic for foldable devices and the navigation menu structure.",
+    "action": "Review the recent impact of UI animations and audio behavior on app stability.",
     "reply_to": 2,
-    "reply": "We hear you, and we appreciate you sharing this feedback regarding the refresh animation. We understand how unnecessary motion can be an accessibility concern. Please feel free to reach out to our support team to share more details about your experience.",
+    "reply": "Thank you for sharing this feedback. We understand that the refresh animation can be disruptive, and we appreciate you highlighting this as an accessibility concern. Please feel free to reach out to our support team to share more details.",
     "checked": true
    }
   },
@@ -225,11 +231,12 @@
    "n_recent": 7,
    "n_prior": 8,
    "low_recent": 6,
+   "pos_recent": 0,
    "avg": 2.05,
    "avg_recent": 1.71,
    "bug_share": 1.0,
    "last_seen": "2026-11-17",
-   "share_recent": 0.069,
+   "share_recent": 0.071,
    "quotes": [
     {
      "stars": 1,
@@ -275,12 +282,12 @@
     "14496318409"
    ],
    "brief": {
-    "headline": "Stability and performance issues in recent iOS builds",
-    "happening": "Users report frequent app crashes, black screens upon opening, and device overheating. There are also reports of video streaming interruptions and content failing to load.",
-    "where_to_look": "The video streaming playback and initial app launch sequences.",
+    "headline": "Stability and performance issues in recent app versions",
+    "happening": "Users are reporting frequent app crashes, long loading times, and content loading failures. Specific reports also mention video streaming interruptions and device overheating during use.",
+    "where_to_look": "The video playback and streaming functionality.",
     "action": "Review recent crash logs and performance metrics for v4.13.10 and v4.13.12.",
     "reply_to": 2,
-    "reply": "We are sorry to hear about the connection issues you experienced while watching. We appreciate you bringing this to our attention, and we encourage you to reach out to our support team so we can look into this further.",
+    "reply": "We are sorry to hear about the connection issues you experienced while watching. We want the video store to be a seamless experience for you. Please reach out to our support team so we can look into this further.",
     "checked": true
    }
   },
@@ -292,6 +299,7 @@
    "n_recent": 4,
    "n_prior": 26,
    "low_recent": 2,
+   "pos_recent": 0,
    "avg": 1.94,
    "avg_recent": 2,
    "bug_share": 0.93,
@@ -337,11 +345,11 @@
    ],
    "brief": {
     "headline": "Decreasing reports of login and session sync issues",
-    "happening": "Users report being randomly logged out or unable to sign into accounts. Some instances involve difficulty creating new accounts despite stable internet connections.",
-    "where_to_look": "The authentication and account creation flows.",
-    "action": "Review recent error logs related to session timeouts and account verification.",
+    "happening": "A small minority of recent reviews mention being randomly logged out or unable to sign in. Users have reported losing access to lists and reviews after being signed out unexpectedly.",
+    "where_to_look": "The authentication flow and session persistence during active app use.",
+    "action": "Review recent error logs related to session timeouts and account creation failures.",
     "reply_to": 0,
-    "reply": "We are sorry to hear you're having trouble creating an account. Please reach out to our support team so we can look into this further and help you get started.",
+    "reply": "We are sorry to hear you're having trouble creating an account. Please reach out to our support team so we can look into this further and help you get started with Letterboxd.",
     "checked": true
    }
   },
@@ -353,11 +361,12 @@
    "n_recent": 26,
    "n_prior": 27,
    "low_recent": 1,
+   "pos_recent": 21,
    "avg": 3.87,
    "avg_recent": 4.15,
    "bug_share": 0.05,
    "last_seen": "2026-11-12",
-   "share_recent": 0.257,
+   "share_recent": 0.263,
    "quotes": [
     {
      "stars": 2,
@@ -420,13 +429,13 @@
     "14487564340"
    ],
    "brief": {
-    "headline": "Steady requests for feature enhancements and expanded functionality",
-    "happening": "Users are requesting the 'where to watch' toggle on mobile and more personalized recommendations. There are also requests for API access and easier ways to view watched films.",
+    "headline": "Feature Gaps/Enhancements: raised mostly in happy reviews",
+    "happening": "Of the 26 reviews in the last 90 days that raise this, 21 are 4–5 stars and 1 is 1–2 stars: it comes up mostly as a request or a side note from people who like the app. The evidence below shows the unhappy one.",
     "where_to_look": "The mobile app feature parity with the web browser.",
-    "action": "Review the feasibility of bringing web-only toggles to the iOS interface.",
+    "action": "Review the feasibility of bringing web-only toggles to the mobile interface.",
     "reply_to": 0,
-    "reply": "Thank you for your feedback. We understand the importance of having the 'where to watch' toggle available on the mobile app. We appreciate you sharing this with us, and please feel free to reach out to our support team with any further thoughts.",
-    "checked": true
+    "reply": "Thank you for being a paid member and for sharing this feedback. We understand how important the 'where to watch' toggle is for your mobile experience. We appreciate you bringing this to our attention, and please feel free to reach out to our support team with any other thoughts.",
+    "checked": "counts"
    }
   },
   {
@@ -435,13 +444,14 @@
    "describe": "A recurring request to expand tracking and rating capabilities to include television series.",
    "n": 100,
    "n_recent": 11,
-   "n_prior": 14,
+   "n_prior": 12,
    "low_recent": 1,
+   "pos_recent": 10,
    "avg": 4,
    "avg_recent": 4,
    "bug_share": 0.02,
    "last_seen": "2026-11-12",
-   "share_recent": 0.109,
+   "share_recent": 0.111,
    "quotes": [
     {
      "stars": 1,
@@ -477,6 +487,7 @@
    "n_recent": 0,
    "n_prior": 1,
    "low_recent": 0,
+   "pos_recent": 0,
    "avg": 1.25,
    "avg_recent": null,
    "bug_share": 0.0,
@@ -521,14 +532,15 @@
    "label": "Praise",
    "describe": "Reviews that are purely positive about the app's core functionality or concept.",
    "n": 156,
-   "n_recent": 18,
-   "n_prior": 27,
+   "n_recent": 17,
+   "n_prior": 28,
    "low_recent": 0,
+   "pos_recent": 17,
    "avg": 4.55,
-   "avg_recent": 4.78,
+   "avg_recent": 4.76,
    "bug_share": 0.01,
    "last_seen": "2026-11-20",
-   "share_recent": 0.178,
+   "share_recent": 0.172,
    "quotes": [],
    "gists": [],
    "ids_recent": [
@@ -548,8 +560,7 @@
     "14544073658",
     "14542525126",
     "14518771049",
-    "14503188379",
-    "14484449404"
+    "14503188379"
    ]
   }
  ],
@@ -752,21 +763,6 @@
   }
  ],
  "series": [
-  {
-   "d": "2026-05-29",
-   "n": 2,
-   "low": 1
-  },
-  {
-   "d": "2026-05-30",
-   "n": 1,
-   "low": 1
-  },
-  {
-   "d": "2026-05-31",
-   "n": 2,
-   "low": 1
-  },
   {
    "d": "2026-06-01",
    "n": 0,
@@ -1650,6 +1646,21 @@
   {
    "d": "2026-11-24",
    "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-27",
+   "n": 0,
    "low": 0
   }
  ],

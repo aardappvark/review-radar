@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Review Radar</title>
-<meta name="description" content="What recent App Store reviews say about two Tiny apps: top problems, incidents, version regressions and drafted replies. Built in one afternoon.">
+<meta name="description" content="What public reviews say about every Tiny app: top problems, incidents, version regressions and drafted replies.">
 <style>
 :root{
   --bg:#f7f6f2; --panel:#ffffff; --ink:#1b1d1f; --muted:#62676d; --line:#e4e2dc;
@@ -104,7 +104,7 @@ a{color:var(--accent)}
 <button class="theme-toggle" id="themeBtn" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
 <header>
   <div class="kicker">Review Radar · demo</div>
-  <h1>What App Store reviews are telling two Tiny apps</h1>
+  <h1>What reviews are telling Tiny&rsquo;s apps</h1>
   <p class="lede">Every recent written review read, tagged and ranked into the handful of problems worth a look this week, with the evidence, the version it started in, and a reply ready to post.</p>
   <div class="built" id="built"></div>
 </header>
@@ -153,17 +153,17 @@ const tabs = $('#tabs');
 D.apps.forEach((a, i) => {
   const b = document.createElement('button');
   b.className = 'tab'; b.type = 'button'; b.role = 'tab';
-  b.innerHTML = `${esc(a.name)}<small>${fmt(a.window.n)} reviews</small>`;
+  b.innerHTML = `${esc(a.tab || a.name)}<small>${a.store_kind === 'shopify' ? 'Shopify' : 'iOS'}</small>`;
   b.addEventListener('click', () => show(i));
   tabs.appendChild(b);
 });
 
-function trendChip(t){
-  if (!t.n_prior && t.n_recent) return `<span class="chip up">new in last 90 days</span>`;
+function trendChip(t, L){
+  if (!t.n_prior && t.n_recent) return `<span class="chip up">new in last ${L}</span>`;
   if (!t.n_prior) return '';
   const r = (t.n_recent - t.n_prior) / t.n_prior;
-  if (Math.abs(r) < 0.15) return `<span class="chip">steady vs prior 90 days</span>`;
-  return r > 0 ? `<span class="chip up">▲ ${Math.round(r*100)}% vs prior 90 days</span>` : `<span class="chip down">▼ ${Math.round(-r*100)}% vs prior 90 days</span>`;
+  if (Math.abs(r) < 0.15) return `<span class="chip">steady vs prior ${L}</span>`;
+  return r > 0 ? `<span class="chip up">▲ ${Math.round(r*100)}% vs prior ${L}</span>` : `<span class="chip down">▼ ${Math.round(-r*100)}% vs prior ${L}</span>`;
 }
 
 function chart(a){
@@ -199,23 +199,26 @@ function show(i){
   [...tabs.children].forEach((b, j) => b.setAttribute('aria-selected', String(i === j)));
   const a = D.apps[i];
   const hasPrior = a.window.prior_n > 0;
+  const L = a.window.recent_label || '90 days';
+  const shop = a.store_kind === 'shopify';
   const top = a.themes.filter(t => t.brief);
   const gap = (a.store.avg - a.written_avg_recent).toFixed(1);
   let h = '';
   h += `<div class="kpis">
-    <div class="kpi"><div class="v">${a.store.avg.toFixed(2)}★</div><div class="l">App Store rating (${fmt(a.store.count)} ratings, US)</div></div>
-    <div class="kpi alert"><div class="v">${a.written_avg_recent.toFixed(2)}★</div><div class="l">average of written reviews, last 90 days (${fmt(a.window.recent_n)})</div></div>
+    <div class="kpi"><div class="v">${a.store.avg.toFixed(2)}★</div><div class="l">${shop ? 'Shopify App Store rating (' + fmt(a.store.count) + ' reviews)' : 'App Store rating (' + fmt(a.store.count) + ' ratings, US)'}</div></div>
+    <div class="kpi alert"><div class="v">${a.written_avg_recent.toFixed(2)}★</div><div class="l">average of written reviews, last ${L} (${fmt(a.window.recent_n)})</div></div>
     <div class="kpi"><div class="v">${pct(a.bug_share_recent)}</div><div class="l">of recent reviews report something broken</div></div>
-    <div class="kpi"><div class="v">v${esc(a.store.version)}</div><div class="l">current version, released ${mdate(a.store.version_date)}</div></div>
+    ${shop ? `<div class="kpi"><div class="v">${esc(a.company)}</div><div class="l"><a href="${esc(a.store.url)}">listing on the Shopify App Store</a></div></div>` : `<div class="kpi"><div class="v">v${esc(a.store.version)}</div><div class="l">current version, released ${mdate(a.store.version_date)}</div></div>`}
   </div>`;
   h += `<div class="callout">${a.callout}</div>`;
 
   h += `<h2>Top problems right now</h2><p class="sub">Ranked by how many recent reviews raise each one and how angry they are. Each card is drafted by a local model and every number in it is checked against the data.</p><div class="cards">`;
+  if (!top.length) h += `<p class="muted">No theme has enough unhappy reviews behind it to rank as a problem. That is a result too: the team can spend the week elsewhere.</p>`;
   top.forEach((t, k) => {
     const b = t.brief, q = t.quotes[b.reply_to] || t.quotes[0];
     h += `<article class="card">
       <div class="top"><div><div class="rank">#${k+1} · ${esc(t.label)}</div><h3>${esc(b.headline)}</h3></div></div>
-      <div class="chips"><span class="chip">${t.n_recent} reviews, last 90 days</span><span class="chip">${t.low_recent} at 1–2★</span>${t.avg_recent != null ? `<span class="chip">avg ${t.avg_recent}★</span>` : ''}${hasPrior ? trendChip(t) : ''}</div>
+      <div class="chips"><span class="chip">${t.n_recent} reviews, last ${L}</span><span class="chip">${t.low_recent} at 1–2★</span>${t.avg_recent != null ? `<span class="chip">avg ${t.avg_recent}★</span>` : ''}${hasPrior ? trendChip(t, L) : ''}</div>
       <div class="grid3">
         <div><div class="h">What people report</div><p>${esc(b.happening)}</p></div>
         <div><div class="h">Where to look</div><p>${esc(b.where_to_look)}</p></div>
@@ -233,8 +236,8 @@ function show(i){
     <div class="legend"><span><i style="background:var(--bar)"></i>all written reviews</span><span><i style="background:var(--bar-low)"></i>1–2★</span><span>normal day: ${a.bursts[0] ? a.bursts[0].base : 'about 1'} review${a.bursts[0] && a.bursts[0].base !== 1 ? 's' : ''}</span></div>`;
   if (a.bursts.length) {
     a.bursts.forEach(b => {
-      h += `<div class="incident"><div class="date">${mdate(b.date)}<small>v${esc(b.version)}</small></div><div>
-        <b>${b.n} reviews in one day</b> (${b.low} at 1–2★), mostly <b>${esc(b.theme)}</b>. First one at ${b.first}${b.alert_at ? `; a three-report alert would have fired at <b>${b.alert_at}</b>` : ''}.
+      h += `<div class="incident"><div class="date">${mdate(b.date)}${b.version ? `<small>v${esc(b.version)}</small>` : ''}</div><div>
+        <b>${b.n} reviews in one day</b> (${b.low} at 1–2★), mostly <b>${esc(b.theme)}</b>.${b.first ? ` First one at ${b.first}` : ''}${b.alert_at ? `; a three-report alert would have fired at <b>${b.alert_at}</b>` : ''}.
         <div class="quotes">${b.quotes.map(x => `<div class="q"><div class="meta">${stars(x.stars)} · ${esc(x.cc)}</div><b>${esc(x.title)}</b> ${esc(x.text)}</div>`).join('')}</div></div></div>`;
     });
   } else {
@@ -242,6 +245,7 @@ function show(i){
   }
   h += `</div>`;
 
+  if (a.versions.length) {
   h += `<h2>By version</h2><p class="sub">Written-review average per release, in release order. Highlighted rows dropped half a star or more from the release before.</p><div class="panel tablewrap"><table>
     <thead><tr><th>Version</th><th>Seen</th><th>Reviews</th><th>Avg</th><th>Change</th><th>Broken</th><th>Main complaints</th></tr></thead><tbody>`;
   a.versions.slice().reverse().forEach(v => {
@@ -249,9 +253,10 @@ function show(i){
     h += `<tr class="${v.flag ? 'flag' : ''}"><td><b>${esc(v.version)}</b></td><td class="muted">${mdate(v.first)}${v.last !== v.first ? '–' + mdate(v.last) : ''}</td><td>${v.n}</td><td>${v.avg.toFixed(2)}</td><td>${d}</td><td>${pct(v.bug_share)}</td><td>${esc(v.top.join(', '))}</td></tr>`;
   });
   h += `</tbody></table></div>`;
+  }
 
-  h += `<h2>Every theme</h2><p class="sub">${fmt(a.window.n)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}, storefronts ${esc(a.window.countries.join(', '))}.</p><div class="panel tablewrap"><table>
-    <thead><tr><th>Theme</th><th>Last 90 days</th><th>Share</th>${hasPrior ? '<th>Prior 90</th>' : ''}<th>Avg</th>${hasPrior ? '<th>All in window</th>' : ''}</tr></thead><tbody>`;
+  h += `<h2>Every theme</h2><p class="sub">${fmt(a.window.n)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}, ${shop ? 'merchants in' : 'storefronts'} ${esc(a.window.countries.join(', '))}.</p><div class="panel tablewrap"><table>
+    <thead><tr><th>Theme</th><th>Last ${L}</th><th>Share</th>${hasPrior ? `<th>Prior ${L}</th>` : ''}<th>Avg</th>${hasPrior ? '<th>All in window</th>' : ''}</tr></thead><tbody>`;
   a.themes.forEach(t => {
     h += `<tr><td><b>${esc(t.label)}</b><div class="muted" style="font-size:13px">${esc(t.describe)}</div></td><td>${t.n_recent}</td><td><div class="bar"><span style="width:${Math.min(100, t.share_recent*100*2)}%"></span></div><span class="muted" style="font-size:12px">${pct(t.share_recent)}</span></td>${hasPrior ? `<td>${t.n_prior}</td>` : ''}<td>${t.avg.toFixed(2)}</td>${hasPrior ? `<td>${t.n}</td>` : ''}</tr>`;
   });

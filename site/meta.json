@@ -1,12 +1,18 @@
 {
   "apps": [
     "letterboxd",
-    "serato-dj"
+    "serato-dj",
+    "befunky",
+    "visionn",
+    "stamped",
+    "kno",
+    "foursixty",
+    "oots-theme-updater"
   ],
-  "built_line": "Built in one sitting: started <b>1:53 pm</b>, finished by <b>2:28 pm</b> Melbourne time, 27 Nov 2026. Local model, zero API spend.",
+  "built_line": "First version built in one sitting (1:53–2:28 pm Melbourne, 27 Nov 2026), then extended the same day to every Tiny company with a public app. Local model, zero API spend.",
   "footer": " Source and method: <a href=\"https://github.com/aardappvark/review-radar\">github.com/aardappvark/review-radar</a>.",
   "method": [
-    "<b>Source:</b> Apple's public customer-review feed, which serves the most recent 500 written reviews per app per storefront. Six English-language storefronts: US, GB, CA, AU, NZ, IE. Star-only ratings (no text) are not in the feed, which is why written reviews average lower than the store rating.",
+    "<b>Source:</b> Apple's public customer-review feed, which serves the most recent 500 written reviews per app per storefront. Six English-language storefronts: US, GB, CA, AU, NZ, IE. Star-only ratings (no text) are not in the feed, which is why written reviews average lower than the store rating. <b>Shopify App Store:</b> the public review pages, newest first, up to 500 per app; merchant store names are never stored, and a review whose layout isn't recognised keeps its stars only.",
     "<b>Tagging:</b> a local model (gemma4 on Ollama) first reads a sample of low-star reviews and proposes the theme list, then tags every review with up to two themes, a 'something is broken' flag and a one-line gist. A hand check of 30 random Letterboxd tags agreed with 28. One known gap: the Letterboxd theme list has no separate subscription-pricing bucket, so complaints about paywalled features sit under feature requests.",
     "<b>Ranking:</b> problems are ranked by how many 1–2★ reviews raised them in the last 90 days, then by total mentions. Trends compare against the 90 days before.",
     "<b>Incidents:</b> a day is flagged when it gets at least five times the normal daily count (and at least six reviews). Launch week is skipped. The alert time is when the third matching low-star review landed.",

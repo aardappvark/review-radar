@@ -6,10 +6,7 @@ Writes data/<slug>.analysis.json. Pure stdlib, deterministic.
 import json, re, sys, pathlib, statistics, collections, datetime as dt, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "data"
-APPS = {
-    "letterboxd": {"name": "Letterboxd", "id": 1054271011, "window_start": "2025-03-01"},
-    "serato-dj": {"name": "Serato DJ", "id": 6754231707, "window_start": "2026-10-01"},
-}
+APPS = {a["slug"]: a for a in json.loads((ROOT.parent / "apps.json").read_text())}
 # Quotes shown on the page skip anything hostile, political or profane: evidence, not drama.
 QUOTE_SKIP = re.compile(r"\b(israel|palestin|gaza|trump|biden|woke|nazi|fuck|shit|gaf|wtf|damn|bitch|idiot|retard|garbage|stupid|hate)\w*", re.I)
 
@@ -36,11 +33,26 @@ def shingles(t, k=3):
     return {" ".join(w[i:i + k]) for i in range(max(0, len(w) - k + 1))}
 
 
-def store_stats(app_id):
-    with urllib.request.urlopen(f"https://itunes.apple.com/lookup?id={app_id}&country=us", timeout=20) as r:
+UA = {"User-Agent": "Mozilla/5.0 (Macintosh) review-radar/0.2"}
+
+
+def store_stats(meta):
+    if meta["store"] == "shopify":  # the app page's own JSON-LD rating
+        h = urllib.request.urlopen(urllib.request.Request(f"https://apps.shopify.com/{meta['id']}", headers=UA), timeout=25).read().decode("utf-8", "replace")
+        agg = {}
+        for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+            try:
+                d = json.loads(m)
+            except ValueError:
+                continue
+            agg = d.get("aggregateRating") or agg
+        return {"avg": round(float(agg.get("ratingValue", 0)), 2), "count": int(agg.get("ratingCount", 0)), "version": None,
+                "version_date": None, "released": None, "notes": "", "store": "shopify", "url": f"https://apps.shopify.com/{meta['id']}"}
+    with urllib.request.urlopen(urllib.request.Request(f"https://itunes.apple.com/lookup?id={meta['id']}&country=us", headers=UA), timeout=20) as r:
         x = json.load(r)["results"][0]
     return {"avg": round(x["averageUserRating"], 2), "count": x["userRatingCount"], "version": x["version"],
-            "version_date": x["currentVersionReleaseDate"][:10], "released": x["releaseDate"][:10], "notes": x.get("releaseNotes", "")[:400]}
+            "version_date": x["currentVersionReleaseDate"][:10], "released": x["releaseDate"][:10], "notes": x.get("releaseNotes", "")[:400],
+            "store": "apple", "url": x.get("trackViewUrl", "").split("?")[0]}
 
 
 def quotes(rows, k=3, max_stars=3):
@@ -55,11 +67,18 @@ def main(slug):
     rows = json.loads((ROOT / f"{slug}.reviews.json").read_text())
     tags = json.loads((ROOT / f"{slug}.tags.json").read_text())
     themes = {t["key"]: t for t in json.loads((ROOT / f"{slug}.themes.json").read_text())["themes"]}
+    # The model names its praise bucket differently per app ("praise", "Praise", "positive_feedback"): one key for all.
+    praise_keys = {k for k, t in themes.items() if re.search(r"praise|positive", k + " " + t["label"], re.I)}
+    for k in praise_keys:
+        themes["praise"] = dict(themes.pop(k), key="praise")
+    tags = {i: dict(v, themes=["praise" if k in praise_keys else k for k in v.get("themes", [])]) for i, v in tags.items()}
     rows = [dict(r, **tags.get(r["id"], {"themes": [], "bug": False, "gist": ""})) for r in rows if r["date"] >= meta["window_start"]]
     for r in rows:
         r["t"] = parse(r["date"])
-    now = max(r["t"] for r in rows)
-    recent_from, prior_from = now - dt.timedelta(days=90), now - dt.timedelta(days=180)
+    now = dt.datetime.now(dt.timezone.utc)
+    # Quiet apps get a 12-month window instead of 90 days, so there is enough to rank (27 Nov 2026).
+    days = 90 if sum(r["t"] >= now - dt.timedelta(days=90) for r in rows) >= 20 else 365
+    recent_from, prior_from = now - dt.timedelta(days=days), now - dt.timedelta(days=2 * days)
     recent = [r for r in rows if r["t"] >= recent_from]
     prior = [r for r in rows if prior_from <= r["t"] < recent_from]
 
@@ -75,6 +94,7 @@ def main(slug):
             "key": key, "label": t["label"], "describe": t["describe"],
             "n": len(allr), "n_recent": len(rec), "n_prior": len(pri),
             "low_recent": sum(r["rating"] <= 2 for r in rec),
+            "pos_recent": sum(r["rating"] >= 4 for r in rec),
             "avg": round(statistics.mean(r["rating"] for r in allr), 2),
             "avg_recent": round(statistics.mean(r["rating"] for r in rec), 2) if rec else None,
             "bug_share": round(sum(r["bug"] for r in allr) / len(allr), 2),
@@ -127,11 +147,12 @@ def main(slug):
             top = tc.most_common(1)[0][0] if tc else None
             hits = [r for r in rs if top in r["themes"] and r["rating"] <= 3]
             # Apple's feed stamps every review in Pacific time (UTC-7); days are grouped on that same clock.
-            alert = hits[2]["date"][11:16] + " Pacific" if len(hits) >= 3 else None
+            timed = not rs[0].get("date_only")  # Shopify gives a date, not a time
+            alert = (hits[2]["date"][11:16] + " Pacific" if len(hits) >= 3 else None) if timed else None
             vc = collections.Counter(r["version"] for r in rs).most_common(1)[0][0]
             bursts.append({"date": s["d"], "n": s["n"], "low": s["low"], "base": base,
                            "theme": themes[top]["label"] if top else None, "version": vc,
-                           "first": rs[0]["date"][11:16] + " Pacific", "alert_at": alert,
+                           "first": rs[0]["date"][11:16] + " Pacific" if timed else None, "alert_at": alert,
                            "quotes": quotes(hits or rs, 3)})
 
     # Copy-paste / near-duplicate text across different reviews
@@ -148,11 +169,12 @@ def main(slug):
                 dups.append({"jaccard": round(jac, 2), "a": {"date": sh[i][0]["date"][:10], "stars": sh[i][0]["rating"], "cc": sh[i][0]["cc"].upper(), "text": clip(sh[i][0]["body"], 140)},
                              "b": {"date": sh[j][0]["date"][:10], "stars": sh[j][0]["rating"], "cc": sh[j][0]["cc"].upper(), "text": clip(sh[j][0]["body"], 140)}})
 
-    store = store_stats(meta["id"])
+    store = store_stats(meta)
     out = {
-        "slug": slug, "name": meta["name"], "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "slug": slug, "name": meta["name"], "company": meta["company"], "store_kind": meta["store"], "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "window": {"from": min(r["date"] for r in rows)[:10], "to": now.date().isoformat(), "n": len(rows),
-                   "recent_n": len(recent), "prior_n": len(prior), "countries": sorted({r["cc"].upper() for r in rows})},
+                   "recent_n": len(recent), "prior_n": len(prior), "recent_days": days,
+                   "recent_label": "90 days" if days == 90 else "12 months", "countries": sorted({r["cc"].upper() for r in rows})},
         "store": store,
         "written_avg_recent": round(statistics.mean(r["rating"] for r in recent), 2) if recent else None,
         "bug_share_recent": round(sum(r["bug"] for r in recent) / len(recent), 2) if recent else None,

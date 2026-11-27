@@ -1,0 +1,44 @@
+{
+ "themes": [
+  {
+   "key": "pricing_value",
+   "label": "Pricing/Cost",
+   "describe": "Users feel the cost is too high relative to the features provided."
+  },
+  {
+   "key": "feature_gating",
+   "label": "Feature Limitations",
+   "describe": "Essential features are locked behind higher, more expensive subscription tiers."
+  },
+  {
+   "key": "login_errors",
+   "label": "Login/Account Bugs",
+   "describe": "Users encounter technical errors when trying to log in or create accounts via the app."
+  },
+  {
+   "key": "app_functionality",
+   "label": "Core Functionality Failure",
+   "describe": "The app is reported as not working or failing to perform its intended tasks."
+  },
+  {
+   "key": "support_response_time",
+   "label": "Support Responsiveness",
+   "describe": "Users are frustrated by slow or non-existent responses from customer support."
+  },
+  {
+   "key": "support_channel",
+   "label": "Support Channel Needs",
+   "describe": "There is a request for more immediate support options, like live chat."
+  },
+  {
+   "key": "performance_stability",
+   "label": "Stability/Reliability",
+   "describe": "General complaints about the app not working consistently or being unreliable."
+  },
+  {
+   "key": "praise",
+   "label": "Positive Feedback",
+   "describe": "Reviews that express satisfaction with the app's current performance."
+  }
+ ]
+}

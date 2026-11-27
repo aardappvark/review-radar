@@ -1,0 +1,49 @@
+{
+ "themes": [
+  {
+   "key": "billing_and_pricing",
+   "label": "Billing & Pricing",
+   "describe": "Users complain about unexpected charges, forced upgrades, or confusing billing practices."
+  },
+  {
+   "key": "customer_support_response",
+   "label": "Support Response Time",
+   "describe": "Complaints regarding slow, unhelpful, or inaccessible customer support channels."
+  },
+  {
+   "key": "app_stability_bugs",
+   "label": "App Bugs & Glitches",
+   "describe": "Reports of core functionality failing, reviews not displaying, or the app being generally buggy."
+  },
+  {
+   "key": "performance_speed",
+   "label": "Slowness & Performance",
+   "describe": "Concerns that the app significantly slows down the website loading time or backend operations."
+  },
+  {
+   "key": "feature_functionality",
+   "label": "Feature Failure",
+   "describe": "Specific complaints that core features (like importing, sending requests, or displaying stars) are not working."
+  },
+  {
+   "key": "backend_usability",
+   "label": "Backend Complexity",
+   "describe": "Feedback that the administrative backend is confusing, difficult to navigate, or poorly designed."
+  },
+  {
+   "key": "data_loss_migration",
+   "label": "Data Loss/Migration",
+   "describe": "Issues related to losing previously collected reviews or difficulty exporting data."
+  },
+  {
+   "key": "integration_issues",
+   "label": "Integration Problems",
+   "describe": "Difficulties connecting the app with other platforms or Shopify features."
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that are purely positive about the app's functionality or experience."
+  }
+ ]
+}

@@ -1,13 +1,17 @@
 {
  "slug": "serato-dj",
  "name": "Serato DJ",
- "generated": "2026-11-27 03:25 UTC",
+ "company": "Serato",
+ "store_kind": "apple",
+ "generated": "2026-11-27 06:41 UTC",
  "window": {
   "from": "2026-10-19",
-  "to": "2026-11-21",
+  "to": "2026-11-27",
   "n": 59,
   "recent_n": 59,
   "prior_n": 0,
+  "recent_days": 90,
+  "recent_label": "90 days",
   "countries": [
    "AU",
    "CA",
@@ -22,7 +26,9 @@
   "version": "5.1.0.20",
   "version_date": "2026-11-10",
   "released": "2026-10-18",
-  "notes": "•\tAlphaTheta DJM-A7 support. Connect with a DJ Suite or iOS Outright license.\n•\tUpdated performance pad mappings for the Pioneer DJ DJM-S5 and Numark Party Mix Pro.\n•\tFixes for the Denon DJ PRIME 4, Rane SYSTEM ONE and Pioneer DJ PLX-CRSS12.\n•\tBetter stability, memory and performance on devices with 4GB of RAM."
+  "notes": "•\tAlphaTheta DJM-A7 support. Connect with a DJ Suite or iOS Outright license.\n•\tUpdated performance pad mappings for the Pioneer DJ DJM-S5 and Numark Party Mix Pro.\n•\tFixes for the Denon DJ PRIME 4, Rane SYSTEM ONE and Pioneer DJ PLX-CRSS12.\n•\tBetter stability, memory and performance on devices with 4GB of RAM.",
+  "store": "apple",
+  "url": "https://apps.apple.com/us/app/serato-dj/id6754231707"
  },
  "written_avg_recent": 3.29,
  "bug_share_recent": 0.14,
@@ -35,6 +41,7 @@
    "n_recent": 16,
    "n_prior": 0,
    "low_recent": 12,
+   "pos_recent": 1,
    "avg": 1.75,
    "avg_recent": 1.75,
    "bug_share": 0.12,
@@ -103,11 +110,11 @@
    ],
    "brief": {
     "headline": "User dissatisfaction regarding pricing and feature paywalls",
-    "happening": "In the last 90 days, 16 reviews mention high costs and subscription requirements. Users report frustration with paying for features previously owned and the high price point compared to competitors.",
-    "where_to_look": "The in-app purchase and subscription entitlement flow.",
-    "action": "Review the current pricing structure and feature access tiers against competitor benchmarks.",
+    "happening": "Users report frustration with subscription requirements and the cost of unlocking features previously owned. The feedback highlights concerns regarding the price point relative to competitors and the necessity of additional payments for hardware connection and library access.",
+    "where_to_look": "The subscription verification flow and feature entitlement logic.",
+    "action": "Review the feedback regarding feature accessibility for existing desktop users.",
     "reply_to": 1,
-    "reply": "We hear your frustration regarding the subscription for features you have previously purchased. We appreciate you sharing this feedback with us, as it helps us understand how our pricing affects our long-term users. Please feel free to reach out to our support team to discuss your account.",
+    "reply": "We hear your frustration regarding the subscription model for features you have previously purchased. We appreciate you sharing this feedback with us, as it helps us understand the impact on our long-term users. Please feel free to reach out to our support team to discuss your account details.",
     "checked": true
    }
   },
@@ -119,6 +126,7 @@
    "n_recent": 17,
    "n_prior": 0,
    "low_recent": 11,
+   "pos_recent": 3,
    "avg": 2.24,
    "avg_recent": 2.24,
    "bug_share": 0.0,
@@ -186,12 +194,12 @@
     "14687227753"
    ],
    "brief": {
-    "headline": "Feature gaps and pricing concerns relative to competitors",
-    "happening": "Users report the app lacks specific functionalities like HID mode support, custom mapping, and local library access. There is also significant dissatisfaction regarding the subscription model and feature paywalls.",
-    "where_to_look": "The feature parity and library management capabilities within the mobile application.",
-    "action": "Review the feature set of competing mobile DJ applications to identify specific gaps.",
+    "headline": "Feature gaps compared to competing DJ applications",
+    "happening": "Users report that the app lacks specific functionalities found in alternatives, such as HID mode support, custom controller mapping, and local MP3 library access. While a small minority of these reviews are positive, the majority express frustration regarding the current feature set and pricing structure.",
+    "where_to_look": "The local music library integration and hardware compatibility layers.",
+    "action": "Review the feature parity list against djay and Pioneer software.",
     "reply_to": 0,
-    "reply": "Thank you for sharing your feedback. We understand your concerns regarding the subscription model and feature availability. We value your long-term support of Serato and invite you to contact our support team to discuss your experience further.",
+    "reply": "Thank you for sharing your feedback. We understand your concerns regarding the current feature set and the transition to a subscription model. We value your long-term support of Serato and invite you to contact our support team to discuss your experience further.",
     "checked": true
    }
   },
@@ -203,6 +211,7 @@
    "n_recent": 9,
    "n_prior": 0,
    "low_recent": 6,
+   "pos_recent": 1,
    "avg": 2.22,
    "avg_recent": 2.22,
    "bug_share": 0.56,
@@ -256,12 +265,12 @@
     "14694045342"
    ],
    "brief": {
-    "headline": "Issues accessing local music and iTunes libraries",
-    "happening": "Users report being unable to access existing iTunes playlists or local MP3 files. Some users also noted the app signs out of Apple Music after loading a track.",
-    "where_to_look": "The local file system access and Apple Music integration flow.",
-    "action": "Review recent changes to file permissions and library syncing logic.",
+    "headline": "Issues accessing local and iTunes music libraries",
+    "happening": "Users report being unable to access existing iTunes playlists and local MP3 files. Some users also noted that the app signs out of Apple Music after loading a track.",
+    "where_to_look": "The local file system integration and Apple Music library synchronization flow.",
+    "action": "Review the logs related to library permission requests and media player authentication.",
     "reply_to": 1,
-    "reply": "Thank you for your feedback. We are sorry to hear you are having trouble accessing your iTunes library. Please contact our support team so we can look into this specific issue for you.",
+    "reply": "Thank you for sharing your feedback. We are sorry to hear you are having trouble accessing your iTunes library. Please reach out to our support team so we can look into this specific issue further.",
     "checked": true
    }
   },
@@ -273,6 +282,7 @@
    "n_recent": 5,
    "n_prior": 0,
    "low_recent": 4,
+   "pos_recent": 0,
    "avg": 1.8,
    "avg_recent": 1.8,
    "bug_share": 0.2,
@@ -319,13 +329,13 @@
     "14689869534"
    ],
    "brief": {
-    "headline": "Limited support for new and specific DJ controllers",
-    "happening": "Users report that certain modern hardware, such as the Rane Four and FLX10, is not fully supported or lacks features like HID mode and jog wheel displays. This issue is present in 8% of recent reviews, with an average rating of 1.8 stars for these reports.",
-    "where_to_look": "The hardware connection and MIDI/HID integration layer.",
-    "action": "Review the compatibility logs for the Rane Four and FLX10 hardware profiles.",
+    "headline": "Hardware compatibility issues with newer DJ controllers",
+    "happening": "5 reviews in the last 90 days raise this (4 at 1–2 stars).",
+    "where_to_look": "The hardware integration and driver communication layer for new controller models.",
+    "action": "Review the recent feedback regarding HID mode and jog wheel display functionality.",
     "reply_to": 2,
-    "reply": "Thank you for sharing your feedback regarding Rane Four support. We understand how important it is to use your current gear with Serato. Please contact our support team so we can learn more about your experience with this controller.",
-    "checked": true
+    "reply": "Thank you for sharing your feedback regarding Rane Four support. We understand how important it is to use your latest gear with Serato. Please reach out to our support team so we can gather more details about your setup.",
+    "checked": "partial: happening"
    }
   },
   {
@@ -336,6 +346,7 @@
    "n_recent": 2,
    "n_prior": 0,
    "low_recent": 2,
+   "pos_recent": 0,
    "avg": 1.5,
    "avg_recent": 1.5,
    "bug_share": 1.0,
@@ -370,12 +381,43 @@
    "brief": {
     "headline": "Audio routing issues via connected controllers",
     "happening": "2 reviews in the last 90 days raise this (2 at 1–2 stars).",
-    "where_to_look": "The audio output routing logic when an external controller is connected.",
-    "action": "Verify audio output behavior on supported hardware using recent builds.",
+    "where_to_look": "The audio output routing logic when external controllers are connected.",
+    "action": "Verify the audio driver handshake process during device connection.",
     "reply_to": 0,
-    "reply": "We are sorry to hear you are experiencing issues with your master output routing. Please contact our support team so we can look into this further and help get your audio playing through your controller correctly.",
+    "reply": "We are sorry to hear you are experiencing issues with your Master Output. Please contact our support team so we can look into this routing behavior with your specific hardware setup.",
     "checked": "partial: happening"
    }
+  },
+  {
+   "key": "accessibility",
+   "label": "Accessibility Support",
+   "describe": "Specific complaints regarding the lack of accessibility features.",
+   "n": 1,
+   "n_recent": 1,
+   "n_prior": 0,
+   "low_recent": 1,
+   "pos_recent": 0,
+   "avg": 1,
+   "avg_recent": 1,
+   "bug_share": 0.0,
+   "last_seen": "2026-10-21",
+   "share_recent": 0.017,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-10-21",
+     "version": "5.0.0.1168",
+     "cc": "GB",
+     "title": "Accessibility",
+     "text": "The company always ignored an accessibility of their products. So there’s no surprise that there are no changes in that case. Another competitor do it better."
+    }
+   ],
+   "gists": [
+    "No accessibility features; competitor does it better."
+   ],
+   "ids_recent": [
+    "14692986824"
+   ]
   },
   {
    "key": "workflow_improvements",
@@ -385,6 +427,7 @@
    "n_recent": 6,
    "n_prior": 0,
    "low_recent": 0,
+   "pos_recent": 4,
    "avg": 4,
    "avg_recent": 4,
    "bug_share": 0.17,
@@ -422,36 +465,6 @@
    ]
   },
   {
-   "key": "accessibility",
-   "label": "Accessibility Support",
-   "describe": "Specific complaints regarding the lack of accessibility features.",
-   "n": 1,
-   "n_recent": 1,
-   "n_prior": 0,
-   "low_recent": 1,
-   "avg": 1,
-   "avg_recent": 1,
-   "bug_share": 0.0,
-   "last_seen": "2026-10-21",
-   "share_recent": 0.017,
-   "quotes": [
-    {
-     "stars": 1,
-     "date": "2026-10-21",
-     "version": "5.0.0.1168",
-     "cc": "GB",
-     "title": "Accessibility",
-     "text": "The company always ignored an accessibility of their products. So there’s no surprise that there are no changes in that case. Another competitor do it better."
-    }
-   ],
-   "gists": [
-    "No accessibility features; competitor does it better."
-   ],
-   "ids_recent": [
-    "14692986824"
-   ]
-  },
-  {
    "key": "usability_and_stability",
    "label": "Stability & Bugs",
    "describe": "Reports of crashes, disconnections, or general instability during use.",
@@ -459,6 +472,7 @@
    "n_recent": 1,
    "n_prior": 0,
    "low_recent": 0,
+   "pos_recent": 0,
    "avg": 3,
    "avg_recent": 3,
    "bug_share": 1.0,
@@ -489,6 +503,7 @@
    "n_recent": 23,
    "n_prior": 0,
    "low_recent": 0,
+   "pos_recent": 23,
    "avg": 5,
    "avg_recent": 5,
    "bug_share": 0.0,
@@ -722,6 +737,36 @@
   {
    "d": "2026-11-21",
    "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-27",
+   "n": 0,
    "low": 0
   }
  ],

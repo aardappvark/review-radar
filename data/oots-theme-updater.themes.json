@@ -1,0 +1,49 @@
+{
+ "themes": [
+  {
+   "key": "pricing_model_changes",
+   "label": "Pricing Model Changes",
+   "describe": "Users are highly upset about the shift from free/included updates to mandatory paid subscriptions."
+  },
+  {
+   "key": "customization_loss",
+   "label": "Customization Loss",
+   "describe": "Updates frequently overwrite or fail to transfer user-made customizations and code changes."
+  },
+  {
+   "key": "support_responsiveness",
+   "label": "Support Responsiveness",
+   "describe": "Complaints about slow, unhelpful, or non-existent customer support responses."
+  },
+  {
+   "key": "update_bugs_functionality",
+   "label": "Update Bugs/Functionality",
+   "describe": "The updates themselves are reported to contain bugs, break features, or cause site failures."
+  },
+  {
+   "key": "manual_work_required",
+   "label": "Manual Work Required",
+   "describe": "Users report that updates require extensive, time-consuming manual rebuilding or developer intervention."
+  },
+  {
+   "key": "billing_disputes",
+   "label": "Billing Disputes",
+   "describe": "Issues with unexpected charges, automatic renewals, or difficulty canceling subscriptions."
+  },
+  {
+   "key": "app_reliability",
+   "label": "App Reliability",
+   "describe": "The app itself is reported as buggy, failing to run, or not completing the update process."
+  },
+  {
+   "key": "bait_and_switch",
+   "label": "Changed terms after purchase",
+   "describe": "Reviewers say plans, prices or included features changed after they had paid."
+  },
+  {
+   "key": "Praise",
+   "label": "Praise",
+   "describe": "Reviews that express overall satisfaction with the product or service."
+  }
+ ]
+}

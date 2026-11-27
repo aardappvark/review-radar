@@ -1,62 +1,101 @@
 #!/usr/bin/env python3
-"""Pull public App Store reviews (Apple's customer-review RSS) for a set of apps.
+"""Pull public reviews for every app in apps.json.
 
-Apple serves the most recent ~500 reviews per app per storefront (10 pages x 50).
-We keep id, storefront, rating, version, date, title, body. No usernames are stored.
+- Apple: the customer-review RSS feed, the most recent ~500 per storefront (10 pages x 50), six English storefronts.
+- Shopify App Store: the public review pages (newest first, 10 per page), up to MAX_SHOPIFY_PAGES pages.
+We keep id, country, rating, version, date, title and text. Reviewer and store names are never stored.
+Usage: fetch.py [slug ...]   (no slugs = all apps)
 """
-import json, sys, time, urllib.request, pathlib
+import datetime as dt, html, json, re, sys, time, urllib.request, pathlib
 
-APPS = {
-    "letterboxd": 1054271011,
-    "serato-dj": 6754231707,
-}
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+OUT = ROOT / "data"
+APPS = {a["slug"]: a for a in json.loads((ROOT / "apps.json").read_text())}
 COUNTRIES = ["us", "gb", "ca", "au", "nz", "ie"]
-OUT = pathlib.Path(__file__).resolve().parent.parent / "data"
+MAX_SHOPIFY_PAGES = 50
+UA = {"User-Agent": "Mozilla/5.0 (Macintosh) review-radar/0.2"}
 
 
-def page(app_id, cc, n):
-    url = f"https://itunes.apple.com/{cc}/rss/customerreviews/page={n}/id={app_id}/sortBy=mostRecent/json"
-    req = urllib.request.Request(url, headers={"User-Agent": "review-radar/0.1"})
+def get(url, as_json=False):
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=20) as r:
-                return json.load(r).get("feed", {}).get("entry", [])
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=25) as r:
+                body = r.read()
+                return json.loads(body) if as_json else body.decode("utf-8", "replace")
         except Exception as e:  # noqa: BLE001
             if attempt == 2:
-                print(f"  ! {cc} p{n}: {e}", file=sys.stderr)
-                return []
-            time.sleep(1.5 * (attempt + 1))
+                print(f"  ! {url[:90]}: {e}", file=sys.stderr)
+                return None
+            time.sleep(2 * (attempt + 1))
+
+
+def apple(app):
+    seen, rows = set(), []
+    for cc in COUNTRIES:
+        got = 0
+        for n in range(1, 11):
+            d = get(f"https://itunes.apple.com/{cc}/rss/customerreviews/page={n}/id={app['id']}/sortBy=mostRecent/json", as_json=True)
+            entries = (d or {}).get("feed", {}).get("entry", [])
+            if isinstance(entries, dict):
+                entries = [entries]
+            fresh = [e for e in entries if "im:rating" in e]
+            if not fresh:
+                break
+            for e in fresh:
+                rid = e["id"]["label"]
+                if rid in seen:
+                    continue
+                seen.add(rid)
+                rows.append({"id": rid, "cc": cc, "rating": int(e["im:rating"]["label"]),
+                             "version": e.get("im:version", {}).get("label", ""), "date": e.get("updated", {}).get("label", ""),
+                             "title": e.get("title", {}).get("label", ""), "body": e.get("content", {}).get("label", "")})
+                got += 1
+            time.sleep(0.3)
+        print(f"  {app['slug']} {cc}: {got}")
+    return rows
+
+
+def shopify(app):
+    rows, seen = [], set()
+    for n in range(1, MAX_SHOPIFY_PAGES + 1):
+        h = get(f"https://apps.shopify.com/{app['id']}/reviews?sort_by=newest&page={n}")
+        if not h:
+            break
+        blocks = re.split(r'<div data-merchant-review="" data-review-content-id="', h)[1:]
+        if not blocks:
+            break
+        for b in blocks:
+            rid = b.split('"', 1)[0]
+            if rid in seen:
+                continue
+            seen.add(rid)
+            stars = re.search(r'aria-label="(\d) out of 5 stars"', b)
+            # A developer reply is a separate block inside the review: cut it off before reading the merchant's text.
+            main = re.split(r'(?i)replied|<div[^>]*data-reply', b)[0]
+            main = re.sub(r"<svg.*?</svg>", "", main, flags=re.S)
+            parts = [html.unescape(p).strip() for p in re.split(r"<[^>]+>", main)]
+            parts = [p for p in parts if p and not p.startswith(("tw-", "class=")) and p not in ("Show more", "Show less")]
+            date_i = next((i for i, p in enumerate(parts) if re.fullmatch(r"[A-Z][a-z]+ \d{1,2}, \d{4}", p)), None)
+            if date_i is None or not stars:
+                continue
+            d = dt.datetime.strptime(parts[date_i], "%B %d, %Y").date().isoformat()
+            # Layout after the date: text paragraph(s), store name (dropped), country, "N years using the app".
+            u = next((i for i in range(date_i + 1, len(parts)) if "using the app" in parts[i]), None)
+            if u is not None and u - 2 > date_i:
+                text, country = "\n".join(parts[date_i + 1:u - 2]), parts[u - 1]
+            else:  # layout not recognised: keep the stars only, so a store name can never be stored as text
+                text, country = "", ""
+            rows.append({"id": rid, "cc": country, "rating": int(stars.group(1)), "version": "",
+                         "date": f"{d}T12:00:00-07:00", "date_only": True, "title": "", "body": text})
+        time.sleep(1.0)
+    print(f"  {app['slug']}: {len(rows)} reviews from {n} pages")
+    return rows
 
 
 def main():
-    for slug, app_id in APPS.items():
-        seen, rows = set(), []
-        for cc in COUNTRIES:
-            got = 0
-            for n in range(1, 11):
-                entries = page(app_id, cc, n)
-                if isinstance(entries, dict):
-                    entries = [entries]
-                fresh = [e for e in entries if "im:rating" in e]
-                if not fresh:
-                    break
-                for e in fresh:
-                    rid = e["id"]["label"]
-                    if rid in seen:
-                        continue
-                    seen.add(rid)
-                    rows.append({
-                        "id": rid,
-                        "cc": cc,
-                        "rating": int(e["im:rating"]["label"]),
-                        "version": e.get("im:version", {}).get("label", ""),
-                        "date": e.get("updated", {}).get("label", ""),
-                        "title": e.get("title", {}).get("label", ""),
-                        "body": e.get("content", {}).get("label", ""),
-                    })
-                    got += 1
-                time.sleep(0.3)
-            print(f"{slug} {cc}: {got}")
+    for slug in sys.argv[1:] or list(APPS):
+        app = APPS[slug]
+        rows = apple(app) if app["store"] == "apple" else shopify(app)
         rows.sort(key=lambda r: r["date"], reverse=True)
         (OUT / f"{slug}.reviews.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1))
         print(f"{slug}: {len(rows)} reviews, {rows[-1]['date'][:10] if rows else '-'} .. {rows[0]['date'][:10] if rows else '-'}")

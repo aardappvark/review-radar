@@ -1,0 +1,77 @@
+{
+ "generated": "2026-11-27 06:44 UTC",
+ "apps": [
+  {
+   "slug": "letterboxd",
+   "app": "Letterboxd",
+   "company": "Letterboxd",
+   "store": "apple",
+   "store_rating": 4.82,
+   "store_rating_count": 88438,
+   "written_reviews_read": 700,
+   "window": "last 90 days",
+   "problems_ranked": 5,
+   "incidents": 3
+  },
+  {
+   "slug": "serato-dj",
+   "app": "Serato DJ",
+   "company": "Serato",
+   "store": "apple",
+   "store_rating": 3.85,
+   "store_rating_count": 106,
+   "written_reviews_read": 59,
+   "window": "last 90 days",
+   "problems_ranked": 5,
+   "incidents": 0
+  },
+  {
+   "slug": "stamped",
+   "app": "Stamped Product Reviews & UGC",
+   "company": "Stamped",
+   "store": "shopify",
+   "store_rating": 4.7,
+   "store_rating_count": 3752,
+   "written_reviews_read": 108,
+   "window": "last 12 months",
+   "problems_ranked": 5,
+   "incidents": 0
+  },
+  {
+   "slug": "kno",
+   "app": "KNO Post Purchase Surveys",
+   "company": "KNO Commerce",
+   "store": "shopify",
+   "store_rating": 4.9,
+   "store_rating_count": 118,
+   "written_reviews_read": 83,
+   "window": "last 12 months",
+   "problems_ranked": 0,
+   "incidents": 0
+  },
+  {
+   "slug": "foursixty",
+   "app": "Foursixty Shoppable Social UGC",
+   "company": "Foursixty",
+   "store": "shopify",
+   "store_rating": 4.9,
+   "store_rating_count": 137,
+   "written_reviews_read": 24,
+   "window": "last 12 months",
+   "problems_ranked": 0,
+   "incidents": 0
+  },
+  {
+   "slug": "oots-theme-updater",
+   "app": "Theme Updater & Backups",
+   "company": "Out of the Sandbox",
+   "store": "shopify",
+   "store_rating": 4.2,
+   "store_rating_count": 293,
+   "written_reviews_read": 148,
+   "window": "last 12 months",
+   "problems_ranked": 1,
+   "incidents": 0
+  }
+ ]
+}

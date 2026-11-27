@@ -4,12 +4,14 @@ Every recent written App Store review of an app, read by a local model and turne
 
 Live: https://aardappvark.github.io/review-radar/
 
-Built in one sitting (27 Nov 2026, 1:53–2:28 pm Melbourne) as a demo on two Tiny companies' apps, Letterboxd and Serato DJ. Independent; not affiliated with either.
+First version built in one sitting (27 Nov 2026, 1:53–2:28 pm Melbourne) on Letterboxd and Serato DJ, then extended the same day to every Tiny company with public app reviews: Stamped, KNO, Foursixty and Out of the Sandbox (Shopify App Store). BeFunky and Visionn are next: Apple's review feed returned nothing on 27 Nov evening. Independent; not affiliated with Tiny or any of these companies.
+
+**For agents:** `claude mcp add --transport http review-radar https://review-radar.aardappvark.workers.dev/mcp` (source in `mcp/`; tools: list_apps, top_problems, incidents, versions, themes, draft_reply).
 
 ## Run it
 
 ```bash
-python3 tools/fetch.py      # Apple's public review feed: 500 most recent per storefront, 6 storefronts
+python3 tools/fetch.py      # apps.json: Apple's review feed (500 per storefront, 6 storefronts) and Shopify App Store review pages
 python3 tools/tag.py        # local gemma4 (Ollama): theme list, then 0-2 themes + bug flag + gist per review
 python3 tools/analyse.py    # themes and trend, version regressions, bursts, copy-paste text
 python3 tools/brief.py      # local gemma4 26B drafts the top-5 cards; numbers checked against the data

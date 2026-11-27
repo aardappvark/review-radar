@@ -26,8 +26,8 @@ def discover(slug, app_name, rows):
         return json.loads(path.read_text())
     low = [r for r in rows if r["rating"] <= 3]
     random.Random(7).shuffle(low)
-    sample = "\n".join(f"- [{r['rating']}*] {r['title']}: {r['body'][:300]}" for r in low[:120])
-    out = ask(f"""You are a product analyst reading App Store reviews of the {app_name} iOS app.
+    sample = "\n".join(f"- [{r['rating']}*] {(r['title'] + ': ') if r['title'] else ''}{r['body'][:300]}" for r in low[:120] if r['body'].strip())
+    out = ask(f"""You are a product analyst reading public reviews of the {app_name} app.
 Propose 8 to 11 distinct, specific complaint/request themes that cover these reviews.
 Use short plain labels a product manager would use (e.g. "Login & account", "Crashes on launch").
 Also include one theme named "Praise" for purely positive reviews.
@@ -44,13 +44,13 @@ def classify(slug, app_name, rows, themes):
     cache = json.loads(path.read_text()) if path.exists() else {}
     keys = [t["key"] for t in themes["themes"]]
     menu = "\n".join(f"- {t['key']}: {t['describe']}" for t in themes["themes"])
-    todo = [r for r in rows if r["id"] not in cache]
+    todo = [r for r in rows if r["id"] not in cache and (r["body"].strip() or r["title"].strip())]  # stars-only reviews have nothing to tag
     print(f"{slug}: {len(todo)} to tag ({len(cache)} cached)")
     for i in range(0, len(todo), BATCH):
         chunk = todo[i:i + BATCH]
-        listing = "\n".join(f"#{j} [{r['rating']}*, v{r['version']}] {r['title']}: {r['body'][:600]}" for j, r in enumerate(chunk))
+        listing = "\n".join(f"#{j} [{r['rating']}*{', v' + r['version'] if r['version'] else ''}] {(r['title'] + ': ') if r['title'] else ''}{r['body'][:600]}" for j, r in enumerate(chunk))
         try:
-            out = ask(f"""Classify each App Store review of the {app_name} iOS app.
+            out = ask(f"""Classify each public review of the {app_name} app.
 Themes (use only these keys):
 {menu}
 
@@ -78,11 +78,12 @@ Reviews:
             path.write_text(json.dumps(cache, ensure_ascii=False))
             print(f"  {min(i + BATCH, len(todo))}/{len(todo)}", flush=True)
     path.write_text(json.dumps(cache, ensure_ascii=False))
-    missing = [r["id"] for r in rows if r["id"] not in cache]
+    missing = [r["id"] for r in rows if r["id"] not in cache and (r["body"].strip() or r["title"].strip())]
     print(f"{slug}: tagged {len(rows) - len(missing)}/{len(rows)}")
 
 
-APPS = {"letterboxd": "Letterboxd", "serato-dj": "Serato DJ"}
+_APPS = json.loads((ROOT.parent / "apps.json").read_text())
+APPS = {a["slug"]: f"{a['name']} {'iOS' if a['store'] == 'apple' else 'Shopify'}" for a in _APPS}  # e.g. "Letterboxd iOS"
 
 if __name__ == "__main__":
     only = sys.argv[1:] or list(APPS)

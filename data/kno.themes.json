@@ -1,0 +1,44 @@
+{
+ "themes": [
+  {
+   "key": "advanced_filtering_cost",
+   "label": "Advanced Filtering Cost",
+   "describe": "Limitation of advanced features (like audience targeting) requiring higher-tier plans."
+  },
+  {
+   "key": "session_persistence",
+   "label": "Session Persistence",
+   "describe": "Users are frequently logged out unexpectedly despite successful transactions."
+  },
+  {
+   "key": "support_response_time",
+   "label": "Support Response Time",
+   "describe": "Customer support response times are reported as excessively slow, especially for urgent issues."
+  },
+  {
+   "key": "setup_complexity",
+   "label": "Setup Complexity",
+   "describe": "The initial setup process for surveys can be time-consuming and difficult to configure."
+  },
+  {
+   "key": "template_usability",
+   "label": "Template Usability",
+   "describe": "Difficulty or limitations encountered when using provided survey templates."
+  },
+  {
+   "key": "integration_gaps",
+   "label": "Integration Gaps",
+   "describe": "Comparison to competitors highlighting missing or superior features in other tools."
+  },
+  {
+   "key": "billing_clarity",
+   "label": "Billing Clarity",
+   "describe": "Confusion or frustration regarding feature limitations tied to specific pricing tiers."
+  },
+  {
+   "key": "Praise",
+   "label": "Praise",
+   "describe": "Reviews containing purely positive feedback about the app's functionality or experience."
+  }
+ ]
+}

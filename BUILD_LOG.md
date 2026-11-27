@@ -16,3 +16,9 @@
 | 14:25 | Checker made per-field: unknown numbers or versions, or a reply that promises work, send the card back. Caught a "we are looking into" reply. |
 | 14:26 | Ranking changed to 1–2★ count first: a 4.15★ feature-request theme had ranked above crash reports. |
 | 14:28 | Page built and checked: desktop, phone width (no sideways scroll), dark mode, tab switching, 0 JS errors. Finished. |
+| 17:10 | Extended to every Tiny company with public app reviews: tiny.com lists 21 companies; App Store sellers checked by name (Letterboxd, Serato, BeFunky only); Shopify developer pages confirmed Stamped, KNO, Foursixty, Out of the Sandbox. |
+| 17:20 | Shopify reader: 939 reviews; store names never stored (a review whose layout isn't recognised keeps its stars only). Apple's feed went empty from two networks, so BeFunky and Visionn wait. |
+| 17:40 | Quiet apps get a 12-month window; praise buckets normalised; an accusatory theme label ("Bait-and-Switch") neutralised. |
+| 18:05 | Caught cards presenting mostly-praise themes as problems (Stamped support: 15 of 21 are 4–5★). Rule: a problem needs a 1–2★ review, and a theme raised mostly in happy reviews says so, from the counts. |
+| 18:15 | MCP server on Cloudflare Workers reading the published data; six tools. |
+
