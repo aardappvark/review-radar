@@ -16,7 +16,7 @@ const APP_ARG = { type: "string", description: "App slug from list_apps, e.g. le
 const TOOLS = [
   { name: "list_apps", description: "Every Tiny app Review Radar covers: store, rating, how many written reviews were read, and the window used.",
     inputSchema: { type: "object", properties: {}, additionalProperties: false } },
-  { name: "top_problems", description: "The top problems in an app's recent reviews, ranked by 1-2 star reviews: headline, what people report, where to look, the smallest next step, evidence quotes and counts.",
+  { name: "top_problems", description: "The top problems in an app's recent reviews, ranked by 1-2 star reviews: headline, what people report, where to look, the smallest next step, evidence quotes and counts, plus action points: how many reviews name something specific vs too vague to act on, the specific requests with counts, and a direction, expected outcome and how to check.",
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "incidents", description: "Days when an app got far more reviews than normal (often an outage), with the main complaint, the version, and when a three-report alert would have fired.",
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
@@ -74,8 +74,14 @@ async function callTool(name, args, ctx) {
           reviews: t.n_recent, one_or_two_stars: t.low_recent, previous_period: t.n_prior, average_stars: t.avg_recent,
           evidence: t.quotes.map((q) => ({ stars: q.stars, date: q.date, version: q.version || undefined, text: q.text_en || q.text,
             original: q.text_en ? q.text : undefined, translated_from: q.language || undefined })),
+          action_points: t.actions ? {
+            reviews_read: t.actions.n, specific: t.actions.specific, too_vague_to_act_on: t.actions.noise,
+            requests: t.actions.requests.map((r) => ({ request: r.request, reviews: r.count, quote: r.quote || undefined, stars: r.stars ?? undefined })),
+            no_pattern_yet: t.actions.single || undefined,
+            direction: t.actions.direction, expected_outcome: t.actions.outcome, how_to_check: t.actions.check,
+          } : undefined,
         })),
-        note: "Drafted by a local model; every number and version is checked against the data. Reviews are a loud minority: they show where to look.",
+        note: "Drafted by a local model; every number and version is checked against the data. Action-point counts are computed from the reviews the model grouped; no_pattern_yet means no two reviews ask for the same thing. Reviews are a loud minority: they show where to look.",
       };
     }
     case "incidents": {
