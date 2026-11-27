@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Radar</title>
+<meta name="description" content="What recent App Store reviews say about two Tiny apps: top problems, incidents, version regressions and drafted replies. Built in one afternoon.">
+<style>
+:root{
+  --bg:#f7f6f2; --panel:#ffffff; --ink:#1b1d1f; --muted:#62676d; --line:#e4e2dc;
+  --accent:#d0542c; --accent-soft:#fbe9e2; --ok:#2f7d5b; --ok-soft:#e3f2ea; --warn:#b7791f; --warn-soft:#fbf1dc;
+  --bar:#c9c6bd; --bar-low:#d0542c; --chip:#efede7; --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121314; --panel:#1b1c1e; --ink:#ecebe7; --muted:#9a9ea3; --line:#2c2e31;
+    --accent:#f07a52; --accent-soft:#3a2219; --ok:#5cc196; --ok-soft:#18302a; --warn:#e3a94a; --warn-soft:#33281a;
+    --bar:#4a4c50; --bar-low:#f07a52; --chip:#26282b; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121314; --panel:#1b1c1e; --ink:#ecebe7; --muted:#9a9ea3; --line:#2c2e31;
+  --accent:#f07a52; --accent-soft:#3a2219; --ok:#5cc196; --ok-soft:#18302a; --warn:#e3a94a; --warn-soft:#33281a;
+  --bar:#4a4c50; --bar-low:#f07a52; --chip:#26282b; --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
+header .kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:34px;line-height:1.15;margin:6px 0 10px;letter-spacing:-.02em}
+h2{font-size:20px;margin:40px 0 4px;letter-spacing:-.01em}
+h2 + .sub{color:var(--muted);margin:0 0 14px;font-size:14px}
+.lede{font-size:17px;color:var(--muted);max-width:720px;margin:0}
+.built{margin-top:14px;font-size:13px;color:var(--muted)}
+.built b{color:var(--ink)}
+.tabs{display:flex;gap:8px;margin:26px 0 6px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:9px 14px;border-radius:999px;font:inherit;font-weight:600;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab small{font-weight:500;opacity:.7;margin-left:6px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.kpi .v{font-size:26px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:13px;color:var(--muted)}
+.kpi.alert .v{color:var(--accent)}
+.callout{background:var(--accent-soft);border-radius:14px;padding:14px 16px;margin-top:12px;font-size:14.5px}
+.callout b{color:var(--accent)}
+.cards{display:grid;gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+.card .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.rank{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.card h3{margin:2px 0 6px;font-size:18px;letter-spacing:-.01em}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip.up{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.chip.down{background:var(--ok-soft);color:var(--ok);font-weight:600}
+.grid3{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;margin-top:10px}
+.grid3 .h{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.grid3 p{margin:0;font-size:14.5px}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--ink)}
+summary::marker{color:var(--muted)}
+.quotes{display:grid;gap:8px;margin-top:10px}
+.q{border-left:3px solid var(--line);padding:2px 0 2px 12px;font-size:14px}
+.q .meta{font-size:12px;color:var(--muted)}
+.reply{margin-top:10px;background:var(--ok-soft);border-radius:12px;padding:12px 14px;font-size:14px}
+.reply .meta{font-size:12px;color:var(--ok);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.copy{float:right;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;font:inherit;font-size:12px;padding:3px 8px;cursor:pointer}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.chart svg{display:block;width:100%;height:auto}
+.legend{display:flex;gap:14px;font-size:12.5px;color:var(--muted);margin-top:8px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.incident{margin-top:12px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.incident .date{background:var(--accent);color:#fff;border-radius:10px;padding:8px 10px;text-align:center;font-weight:700;line-height:1.1;min-width:64px}
+.incident .date small{display:block;font-weight:500;font-size:11px;opacity:.9}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.flag td{background:var(--accent-soft)}
+.stars{white-space:nowrap}
+.delta.neg{color:var(--accent);font-weight:700}
+.delta.pos{color:var(--ok);font-weight:700}
+.bar{height:8px;border-radius:4px;background:var(--chip);overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--accent)}
+.muted{color:var(--muted)}
+.method{font-size:14px;color:var(--muted)}
+.method li{margin:4px 0}
+footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+a{color:var(--accent)}
+.theme-toggle{position:absolute;top:16px;right:16px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 10px;font:inherit;font-size:12px;cursor:pointer}
+@media (max-width:760px){
+  h1{font-size:27px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .grid3{grid-template-columns:1fr}
+  .incident{grid-template-columns:1fr}
+  .incident .date{justify-self:start}
+  .theme-toggle{position:static;margin-bottom:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap" style="position:relative">
+<button class="theme-toggle" id="themeBtn" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+<header>
+  <div class="kicker">Review Radar · demo</div>
+  <h1>What App Store reviews are telling two Tiny apps</h1>
+  <p class="lede">Every recent written review read, tagged and ranked into the handful of problems worth a look this week, with the evidence, the version it started in, and a reply ready to post.</p>
+  <div class="built" id="built"></div>
+</header>
+
+<div class="tabs" role="tablist" id="tabs"></div>
+<main id="app"></main>
+
+<h2>How this works</h2>
+<p class="sub">Small enough to run every morning; honest about what it can't see.</p>
+<div class="panel method">
+<ul id="method"></ul>
+</div>
+
+<footer>
+  Independent demo built from public App Store reviews. Not affiliated with or endorsed by Letterboxd, Serato or Tiny. Reviewer names are never stored or shown.
+  <span id="footerExtra"></span>
+</footer>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = n => Number(n).toLocaleString('en-US');
+const stars = n => '★'.repeat(n) + '☆'.repeat(5 - n);
+const pct = x => Math.round(x * 100) + '%';
+const mdate = d => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'});
+
+// Theme toggle (remembered per viewer when storage works)
+(function(){
+  const root = document.documentElement;
+  try { const t = localStorage.getItem('rr-theme'); if (t) root.dataset.theme = t; } catch (e) {}
+  $('#themeBtn').addEventListener('click', () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('rr-theme', root.dataset.theme); } catch (e) {}
+  });
+})();
+
+$('#built').innerHTML = D.meta.built_line;
+$('#footerExtra').innerHTML = D.meta.footer || '';
+$('#method').innerHTML = D.meta.method.map(m => `<li>${m}</li>`).join('');
+
+const tabs = $('#tabs');
+D.apps.forEach((a, i) => {
+  const b = document.createElement('button');
+  b.className = 'tab'; b.type = 'button'; b.role = 'tab';
+  b.innerHTML = `${esc(a.name)}<small>${fmt(a.window.n)} reviews</small>`;
+  b.addEventListener('click', () => show(i));
+  tabs.appendChild(b);
+});
+
+function trendChip(t){
+  if (!t.n_prior && t.n_recent) return `<span class="chip up">new in last 90 days</span>`;
+  if (!t.n_prior) return '';
+  const r = (t.n_recent - t.n_prior) / t.n_prior;
+  if (Math.abs(r) < 0.15) return `<span class="chip">steady vs prior 90 days</span>`;
+  return r > 0 ? `<span class="chip up">▲ ${Math.round(r*100)}% vs prior 90 days</span>` : `<span class="chip down">▼ ${Math.round(-r*100)}% vs prior 90 days</span>`;
+}
+
+function chart(a){
+  const s = a.series, W = 900, H = 170, pad = {l: 28, r: 8, t: 14, b: 22};
+  const max = Math.max(4, ...s.map(x => x.n));
+  const bw = (W - pad.l - pad.r) / s.length;
+  const y = v => pad.t + (H - pad.t - pad.b) * (1 - v / max);
+  const css = getComputedStyle(document.documentElement);
+  const cBar = css.getPropertyValue('--bar').trim(), cLow = css.getPropertyValue('--bar-low').trim(), cLine = css.getPropertyValue('--line').trim(), cMuted = css.getPropertyValue('--muted').trim(), cInk = css.getPropertyValue('--ink').trim();
+  let g = '';
+  [0, Math.round(max/2), max].forEach(v => { g += `<line x1="${pad.l}" x2="${W-pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="${cLine}"/><text x="${pad.l-6}" y="${y(v)+4}" font-size="11" text-anchor="end" fill="${cMuted}">${v}</text>`; });
+  s.forEach((x, i) => {
+    const X = pad.l + i * bw;
+    if (x.n) {
+      g += `<rect x="${X+0.5}" y="${y(x.n)}" width="${Math.max(1, bw-1)}" height="${y(0)-y(x.n)}" fill="${cBar}"><title>${x.d}: ${x.n} review${x.n === 1 ? '' : 's'}, ${x.low} at 1–2★</title></rect>`;
+      if (x.low) g += `<rect x="${X+0.5}" y="${y(x.low)}" width="${Math.max(1, bw-1)}" height="${y(0)-y(x.low)}" fill="${cLow}"/>`;
+    }
+    if (x.d.endsWith('-01')) g += `<text x="${X}" y="${H-6}" font-size="11" fill="${cMuted}">${new Date(x.d+'T00:00:00Z').toLocaleDateString('en-US',{month:'short',timeZone:'UTC'})}</text>`;
+  });
+  const biggest = a.bursts.reduce((m, b) => (!m || b.n > m.n ? b : m), null);
+  a.bursts.forEach((b, k) => {
+    const i = s.findIndex(x => x.d === b.date); if (i < 0) return;
+    const X = pad.l + i * bw + bw/2, Y = y(b.n) - 4;
+    const big = b === biggest, label = big ? `${mdate(b.date)}: ${b.n} reviews in a day` : mdate(b.date);
+    const anchor = X > W - (big ? 200 : 60) ? 'end' : 'start';
+    const ty = big ? pad.t + 9 : pad.t + 9 + 14 * (1 + (k % 2));
+    g += `<line x1="${X}" x2="${X}" y1="${Y}" y2="${pad.t}" stroke="${cInk}" stroke-dasharray="2 2"/><text x="${anchor==='end'?X-5:X+5}" y="${ty}" font-size="12" font-weight="${big ? 700 : 600}" fill="${cInk}" text-anchor="${anchor}">${label}</text>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reviews per day for the last ${s.length} days">${g}</svg>`;
+}
+
+function show(i){
+  [...tabs.children].forEach((b, j) => b.setAttribute('aria-selected', String(i === j)));
+  const a = D.apps[i];
+  const hasPrior = a.window.prior_n > 0;
+  const top = a.themes.filter(t => t.brief);
+  const gap = (a.store.avg - a.written_avg_recent).toFixed(1);
+  let h = '';
+  h += `<div class="kpis">
+    <div class="kpi"><div class="v">${a.store.avg.toFixed(2)}★</div><div class="l">App Store rating (${fmt(a.store.count)} ratings, US)</div></div>
+    <div class="kpi alert"><div class="v">${a.written_avg_recent.toFixed(2)}★</div><div class="l">average of written reviews, last 90 days (${fmt(a.window.recent_n)})</div></div>
+    <div class="kpi"><div class="v">${pct(a.bug_share_recent)}</div><div class="l">of recent reviews report something broken</div></div>
+    <div class="kpi"><div class="v">v${esc(a.store.version)}</div><div class="l">current version, released ${mdate(a.store.version_date)}</div></div>
+  </div>`;
+  h += `<div class="callout">${a.callout}</div>`;
+
+  h += `<h2>Top problems right now</h2><p class="sub">Ranked by how many recent reviews raise each one and how angry they are. Each card is drafted by a local model and every number in it is checked against the data.</p><div class="cards">`;
+  top.forEach((t, k) => {
+    const b = t.brief, q = t.quotes[b.reply_to] || t.quotes[0];
+    h += `<article class="card">
+      <div class="top"><div><div class="rank">#${k+1} · ${esc(t.label)}</div><h3>${esc(b.headline)}</h3></div></div>
+      <div class="chips"><span class="chip">${t.n_recent} reviews, last 90 days</span><span class="chip">${t.low_recent} at 1–2★</span>${t.avg_recent != null ? `<span class="chip">avg ${t.avg_recent}★</span>` : ''}${hasPrior ? trendChip(t) : ''}</div>
+      <div class="grid3">
+        <div><div class="h">What people report</div><p>${esc(b.happening)}</p></div>
+        <div><div class="h">Where to look</div><p>${esc(b.where_to_look)}</p></div>
+        <div><div class="h">Smallest next step</div><p>${esc(b.action)}</p></div>
+      </div>
+      <details><summary>Evidence and a reply ready to post</summary>
+        <div class="quotes">${t.quotes.map(x => `<div class="q"><div class="meta"><span class="stars">${stars(x.stars)}</span> · v${esc(x.version)} · ${esc(x.cc)} · ${mdate(x.date)}</div><b>${esc(x.title)}</b> ${esc(x.text)}</div>`).join('')}</div>
+        ${q ? `<div class="reply"><button class="copy" type="button">Copy</button><div class="meta">Drafted reply to “${esc(q.title)}”</div><span class="rtext">${esc(b.reply)}</span></div>` : ''}
+      </details>
+    </article>`;
+  });
+  h += `</div>`;
+
+  h += `<h2>Incidents</h2><p class="sub">Reviews per day (orange = 1–2★). A spike far above the normal daily rate usually means something broke for everyone at once.</p><div class="panel chart">${chart(a)}
+    <div class="legend"><span><i style="background:var(--bar)"></i>all written reviews</span><span><i style="background:var(--bar-low)"></i>1–2★</span><span>normal day: ${a.bursts[0] ? a.bursts[0].base : 'about 1'} review${a.bursts[0] && a.bursts[0].base !== 1 ? 's' : ''}</span></div>`;
+  if (a.bursts.length) {
+    a.bursts.forEach(b => {
+      h += `<div class="incident"><div class="date">${mdate(b.date)}<small>v${esc(b.version)}</small></div><div>
+        <b>${b.n} reviews in one day</b> (${b.low} at 1–2★), mostly <b>${esc(b.theme)}</b>. First one at ${b.first}${b.alert_at ? `; a three-report alert would have fired at <b>${b.alert_at}</b>` : ''}.
+        <div class="quotes">${b.quotes.map(x => `<div class="q"><div class="meta">${stars(x.stars)} · ${esc(x.cc)}</div><b>${esc(x.title)}</b> ${esc(x.text)}</div>`).join('')}</div></div></div>`;
+    });
+  } else {
+    h += `<p class="muted" style="margin:12px 0 0">No day stood out after launch week. ${esc(a.no_burst_note || '')}</p>`;
+  }
+  h += `</div>`;
+
+  h += `<h2>By version</h2><p class="sub">Written-review average per release, in release order. Highlighted rows dropped half a star or more from the release before.</p><div class="panel tablewrap"><table>
+    <thead><tr><th>Version</th><th>Seen</th><th>Reviews</th><th>Avg</th><th>Change</th><th>Broken</th><th>Main complaints</th></tr></thead><tbody>`;
+  a.versions.slice().reverse().forEach(v => {
+    const d = v.delta == null ? '<span class="muted">–</span>' : `<span class="delta ${v.delta < 0 ? 'neg' : 'pos'}">${v.delta > 0 ? '+' : ''}${v.delta.toFixed(2)}</span>`;
+    h += `<tr class="${v.flag ? 'flag' : ''}"><td><b>${esc(v.version)}</b></td><td class="muted">${mdate(v.first)}${v.last !== v.first ? '–' + mdate(v.last) : ''}</td><td>${v.n}</td><td>${v.avg.toFixed(2)}</td><td>${d}</td><td>${pct(v.bug_share)}</td><td>${esc(v.top.join(', '))}</td></tr>`;
+  });
+  h += `</tbody></table></div>`;
+
+  h += `<h2>Every theme</h2><p class="sub">${fmt(a.window.n)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}, storefronts ${esc(a.window.countries.join(', '))}.</p><div class="panel tablewrap"><table>
+    <thead><tr><th>Theme</th><th>Last 90 days</th><th>Share</th>${hasPrior ? '<th>Prior 90</th>' : ''}<th>Avg</th>${hasPrior ? '<th>All in window</th>' : ''}</tr></thead><tbody>`;
+  a.themes.forEach(t => {
+    h += `<tr><td><b>${esc(t.label)}</b><div class="muted" style="font-size:13px">${esc(t.describe)}</div></td><td>${t.n_recent}</td><td><div class="bar"><span style="width:${Math.min(100, t.share_recent*100*2)}%"></span></div><span class="muted" style="font-size:12px">${pct(t.share_recent)}</span></td>${hasPrior ? `<td>${t.n_prior}</td>` : ''}<td>${t.avg.toFixed(2)}</td>${hasPrior ? `<td>${t.n}</td>` : ''}</tr>`;
+  });
+  h += `</tbody></table></div>`;
+
+  if (a.dups.length) {
+    h += `<h2>Copy-paste reviews</h2><p class="sub">Different reviews with near-identical text, often a campaign or a bot.</p><div class="panel">`;
+    a.dups.forEach(d => { h += `<div class="q" style="margin-bottom:10px"><div class="meta">${Math.round(d.jaccard*100)}% overlap</div>${stars(d.a.stars)} ${esc(d.a.cc)} ${mdate(d.a.date)}: ${esc(d.a.text)}<br>${stars(d.b.stars)} ${esc(d.b.cc)} ${mdate(d.b.date)}: ${esc(d.b.text)}</div>`; });
+    h += `</div>`;
+  }
+
+  $('#app').innerHTML = h;
+  $('#app').querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', () => {
+    const t = btn.parentElement.querySelector('.rtext').textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1500); }).catch(() => {});
+  }));
+}
+show(0);
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => show([...tabs.children].findIndex(b => b.getAttribute('aria-selected') === 'true')));
+new MutationObserver(() => show([...tabs.children].findIndex(b => b.getAttribute('aria-selected') === 'true'))).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
+</script>
+</body>
+</html>

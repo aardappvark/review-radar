@@ -1,0 +1,1767 @@
+{
+ "slug": "letterboxd",
+ "name": "Letterboxd",
+ "generated": "2026-11-27 03:26 UTC",
+ "window": {
+  "from": "2025-03-01",
+  "to": "2026-11-24",
+  "n": 700,
+  "recent_n": 101,
+  "prior_n": 109,
+  "countries": [
+   "AU",
+   "CA",
+   "GB",
+   "IE",
+   "NZ",
+   "US"
+  ]
+ },
+ "store": {
+  "avg": 4.82,
+  "count": 88436,
+  "version": "4.13.12",
+  "version_date": "2026-11-23",
+  "released": "2016-03-15",
+  "notes": "– Miscellaneous bug fixes and improvements"
+ },
+ "written_avg_recent": 2.91,
+ "bug_share_recent": 0.12,
+ "themes": [
+  {
+   "key": "ad_intrusiveness",
+   "label": "Ad Overload/Intrusiveness",
+   "describe": "Users complain about the frequency, type (video/full-screen), and general annoyance of advertisements.",
+   "n": 149,
+   "n_recent": 26,
+   "n_prior": 6,
+   "low_recent": 24,
+   "avg": 1.66,
+   "avg_recent": 1.31,
+   "bug_share": 0.13,
+   "last_seen": "2026-11-19",
+   "share_recent": 0.257,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-19",
+     "version": "4.13.10",
+     "cc": "CA",
+     "title": "Unskippable ads fr?",
+     "text": "Added unskippable video ads to the landing page that directly inhibits using the product as designed."
+    },
+    {
+     "stars": 1,
+     "date": "2026-11-17",
+     "version": "4.13.10",
+     "cc": "GB",
+     "title": "Too many ads",
+     "text": "I had an account but it lasted 1 minute. I’m autistic and cannot stand ads. They distress me deeply. This app is littered with them and quite honestly, not a good app. I don’t get the hype. …"
+    },
+    {
+     "stars": 2,
+     "date": "2026-11-11",
+     "version": "4.13.10",
+     "cc": "US",
+     "title": "Was Great",
+     "text": "I love watching movies, so Letterboxd was a fun way to track them and record my opinions. They have recently started “Letterboxd pro,” before that the ads were subtle and sometimes helpful. …"
+    }
+   ],
+   "gists": [
+    "Unskippable video ads on the landing page are disruptive.",
+    "Too many ads make the app difficult to use and unpleasant.",
+    "Ads are now constant and annoying, especially with paid tiers.",
+    "Ads force viewing when attempting to post a movie review.",
+    "App is now covered in annoying pop-up advertisements.",
+    "Complains about unwanted video ads appearing after logging a film.",
+    "Complains about full-screen, intrusive banner advertisements.",
+    "Dislikes recent update's full-screen, intrusive advertisements.",
+    "Deleted app due to excessive, jarring, full-screen advertisements.",
+    "Reviewer complains about an intrusive, uncancelable advertisement blocking content.",
+    "Strong complaint about the excessive and annoying advertisements.",
+    "Complains about ridiculous, full-screen, and timed advertisements.",
+    "Ads are overly intrusive, mimicking unwanted pop-up advertisements.",
+    "Complains about a new, frequent 10-second ad upon opening.",
+    "Finds pop-up and scrolling ads make the app unusable.",
+    "Demands removal of all advertisements, even paid ones.",
+    "New update forces viewing a disruptive, timed advertisement.",
+    "Forced video ads upon opening the application are highly annoying.",
+    "Forced ad viewing upon opening ruins the app experience.",
+    "Dislikes the addition of unskippable ads to the app.",
+    "Unskippable ads upon opening negatively impact user experience.",
+    "Frustrated by a full-page ad appearing immediately upon opening.",
+    "Video ads obstructing the screen upon opening are very annoying.",
+    "Full-screen pop-up ads are extremely annoying and disruptive.",
+    "Complains about constant, annoying, and repetitive video ads."
+   ],
+   "ids_recent": [
+    "14808836088",
+    "14802062449",
+    "14778078841",
+    "14764579517",
+    "14758796433",
+    "14757899992",
+    "14744513993",
+    "14723986399",
+    "14692903706",
+    "14680668060",
+    "14661581443",
+    "14648552994",
+    "14586596498",
+    "14554342924",
+    "14553512701",
+    "14549398709",
+    "14549223527",
+    "14549154704",
+    "14548885185",
+    "14548274059",
+    "14548012829",
+    "14545781602",
+    "14544337880",
+    "14543643322",
+    "14503070447",
+    "14476313476"
+   ],
+   "brief": {
+    "headline": "Increase in reports of intrusive full-screen advertisements",
+    "happening": "Users are reporting a rise in unskippable video ads and full-screen pop-ups that disrupt the core experience. These advertisements are frequently appearing upon opening the app and during the movie logging process.",
+    "where_to_look": "The app launch sequence and the movie logging flow.",
+    "action": "Review the frequency and placement of interstitial video ads in recent builds.",
+    "reply_to": 0,
+    "reply": "We are sorry to hear that the recent changes to our ad experience have been frustrating. We appreciate you sharing this feedback regarding the unskippable video ads on the landing page, as it helps us understand how these updates impact the app's usability. Please feel free to reach out to support with more details.",
+    "checked": true
+   }
+  },
+  {
+   "key": "ui_and_ux_complaints",
+   "label": "Poor User Experience (UX)",
+   "describe": "Complaints regarding confusing navigation, clunky interfaces, or poor design elements.",
+   "n": 108,
+   "n_recent": 17,
+   "n_prior": 21,
+   "low_recent": 12,
+   "avg": 2.45,
+   "avg_recent": 1.88,
+   "bug_share": 0.2,
+   "last_seen": "2026-11-23",
+   "share_recent": 0.168,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-23",
+     "version": "4.13.12",
+     "cc": "US",
+     "title": "No iPhone Duo support!",
+     "text": "This app is begging for iPhone Duo support. Everything is so small on the outer screen and the inner screen view is laughable."
+    },
+    {
+     "stars": 1,
+     "date": "2026-11-16",
+     "version": "4.13.10",
+     "cc": "GB",
+     "title": "No duo support",
+     "text": "It’s a shame having to leave a negative review, but as a patron user, I really thought that full iPhone Duo support would be optimised by now. …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-11-15",
+     "version": "4.13.10",
+     "cc": "US",
+     "title": "Turn off the top left animation!! It’s ANNOYING!!",
+     "text": "I don’t like the corner animation. Every time I refresh, it returns. It’s even on the website. The unnecessary motion is an accessibility issue! I don’t like it. Pls REMOVE IT!!!"
+    }
+   ],
+   "gists": [
+    "Needs support for iPhone Duo; current view is too small.",
+    "Requests support for iPhone Duo functionality.",
+    "Lacks full iPhone Duo support compared to competitors.",
+    "Remove the annoying corner animation that appears upon refreshing.",
+    "App unexpectedly takes control of phone audio, disrupting music/audiobooks.",
+    "Needs native support and better scaling for iPhone Duo display.",
+    "Needs an update for proper scaling on iPhone Duo display.",
+    "Difficulty finding the likes section due to confusing interface.",
+    "Finding friend adding and following process overly complicated.",
+    "User finds the user experience and watch history difficult to navigate.",
+    "Wants personalized recommendations instead of friend-based popularity lists.",
+    "Navigation feels overly complex and not streamlined enough.",
+    "App pauses background music every time it is opened.",
+    "Feels the app is biased and not suitable for all users.",
+    "New update forces viewing a disruptive, timed advertisement."
+   ],
+   "ids_recent": [
+    "14826784961",
+    "14799416621",
+    "14797876679",
+    "14796738797",
+    "14760158473",
+    "14758901033",
+    "14757672746",
+    "14702123146",
+    "14701814800",
+    "14691134429",
+    "14671397538",
+    "14647488078",
+    "14624800623",
+    "14608054228",
+    "14566356812",
+    "14549223527",
+    "14503070447"
+   ],
+   "brief": {
+    "headline": "Navigation and display scaling issues on iOS",
+    "happening": "Users report difficulty navigating the interface and finding specific sections like likes or following. There are also significant complaints regarding poor scaling and lack of support for iPhone Duo displays.",
+    "where_to_look": "The display scaling logic and navigation menu architecture.",
+    "action": "Review the layout implementation for iPhone Duo and assess the impact of the refresh animation.",
+    "reply_to": 2,
+    "reply": "We hear you, and we appreciate you sharing this feedback regarding the refresh animation. We understand how unnecessary motion can be an accessibility concern. Please feel free to reach out to our support team to share more details about your experience.",
+    "checked": true
+   }
+  },
+  {
+   "key": "crashes_and_bugs",
+   "label": "Stability & Bugs",
+   "describe": "Frequent reports of the app crashing, freezing, or failing to load properly.",
+   "n": 66,
+   "n_recent": 7,
+   "n_prior": 8,
+   "low_recent": 6,
+   "avg": 2.05,
+   "avg_recent": 1.71,
+   "bug_share": 1.0,
+   "last_seen": "2026-11-17",
+   "share_recent": 0.069,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-17",
+     "version": "4.13.10",
+     "cc": "CA",
+     "title": "VIDEO STORE STREAMING IS BROKEN.",
+     "text": "STREAMING CONSTANTLY INTERRUPTED WITH BUFFERING/LATENCY ISSUES. WHAT AN EMBARRASSMENT FOR THE ARTISTS WHO RELY ON THIS PLATFORM TO SHOWCASE THEIR WORK. FIX IT!!!!!!!!!!!!!"
+    },
+    {
+     "stars": 2,
+     "date": "2026-10-20",
+     "version": "4.13.2",
+     "cc": "AU",
+     "title": "App bugs? Phone overheats",
+     "text": "The app seemed great but only for about 10mins. After that I noticed my phone getting very hot. Tried again later but overheating happened again. …"
+    },
+    {
+     "stars": 3,
+     "date": "2026-09-27",
+     "version": "4.12.6",
+     "cc": "US",
+     "title": "Love the app but not the bugs",
+     "text": "The new video store function is really cool but not when it disconnects 3/4ths into a film, logs you out, and then won’t resume from your last place after you’re forced to reset your …"
+    }
+   ],
+   "gists": [
+    "Video streaming is constantly interrupted with buffering and latency.",
+    "App causes phone overheating after about ten minutes of use.",
+    "App is buggy and frequently fails to load content.",
+    "Video playback disconnects, logs out, and won't resume properly.",
+    "App displays a black screen immediately upon opening after update.",
+    "App crashes frequently and has extremely long loading times.",
+    "App randomly wipes all logged movie reviews and data."
+   ],
+   "ids_recent": [
+    "14802939639",
+    "14691858347",
+    "14643933641",
+    "14601634055",
+    "14575047170",
+    "14574946150",
+    "14496318409"
+   ],
+   "brief": {
+    "headline": "Stability and performance issues in recent iOS builds",
+    "happening": "Users report frequent app crashes, black screens upon opening, and device overheating. There are also reports of video streaming interruptions and content failing to load.",
+    "where_to_look": "The video streaming playback and initial app launch sequences.",
+    "action": "Review recent crash logs and performance metrics for v4.13.10 and v4.13.12.",
+    "reply_to": 2,
+    "reply": "We are sorry to hear about the connection issues you experienced while watching. We appreciate you bringing this to our attention, and we encourage you to reach out to our support team so we can look into this further.",
+    "checked": true
+   }
+  },
+  {
+   "key": "account_login_issues",
+   "label": "Login & Sync Issues",
+   "describe": "Users report being randomly logged out or unable to log back into their accounts.",
+   "n": 69,
+   "n_recent": 4,
+   "n_prior": 26,
+   "low_recent": 2,
+   "avg": 1.94,
+   "avg_recent": 2,
+   "bug_share": 0.93,
+   "last_seen": "2026-11-24",
+   "share_recent": 0.04,
+   "quotes": [
+    {
+     "stars": 3,
+     "date": "2026-11-24",
+     "version": "4.13.12",
+     "cc": "US",
+     "title": "It won’t load",
+     "text": "It will not let me create an account even tho I got on 3 different internets it still didn’t work"
+    },
+    {
+     "stars": 3,
+     "date": "2026-11-02",
+     "version": "4.13.4",
+     "cc": "US",
+     "title": "“Too many log entries….”",
+     "text": "I’m leaving 3 stars for now because I like the app however randomly kicking me off when they think I’ve put too many? …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-09-12",
+     "version": "4.12.5",
+     "cc": "US",
+     "title": "Wasted a lot of time",
+     "text": "Put a lot of thought into making lists, reviews and recalling things I have watched only for my letterboxd to randomly sign out. …"
+    }
+   ],
+   "gists": [
+    "Cannot create an account despite trying multiple internet connections.",
+    "Randomly logged out after using the app extensively.",
+    "App randomly signed out, losing saved list and review data.",
+    "Cannot sign into or verify multiple accounts due to app errors."
+   ],
+   "ids_recent": [
+    "14830272317",
+    "14743007886",
+    "14542876374",
+    "14508083791"
+   ],
+   "brief": {
+    "headline": "Decreasing reports of login and session sync issues",
+    "happening": "Users report being randomly logged out or unable to sign into accounts. Some instances involve difficulty creating new accounts despite stable internet connections.",
+    "where_to_look": "The authentication and account creation flows.",
+    "action": "Review recent error logs related to session timeouts and account verification.",
+    "reply_to": 0,
+    "reply": "We are sorry to hear you're having trouble creating an account. Please reach out to our support team so we can look into this further and help you get started.",
+    "checked": true
+   }
+  },
+  {
+   "key": "feature_requests",
+   "label": "Feature Gaps/Enhancements",
+   "describe": "Requests for specific functionality like collaborative lists, better search, or adding unlisted titles.",
+   "n": 191,
+   "n_recent": 26,
+   "n_prior": 27,
+   "low_recent": 1,
+   "avg": 3.87,
+   "avg_recent": 4.15,
+   "bug_share": 0.05,
+   "last_seen": "2026-11-12",
+   "share_recent": 0.257,
+   "quotes": [
+    {
+     "stars": 2,
+     "date": "2026-11-12",
+     "version": "4.13.10",
+     "cc": "US",
+     "title": "NO where to watch button",
+     "text": "Where to watch toggle is not available for the mobile app. This is so disappointing that this feature is not available even for the paid users. They only have this option on the browser."
+    },
+    {
+     "stars": 3,
+     "date": "2026-10-06",
+     "version": "4.12.6",
+     "cc": "US",
+     "title": "No api access",
+     "text": "Love the app but I want to build things with my data and locking things behind private APIs is lame and requires constant manual exports. I pay you money but that’s not enough? …"
+    },
+    {
+     "stars": 3,
+     "date": "2026-09-27",
+     "version": "4.12.6",
+     "cc": "US",
+     "title": "Where is the watched list go?",
+     "text": "Before I could check though my watched, I don’t often leave reviews but I liked being able to look through the watched cause I have a bad memory"
+    }
+   ],
+   "gists": [
+    "Requesting the 'where to watch' toggle feature for the mobile app.",
+    "Wants personalized recommendations instead of friend-based popularity lists.",
+    "Wants API access to use personal data for building things.",
+    "Wants easier access to view the user's watched films list.",
+    "Request to add tracking for who watched movies with."
+   ],
+   "ids_recent": [
+    "14783012966",
+    "14776232185",
+    "14770464875",
+    "14760185770",
+    "14747942155",
+    "14724693890",
+    "14720957203",
+    "14704271361",
+    "14702937050",
+    "14679766821",
+    "14676089076",
+    "14671397538",
+    "14666375247",
+    "14635488773",
+    "14602090148",
+    "14598110651",
+    "14582346990",
+    "14579157957",
+    "14568302945",
+    "14564890715",
+    "14562073135",
+    "14556432909",
+    "14551030772",
+    "14521655113",
+    "14496255672",
+    "14487564340"
+   ],
+   "brief": {
+    "headline": "Steady requests for feature enhancements and expanded functionality",
+    "happening": "Users are requesting the 'where to watch' toggle on mobile and more personalized recommendations. There are also requests for API access and easier ways to view watched films.",
+    "where_to_look": "The mobile app feature parity with the web browser.",
+    "action": "Review the feasibility of bringing web-only toggles to the iOS interface.",
+    "reply_to": 0,
+    "reply": "Thank you for your feedback. We understand the importance of having the 'where to watch' toggle available on the mobile app. We appreciate you sharing this with us, and please feel free to reach out to our support team with any further thoughts.",
+    "checked": true
+   }
+  },
+  {
+   "key": "missing_tv_shows",
+   "label": "Lack of TV Show Support",
+   "describe": "A recurring request to expand tracking and rating capabilities to include television series.",
+   "n": 100,
+   "n_recent": 11,
+   "n_prior": 14,
+   "low_recent": 1,
+   "avg": 4,
+   "avg_recent": 4,
+   "bug_share": 0.02,
+   "last_seen": "2026-11-12",
+   "share_recent": 0.109,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-09-15",
+     "version": "4.12.5",
+     "cc": "US",
+     "title": "No tv show option",
+     "text": "I’m irritated that it’s been years and they refuse to add tv shows. It doesn’t make any sense why they can’t."
+    }
+   ],
+   "gists": [
+    "Expresses frustration over the lack of TV show tracking options."
+   ],
+   "ids_recent": [
+    "14782038110",
+    "14776232185",
+    "14748133945",
+    "14740736513",
+    "14718072654",
+    "14677327881",
+    "14656451996",
+    "14647488078",
+    "14562073135",
+    "14555187789",
+    "14521655113"
+   ]
+  },
+  {
+   "key": "data_privacy_concerns",
+   "label": "Privacy & Data Tracking",
+   "describe": "Concerns raised about data tracking, third-party sharing, and privacy policies.",
+   "n": 4,
+   "n_recent": 0,
+   "n_prior": 1,
+   "low_recent": 0,
+   "avg": 1.25,
+   "avg_recent": null,
+   "bug_share": 0.0,
+   "last_seen": "2026-06-26",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-06-26",
+     "version": "4.12.3",
+     "cc": "US",
+     "title": "SHADOW BANNED FOR NO REASON",
+     "text": "So I posted a review on the film CITIZEN VIGILANTE and it was the most level headed honest review I could write. I was attack by a bunch of other users who were EXTREMELY political. …"
+    },
+    {
+     "stars": 2,
+     "date": "2026-02-19",
+     "version": "4.8.8",
+     "cc": "US",
+     "title": "Poor app security.",
+     "text": "It’s a fun app, and I love sharing movie reviews. However I have to warn users that this app often has data breaches, I have had personal information exposed through these breaches. …"
+    },
+    {
+     "stars": 1,
+     "date": "2025-12-04",
+     "version": "4.8.1",
+     "cc": "US",
+     "title": "Constant spam email",
+     "text": "I have never seen an app send through such a huge amount of spam email. And they seem to ignore unsubscribe requests and use dark patterns to make unsubscribing difficult."
+    }
+   ],
+   "gists": [
+    "Accuses the platform of bias and racism; warns against using it.",
+    "Concerns about data breaches and app security practices.",
+    "App sends excessive spam emails and makes unsubscribing difficult.",
+    "Review expressing strong disapproval regarding CEO's support."
+   ],
+   "ids_recent": []
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that are purely positive about the app's core functionality or concept.",
+   "n": 156,
+   "n_recent": 18,
+   "n_prior": 27,
+   "low_recent": 0,
+   "avg": 4.55,
+   "avg_recent": 4.78,
+   "bug_share": 0.01,
+   "last_seen": "2026-11-20",
+   "share_recent": 0.178,
+   "quotes": [],
+   "gists": [],
+   "ids_recent": [
+    "14812272126",
+    "14782038110",
+    "14762002199",
+    "14717196490",
+    "14699459854",
+    "14678048985",
+    "14676195276",
+    "14666375247",
+    "14656451996",
+    "14639685903",
+    "14600687002",
+    "14599914422",
+    "14544174042",
+    "14544073658",
+    "14542525126",
+    "14518771049",
+    "14503188379",
+    "14484449404"
+   ]
+  }
+ ],
+ "versions": [
+  {
+   "version": "4.8.9",
+   "n": 15,
+   "avg": 3.27,
+   "first": "2026-03-04",
+   "last": "2026-03-16",
+   "bug_share": 0.47,
+   "top": [
+    "Login & Sync Issues",
+    "Lack of TV Show Support"
+   ],
+   "delta": 0.27,
+   "flag": false
+  },
+  {
+   "version": "4.10.0",
+   "n": 32,
+   "avg": 3.81,
+   "first": "2026-03-19",
+   "last": "2026-04-27",
+   "bug_share": 0.16,
+   "top": [
+    "Feature Gaps/Enhancements",
+    "Lack of TV Show Support"
+   ],
+   "delta": 0.54,
+   "flag": false
+  },
+  {
+   "version": "4.11.3",
+   "n": 9,
+   "avg": 3.56,
+   "first": "2026-04-30",
+   "last": "2026-05-10",
+   "bug_share": 0.11,
+   "top": [
+    "Feature Gaps/Enhancements",
+    "Ad Overload/Intrusiveness"
+   ],
+   "delta": -0.25,
+   "flag": false
+  },
+  {
+   "version": "4.11.4",
+   "n": 6,
+   "avg": 4,
+   "first": "2026-05-12",
+   "last": "2026-05-20",
+   "bug_share": 0.0,
+   "top": [
+    "Feature Gaps/Enhancements",
+    "Lack of TV Show Support"
+   ],
+   "delta": 0.44,
+   "flag": false
+  },
+  {
+   "version": "4.11.5",
+   "n": 35,
+   "avg": 3.03,
+   "first": "2026-05-20",
+   "last": "2026-06-05",
+   "bug_share": 0.46,
+   "top": [
+    "Stability & Bugs",
+    "Ad Overload/Intrusiveness"
+   ],
+   "delta": -0.97,
+   "flag": true
+  },
+  {
+   "version": "4.12.1",
+   "n": 12,
+   "avg": 4,
+   "first": "2026-06-08",
+   "last": "2026-06-19",
+   "bug_share": 0.17,
+   "top": [
+    "Poor User Experience (UX)",
+    "Lack of TV Show Support"
+   ],
+   "delta": 0.97,
+   "flag": false
+  },
+  {
+   "version": "4.12.3",
+   "n": 99,
+   "avg": 3.03,
+   "first": "2026-06-24",
+   "last": "2026-09-07",
+   "bug_share": 0.36,
+   "top": [
+    "Feature Gaps/Enhancements",
+    "Login & Sync Issues"
+   ],
+   "delta": -0.97,
+   "flag": true
+  },
+  {
+   "version": "4.12.5",
+   "n": 18,
+   "avg": 2.28,
+   "first": "2026-09-12",
+   "last": "2026-09-16",
+   "bug_share": 0.06,
+   "top": [
+    "Ad Overload/Intrusiveness",
+    "Feature Gaps/Enhancements"
+   ],
+   "delta": -0.75,
+   "flag": true
+  },
+  {
+   "version": "4.12.6",
+   "n": 32,
+   "avg": 3.34,
+   "first": "2026-09-17",
+   "last": "2026-10-18",
+   "bug_share": 0.12,
+   "top": [
+    "Feature Gaps/Enhancements",
+    "Poor User Experience (UX)"
+   ],
+   "delta": 1.06,
+   "flag": false
+  },
+  {
+   "version": "4.13.2",
+   "n": 3,
+   "avg": 1.33,
+   "first": "2026-10-20",
+   "last": "2026-10-21",
+   "bug_share": 0.33,
+   "top": [
+    "Ad Overload/Intrusiveness",
+    "Stability & Bugs"
+   ],
+   "delta": null,
+   "flag": false
+  },
+  {
+   "version": "4.13.4",
+   "n": 13,
+   "avg": 3.31,
+   "first": "2026-10-22",
+   "last": "2026-11-02",
+   "bug_share": 0.08,
+   "top": [
+    "Feature Gaps/Enhancements",
+    "Ad Overload/Intrusiveness"
+   ],
+   "delta": -0.03,
+   "flag": false
+  },
+  {
+   "version": "4.13.6",
+   "n": 10,
+   "avg": 2.8,
+   "first": "2026-11-03",
+   "last": "2026-11-07",
+   "bug_share": 0.0,
+   "top": [
+    "Ad Overload/Intrusiveness",
+    "Poor User Experience (UX)"
+   ],
+   "delta": -0.51,
+   "flag": true
+  },
+  {
+   "version": "4.13.10",
+   "n": 13,
+   "avg": 2.38,
+   "first": "2026-11-09",
+   "last": "2026-11-20",
+   "bug_share": 0.15,
+   "top": [
+    "Ad Overload/Intrusiveness",
+    "Poor User Experience (UX)"
+   ],
+   "delta": -0.42,
+   "flag": false
+  },
+  {
+   "version": "4.13.12",
+   "n": 2,
+   "avg": 2,
+   "first": "2026-11-23",
+   "last": "2026-11-24",
+   "bug_share": 0.5,
+   "top": [
+    "Login & Sync Issues",
+    "Poor User Experience (UX)"
+   ],
+   "delta": null,
+   "flag": false
+  }
+ ],
+ "series": [
+  {
+   "d": "2026-05-29",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-05-30",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-05-31",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-06-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-03",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-06-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-05",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-08",
+   "n": 3,
+   "low": 0
+  },
+  {
+   "d": "2026-06-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-10",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-11",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-13",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-14",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-06-15",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-06-16",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-18",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-19",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-24",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-06-25",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-06-26",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-06-27",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-28",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-29",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-06-30",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-07-01",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-07-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-03",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-07-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-05",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-07-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-08",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-07-09",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-07-10",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-07-11",
+   "n": 3,
+   "low": 2
+  },
+  {
+   "d": "2026-07-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-13",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-07-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-15",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-07-16",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-07-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-18",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-07-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-21",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-07-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-24",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-07-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-26",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-07-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-29",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-07-30",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-07-31",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-01",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-02",
+   "n": 4,
+   "low": 1
+  },
+  {
+   "d": "2026-08-03",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-05",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-06",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-08-07",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-08-08",
+   "n": 3,
+   "low": 1
+  },
+  {
+   "d": "2026-08-09",
+   "n": 23,
+   "low": 14
+  },
+  {
+   "d": "2026-08-10",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-08-11",
+   "n": 3,
+   "low": 1
+  },
+  {
+   "d": "2026-08-12",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-14",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-16",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-08-17",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-18",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-08-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-21",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-08-22",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-08-23",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-08-24",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-08-25",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-26",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-08-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-28",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-29",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-08-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-31",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-09-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-02",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-09-03",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-09-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-06",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-07",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-12",
+   "n": 3,
+   "low": 2
+  },
+  {
+   "d": "2026-09-13",
+   "n": 4,
+   "low": 2
+  },
+  {
+   "d": "2026-09-14",
+   "n": 7,
+   "low": 5
+  },
+  {
+   "d": "2026-09-15",
+   "n": 3,
+   "low": 3
+  },
+  {
+   "d": "2026-09-16",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-17",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-18",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-09-19",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-20",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-09-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-22",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-09-23",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-09-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-26",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-27",
+   "n": 4,
+   "low": 0
+  },
+  {
+   "d": "2026-09-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-29",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-09-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-03",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-10-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-06",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-07",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-08",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-10-09",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-10-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-11",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-10-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-13",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-10-14",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-15",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-16",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-10-17",
+   "n": 3,
+   "low": 0
+  },
+  {
+   "d": "2026-10-18",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-10-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-20",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-10-21",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-10-22",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-23",
+   "n": 4,
+   "low": 2
+  },
+  {
+   "d": "2026-10-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-27",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-10-28",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-10-29",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-31",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-01",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-02",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-11-03",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-11-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-06",
+   "n": 6,
+   "low": 4
+  },
+  {
+   "d": "2026-11-07",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-11-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-09",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-10",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-11",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-11-12",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-11-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-15",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-11-16",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-11-17",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-11-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-19",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-11-20",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-23",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-11-24",
+   "n": 1,
+   "low": 0
+  }
+ ],
+ "bursts": [
+  {
+   "date": "2026-08-09",
+   "n": 23,
+   "low": 14,
+   "base": 1.0,
+   "theme": "Login & Sync Issues",
+   "version": "4.12.3",
+   "first": "06:08 Pacific",
+   "alert_at": "06:25 Pacific",
+   "quotes": [
+    {
+     "stars": 3,
+     "date": "2026-08-09",
+     "version": "4.12.3",
+     "cc": "US",
+     "title": "so like",
+     "text": "amazing app. really. i use (to use) it daily. BUT I CANT SEEM TO LOG BACK IN (IT LOGGED ME OUT WITHOUT ANYONE TOUCHING IT) AND I AM HAVING A LOT OF TROUBLE. …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-08-09",
+     "version": "4.12.3",
+     "cc": "US",
+     "title": "Broken",
+     "text": "I really wanted to use this it’s fun the layout good etc but the bugs are annoying it logged me out multiple times and me putting my correct info it still doesn’t go through tried to …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-08-09",
+     "version": "4.12.3",
+     "cc": "US",
+     "title": "Keeps logging me out",
+     "text": "This app is way too expensive to keep crashing like this. It keeps logging me out and now the app won’t even load."
+    }
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "n": 7,
+   "low": 5,
+   "base": 1.0,
+   "theme": "Ad Overload/Intrusiveness",
+   "version": "4.12.5",
+   "first": "00:33 Pacific",
+   "alert_at": "06:15 Pacific",
+   "quotes": [
+    {
+     "stars": 2,
+     "date": "2026-09-14",
+     "version": "4.12.5",
+     "cc": "US",
+     "title": "Was once great but not inconvenient",
+     "text": "Been using this app for a few years no issues whatsoever works fine however recently there was a new update and it changes the way as presented. …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-09-14",
+     "version": "4.12.5",
+     "cc": "CA",
+     "title": "Forcing me to watch an an BEFORE I even get in the app …",
+     "text": "I’ll uninstall this app so quickly if you keep this stuff up"
+    },
+    {
+     "stars": 1,
+     "date": "2026-09-14",
+     "version": "4.12.5",
+     "cc": "US",
+     "title": "Forced ad watch when opening",
+     "text": "OOOF. Forcing you to watch an ad just by opening the app. Definitely killing the vibe of using this app. Makes it seem like those gimmicky game apps. What a shame too. …"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "n": 6,
+   "low": 4,
+   "base": 1.0,
+   "theme": "Poor User Experience (UX)",
+   "version": "4.13.6",
+   "first": "06:02 Pacific",
+   "alert_at": "20:20 Pacific",
+   "quotes": [
+    {
+     "stars": 2,
+     "date": "2026-11-06",
+     "version": "4.13.6",
+     "cc": "US",
+     "title": "Another app that needlessly takes control of my phone’s …",
+     "text": "I can’t listen to audiobooks or music never whenever I open this app, it takes control of my phone’s audio and stops it. Annoying!"
+    },
+    {
+     "stars": 1,
+     "date": "2026-11-06",
+     "version": "4.13.6",
+     "cc": "US",
+     "title": "Native support for iPhone Duo",
+     "text": "I love this app, but there is no native support for the iPhone Duo at this time and the interface looks terrible on that display. …"
+    },
+    {
+     "stars": 3,
+     "date": "2026-11-06",
+     "version": "4.13.6",
+     "cc": "US",
+     "title": "Love Letterboxd, needs update",
+     "text": "I love Letterboxd and the app. Really needs an update for iPhone Duo. It’s not even the iOS 27 scale, it’s tiny on screen. Will switch back to 5 stars after"
+    }
+   ]
+  }
+ ],
+ "dups": []
+}

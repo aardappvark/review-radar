@@ -1,0 +1,9 @@
+# Raw review text and model caches stay local; the site carries short quotes only.
+data/*.reviews.json
+data/*.tags.json
+data/*.log
+.preview/
+__pycache__/
+
+# Private: application notes
+EMAIL_DRAFT.md

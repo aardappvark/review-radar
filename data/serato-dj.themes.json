@@ -1,0 +1,49 @@
+{
+ "themes": [
+  {
+   "key": "hardware_compatibility",
+   "label": "Controller Support",
+   "describe": "Users report issues with support for specific or modern DJ controllers."
+  },
+  {
+   "key": "pricing_and_licensing",
+   "label": "Cost & Paywalls",
+   "describe": "Complaints about high costs, subscriptions, and features being locked behind paywalls."
+  },
+  {
+   "key": "library_management",
+   "label": "Music Library Access",
+   "describe": "Difficulty accessing or syncing existing local music libraries (e.g., iTunes, Apple Music)."
+  },
+  {
+   "key": "audio_output_issues",
+   "label": "Audio Output Bugs",
+   "describe": "Problems with audio routing, such as sound only playing through the phone speakers."
+  },
+  {
+   "key": "feature_parity_vs_competitors",
+   "label": "Feature Gaps vs. Competitors",
+   "describe": "Users feel the app lacks features available in competing apps (e.g., djay, Pioneer software)."
+  },
+  {
+   "key": "usability_and_stability",
+   "label": "Stability & Bugs",
+   "describe": "Reports of crashes, disconnections, or general instability during use."
+  },
+  {
+   "key": "workflow_improvements",
+   "label": "Workflow Enhancements",
+   "describe": "Requests for specific functional improvements like crossfader reverse or sample volume control."
+  },
+  {
+   "key": "accessibility",
+   "label": "Accessibility Support",
+   "describe": "Specific complaints regarding the lack of accessibility features."
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that are purely positive about the app's functionality or potential."
+  }
+ ]
+}

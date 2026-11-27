@@ -1,0 +1,730 @@
+{
+ "slug": "serato-dj",
+ "name": "Serato DJ",
+ "generated": "2026-11-27 03:25 UTC",
+ "window": {
+  "from": "2026-10-19",
+  "to": "2026-11-21",
+  "n": 59,
+  "recent_n": 59,
+  "prior_n": 0,
+  "countries": [
+   "AU",
+   "CA",
+   "GB",
+   "NZ",
+   "US"
+  ]
+ },
+ "store": {
+  "avg": 3.85,
+  "count": 106,
+  "version": "5.1.0.20",
+  "version_date": "2026-11-10",
+  "released": "2026-10-18",
+  "notes": "•\tAlphaTheta DJM-A7 support. Connect with a DJ Suite or iOS Outright license.\n•\tUpdated performance pad mappings for the Pioneer DJ DJM-S5 and Numark Party Mix Pro.\n•\tFixes for the Denon DJ PRIME 4, Rane SYSTEM ONE and Pioneer DJ PLX-CRSS12.\n•\tBetter stability, memory and performance on devices with 4GB of RAM."
+ },
+ "written_avg_recent": 3.29,
+ "bug_share_recent": 0.14,
+ "themes": [
+  {
+   "key": "pricing_and_licensing",
+   "label": "Cost & Paywalls",
+   "describe": "Complaints about high costs, subscriptions, and features being locked behind paywalls.",
+   "n": 16,
+   "n_recent": 16,
+   "n_prior": 0,
+   "low_recent": 12,
+   "avg": 1.75,
+   "avg_recent": 1.75,
+   "bug_share": 0.12,
+   "last_seen": "2026-11-19",
+   "share_recent": 0.271,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-19",
+     "version": "5.1.0.20",
+     "cc": "US",
+     "title": "So bad, incomplete feel, charged upon downloading with out …",
+     "text": "Charged just for downloading to try it out super dumb. I used to own the suits for my 1000sr in years for similar reason I haven’t used Serato in years and upon downloading the app got …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-11-11",
+     "version": "5.1.0.20",
+     "cc": "US",
+     "title": "Wants me to upgrade to use DVS after already buying it for …",
+     "text": "You guys gotta be kidding me. This really could have been cool but in no world am I paying a subscription fee for something you already made me purchase once before. …"
+    },
+    {
+     "stars": 3,
+     "date": "2026-11-08",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Almost there",
+     "text": "Not sure if Serato is going to commit to this application but from what I have experienced so far. It is a good start. The price is way out there but I see why they did it. …"
+    }
+   ],
+   "gists": [
+    "Complains about immediate charge and falling behind competitors.",
+    "Frustrated by paywalls for previously purchased features.",
+    "App is heavy; lacks features and sounds worse than Mac.",
+    "App is too expensive and lacks features compared to competitors.",
+    "App looks okay, but pricing is too high compared to alternatives.",
+    "App is feature-filled, but charging for desktop owners is excessive.",
+    "Transfer system failed; iOS folder disappeared, considering competitor.",
+    "Everything is paywalled; better apps exist for less money.",
+    "Questioning the high cost of the phone application.",
+    "Wants crossfader reverse; dislikes paid feature unlocks.",
+    "Feels like a scam due to extra app payment requirements.",
+    "Subscription required for hardware connection; library access is difficult.",
+    "Lacks features found in competitors; subscription cost is too high.",
+    "Criticism of high price point for features already available elsewhere.",
+    "Too expensive, should be free for existing professional users."
+   ],
+   "ids_recent": [
+    "14807992155",
+    "14779719750",
+    "14765491232",
+    "14703591116",
+    "14698967783",
+    "14698762857",
+    "14694352547",
+    "14693700518",
+    "14693579818",
+    "14692727965",
+    "14691257713",
+    "14689917145",
+    "14689869534",
+    "14689778149",
+    "14687227753",
+    "14686849302"
+   ],
+   "brief": {
+    "headline": "User dissatisfaction regarding pricing and feature paywalls",
+    "happening": "In the last 90 days, 16 reviews mention high costs and subscription requirements. Users report frustration with paying for features previously owned and the high price point compared to competitors.",
+    "where_to_look": "The in-app purchase and subscription entitlement flow.",
+    "action": "Review the current pricing structure and feature access tiers against competitor benchmarks.",
+    "reply_to": 1,
+    "reply": "We hear your frustration regarding the subscription for features you have previously purchased. We appreciate you sharing this feedback with us, as it helps us understand how our pricing affects our long-term users. Please feel free to reach out to our support team to discuss your account.",
+    "checked": true
+   }
+  },
+  {
+   "key": "feature_parity_vs_competitors",
+   "label": "Feature Gaps vs. Competitors",
+   "describe": "Users feel the app lacks features available in competing apps (e.g., djay, Pioneer software).",
+   "n": 17,
+   "n_recent": 17,
+   "n_prior": 0,
+   "low_recent": 11,
+   "avg": 2.24,
+   "avg_recent": 2.24,
+   "bug_share": 0.0,
+   "last_seen": "2026-11-19",
+   "share_recent": 0.288,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-19",
+     "version": "5.1.0.20",
+     "cc": "US",
+     "title": "So bad, incomplete feel, charged upon downloading with out …",
+     "text": "Charged just for downloading to try it out super dumb. I used to own the suits for my 1000sr in years for similar reason I haven’t used Serato in years and upon downloading the app got …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-11-11",
+     "version": "5.1.0.20",
+     "cc": "US",
+     "title": "Wants me to upgrade to use DVS after already buying it for …",
+     "text": "You guys gotta be kidding me. This really could have been cool but in no world am I paying a subscription fee for something you already made me purchase once before. …"
+    },
+    {
+     "stars": 3,
+     "date": "2026-11-08",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Almost there",
+     "text": "Not sure if Serato is going to commit to this application but from what I have experienced so far. It is a good start. The price is way out there but I see why they did it. …"
+    }
+   ],
+   "gists": [
+    "Complains about immediate charge and falling behind competitors.",
+    "Frustrated by paywalls for previously purchased features.",
+    "App is heavy; lacks features and sounds worse than Mac.",
+    "Needs HID mode support; otherwise, it is incomplete.",
+    "Controller not supported; lacks custom mapping like competitors.",
+    "Needs library improvements; cannot use local MP3 files.",
+    "Feels rushed; lacks features found in competing apps.",
+    "App looks okay, but pricing is too high compared to alternatives.",
+    "Jog wheel display not working with FLX10 despite audio output.",
+    "Feels clunky compared to djay; cannot access local music library.",
+    "No accessibility features; competitor does it better.",
+    "Prefers djay pro over this application.",
+    "Lacks features found in competitors; subscription cost is too high.",
+    "Criticism of high price point for features already available elsewhere."
+   ],
+   "ids_recent": [
+    "14807992155",
+    "14779719750",
+    "14765491232",
+    "14762508418",
+    "14742583828",
+    "14741709022",
+    "14711544190",
+    "14705869991",
+    "14698967783",
+    "14696476652",
+    "14695631530",
+    "14694045342",
+    "14693700518",
+    "14692986824",
+    "14691189452",
+    "14689778149",
+    "14687227753"
+   ],
+   "brief": {
+    "headline": "Feature gaps and pricing concerns relative to competitors",
+    "happening": "Users report the app lacks specific functionalities like HID mode support, custom mapping, and local library access. There is also significant dissatisfaction regarding the subscription model and feature paywalls.",
+    "where_to_look": "The feature parity and library management capabilities within the mobile application.",
+    "action": "Review the feature set of competing mobile DJ applications to identify specific gaps.",
+    "reply_to": 0,
+    "reply": "Thank you for sharing your feedback. We understand your concerns regarding the subscription model and feature availability. We value your long-term support of Serato and invite you to contact our support team to discuss your experience further.",
+    "checked": true
+   }
+  },
+  {
+   "key": "library_management",
+   "label": "Music Library Access",
+   "describe": "Difficulty accessing or syncing existing local music libraries (e.g., iTunes, Apple Music).",
+   "n": 9,
+   "n_recent": 9,
+   "n_prior": 0,
+   "low_recent": 6,
+   "avg": 2.22,
+   "avg_recent": 2.22,
+   "bug_share": 0.56,
+   "last_seen": "2026-11-18",
+   "share_recent": 0.153,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-18",
+     "version": "5.1.0.20",
+     "cc": "CA",
+     "title": "Master out only coming out of phone speaker",
+     "text": "No matter what I try, the Master Output only plays thru my phone speakers on my iPhone 17. And sound STILL drops out every few minutes. …"
+    },
+    {
+     "stars": 2,
+     "date": "2026-11-11",
+     "version": "5.1.0.20",
+     "cc": "US",
+     "title": "iTunes Library not accessible",
+     "text": "It’s fine if you want spend days remaking all of your crates or playlists and transferring them to a device that already stores them. …"
+    },
+    {
+     "stars": 3,
+     "date": "2026-10-25",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Needs quite a bit of work!",
+     "text": "Serato has had years to perfect this. DJay is light years beyond. Mediocre launch at best. Needs library improvements. Unable to utilize your Apple Music library you own is needed. …"
+    }
+   ],
+   "gists": [
+    "Master output only uses phone speakers; library sorting is needed.",
+    "Cannot access existing iTunes playlists and music library.",
+    "Needs library improvements; cannot use local MP3 files.",
+    "App is too expensive and lacks features compared to competitors.",
+    "Cannot link Spotify profile due to current country location.",
+    "App keeps signing out of Apple Music after loading a track.",
+    "Transfer system failed; iOS folder disappeared, considering competitor.",
+    "Feels clunky compared to djay; cannot access local music library."
+   ],
+   "ids_recent": [
+    "14806994060",
+    "14779947772",
+    "14741709022",
+    "14711544190",
+    "14703591116",
+    "14702634418",
+    "14695938993",
+    "14694352547",
+    "14694045342"
+   ],
+   "brief": {
+    "headline": "Issues accessing local music and iTunes libraries",
+    "happening": "Users report being unable to access existing iTunes playlists or local MP3 files. Some users also noted the app signs out of Apple Music after loading a track.",
+    "where_to_look": "The local file system access and Apple Music integration flow.",
+    "action": "Review recent changes to file permissions and library syncing logic.",
+    "reply_to": 1,
+    "reply": "Thank you for your feedback. We are sorry to hear you are having trouble accessing your iTunes library. Please contact our support team so we can look into this specific issue for you.",
+    "checked": true
+   }
+  },
+  {
+   "key": "hardware_compatibility",
+   "label": "Controller Support",
+   "describe": "Users report issues with support for specific or modern DJ controllers.",
+   "n": 5,
+   "n_recent": 5,
+   "n_prior": 0,
+   "low_recent": 4,
+   "avg": 1.8,
+   "avg_recent": 1.8,
+   "bug_share": 0.2,
+   "last_seen": "2026-11-07",
+   "share_recent": 0.085,
+   "quotes": [
+    {
+     "stars": 2,
+     "date": "2026-11-07",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Needs HID Mode",
+     "text": "Dont waste your money unless they add HID it’s mostly worthless to pay the premium price for a product that is incomplete… you can’t use it without control vinyl or a basic controller, …"
+    },
+    {
+     "stars": 2,
+     "date": "2026-11-02",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Lame",
+     "text": "Would have made an immediate purchase, but Korg Kaoss DJ controller is not supported. …"
+    },
+    {
+     "stars": 1,
+     "date": "2026-10-26",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "No rane four support",
+     "text": "I can’t use my new controller. But I can buy a discontinued numark mixer and it will work. I will change my review once I can use my rane four."
+    }
+   ],
+   "gists": [
+    "Needs HID mode support; otherwise, it is incomplete.",
+    "Controller not supported; lacks custom mapping like competitors.",
+    "Cannot use new controller; only older models work.",
+    "Jog wheel display not working with FLX10 despite audio output.",
+    "Subscription required for hardware connection; library access is difficult."
+   ],
+   "ids_recent": [
+    "14762508418",
+    "14742583828",
+    "14715423380",
+    "14695631530",
+    "14689869534"
+   ],
+   "brief": {
+    "headline": "Limited support for new and specific DJ controllers",
+    "happening": "Users report that certain modern hardware, such as the Rane Four and FLX10, is not fully supported or lacks features like HID mode and jog wheel displays. This issue is present in 8% of recent reviews, with an average rating of 1.8 stars for these reports.",
+    "where_to_look": "The hardware connection and MIDI/HID integration layer.",
+    "action": "Review the compatibility logs for the Rane Four and FLX10 hardware profiles.",
+    "reply_to": 2,
+    "reply": "Thank you for sharing your feedback regarding Rane Four support. We understand how important it is to use your current gear with Serato. Please contact our support team so we can learn more about your experience with this controller.",
+    "checked": true
+   }
+  },
+  {
+   "key": "audio_output_issues",
+   "label": "Audio Output Bugs",
+   "describe": "Problems with audio routing, such as sound only playing through the phone speakers.",
+   "n": 2,
+   "n_recent": 2,
+   "n_prior": 0,
+   "low_recent": 2,
+   "avg": 1.5,
+   "avg_recent": 1.5,
+   "bug_share": 1.0,
+   "last_seen": "2026-11-18",
+   "share_recent": 0.034,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-11-18",
+     "version": "5.1.0.20",
+     "cc": "CA",
+     "title": "Master out only coming out of phone speaker",
+     "text": "No matter what I try, the Master Output only plays thru my phone speakers on my iPhone 17. And sound STILL drops out every few minutes. …"
+    },
+    {
+     "stars": 2,
+     "date": "2026-10-26",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Audio not playing through speakers",
+     "text": "I am using a Hercules DJ control impulse 2 MK2 and have speakers connected to the controller. …"
+    }
+   ],
+   "gists": [
+    "Master output only uses phone speakers; library sorting is needed.",
+    "Audio only plays through phone speakers, not connected controller."
+   ],
+   "ids_recent": [
+    "14806994060",
+    "14716065089"
+   ],
+   "brief": {
+    "headline": "Audio routing issues via connected controllers",
+    "happening": "2 reviews in the last 90 days raise this (2 at 1–2 stars).",
+    "where_to_look": "The audio output routing logic when an external controller is connected.",
+    "action": "Verify audio output behavior on supported hardware using recent builds.",
+    "reply_to": 0,
+    "reply": "We are sorry to hear you are experiencing issues with your master output routing. Please contact our support team so we can look into this further and help get your audio playing through your controller correctly.",
+    "checked": "partial: happening"
+   }
+  },
+  {
+   "key": "workflow_improvements",
+   "label": "Workflow Enhancements",
+   "describe": "Requests for specific functional improvements like crossfader reverse or sample volume control.",
+   "n": 6,
+   "n_recent": 6,
+   "n_prior": 0,
+   "low_recent": 0,
+   "avg": 4,
+   "avg_recent": 4,
+   "bug_share": 0.17,
+   "last_seen": "2026-11-20",
+   "share_recent": 0.102,
+   "quotes": [
+    {
+     "stars": 3,
+     "date": "2026-11-16",
+     "version": "5.1.0.20",
+     "cc": "US",
+     "title": "Sample",
+     "text": "Samples need a Volume Control to each Samples so it can be level on it own samples"
+    },
+    {
+     "stars": 3,
+     "date": "2026-10-20",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Needs Crossfader Reverse",
+     "text": "Not paying to unlock features when I’ve purchased hardware. Plus, no crossfader reverse feature for hamster-style scratching. Other than that, cool app."
+    }
+   ],
+   "gists": [
+    "Needs individual volume control for each sample.",
+    "Wants crossfader reverse; dislikes paid feature unlocks."
+   ],
+   "ids_recent": [
+    "14815491263",
+    "14800217390",
+    "14748748496",
+    "14695485568",
+    "14692099540",
+    "14691257713"
+   ]
+  },
+  {
+   "key": "accessibility",
+   "label": "Accessibility Support",
+   "describe": "Specific complaints regarding the lack of accessibility features.",
+   "n": 1,
+   "n_recent": 1,
+   "n_prior": 0,
+   "low_recent": 1,
+   "avg": 1,
+   "avg_recent": 1,
+   "bug_share": 0.0,
+   "last_seen": "2026-10-21",
+   "share_recent": 0.017,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2026-10-21",
+     "version": "5.0.0.1168",
+     "cc": "GB",
+     "title": "Accessibility",
+     "text": "The company always ignored an accessibility of their products. So there’s no surprise that there are no changes in that case. Another competitor do it better."
+    }
+   ],
+   "gists": [
+    "No accessibility features; competitor does it better."
+   ],
+   "ids_recent": [
+    "14692986824"
+   ]
+  },
+  {
+   "key": "usability_and_stability",
+   "label": "Stability & Bugs",
+   "describe": "Reports of crashes, disconnections, or general instability during use.",
+   "n": 1,
+   "n_recent": 1,
+   "n_prior": 0,
+   "low_recent": 0,
+   "avg": 3,
+   "avg_recent": 3,
+   "bug_share": 1.0,
+   "last_seen": "2026-10-21",
+   "share_recent": 0.017,
+   "quotes": [
+    {
+     "stars": 3,
+     "date": "2026-10-21",
+     "version": "5.0.0.1168",
+     "cc": "US",
+     "title": "Still needs work",
+     "text": "This thing keeps signing me out of my Apple Music literally after me loading one track 🫩 Currently unusable, shame because this has some unique things going for it. …"
+    }
+   ],
+   "gists": [
+    "App keeps signing out of Apple Music after loading a track."
+   ],
+   "ids_recent": [
+    "14695938993"
+   ]
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that are purely positive about the app's functionality or potential.",
+   "n": 23,
+   "n_recent": 23,
+   "n_prior": 0,
+   "low_recent": 0,
+   "avg": 5,
+   "avg_recent": 5,
+   "bug_share": 0.0,
+   "last_seen": "2026-11-21",
+   "share_recent": 0.39,
+   "quotes": [],
+   "gists": [],
+   "ids_recent": [
+    "14815951826",
+    "14813820615",
+    "14799131361",
+    "14782274837",
+    "14778623483",
+    "14772275224",
+    "14771897955",
+    "14728773256",
+    "14712153873",
+    "14696120065",
+    "14695485568",
+    "14694246447",
+    "14691751115",
+    "14690699266",
+    "14690686680",
+    "14690585683",
+    "14689097916",
+    "14687924386",
+    "14687701657",
+    "14687222908",
+    "14687140289",
+    "14687046803",
+    "14684558108"
+   ]
+  }
+ ],
+ "versions": [
+  {
+   "version": "5.0.0.1168",
+   "n": 48,
+   "avg": 3.27,
+   "first": "2026-10-19",
+   "last": "2026-11-09",
+   "bug_share": 0.12,
+   "top": [
+    "Feature Gaps vs. Competitors",
+    "Cost & Paywalls"
+   ],
+   "delta": null,
+   "flag": false
+  },
+  {
+   "version": "5.1.0.20",
+   "n": 11,
+   "avg": 3.36,
+   "first": "2026-11-11",
+   "last": "2026-11-21",
+   "bug_share": 0.18,
+   "top": [
+    "Workflow Enhancements",
+    "Cost & Paywalls"
+   ],
+   "delta": 0.09,
+   "flag": false
+  }
+ ],
+ "series": [
+  {
+   "d": "2026-10-19",
+   "n": 8,
+   "low": 2
+  },
+  {
+   "d": "2026-10-20",
+   "n": 11,
+   "low": 4
+  },
+  {
+   "d": "2026-10-21",
+   "n": 11,
+   "low": 5
+  },
+  {
+   "d": "2026-10-22",
+   "n": 3,
+   "low": 1
+  },
+  {
+   "d": "2026-10-23",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-10-24",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-10-25",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-10-26",
+   "n": 2,
+   "low": 2
+  },
+  {
+   "d": "2026-10-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-29",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-30",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-10-31",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-02",
+   "n": 2,
+   "low": 1
+  },
+  {
+   "d": "2026-11-03",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-07",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-11-08",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-09",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-11-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-11",
+   "n": 3,
+   "low": 2
+  },
+  {
+   "d": "2026-11-12",
+   "n": 1,
+   "low": 0
+  },
+  {
+   "d": "2026-11-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-16",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-11-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-18",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-11-19",
+   "n": 1,
+   "low": 1
+  },
+  {
+   "d": "2026-11-20",
+   "n": 2,
+   "low": 0
+  },
+  {
+   "d": "2026-11-21",
+   "n": 1,
+   "low": 0
+  }
+ ],
+ "bursts": [],
+ "dups": []
+}

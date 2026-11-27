@@ -1,0 +1,44 @@
+{
+ "themes": [
+  {
+   "key": "ad_intrusiveness",
+   "label": "Ad Overload/Intrusiveness",
+   "describe": "Users complain about the frequency, type (video/full-screen), and general annoyance of advertisements."
+  },
+  {
+   "key": "crashes_and_bugs",
+   "label": "Stability & Bugs",
+   "describe": "Frequent reports of the app crashing, freezing, or failing to load properly."
+  },
+  {
+   "key": "account_login_issues",
+   "label": "Login & Sync Issues",
+   "describe": "Users report being randomly logged out or unable to log back into their accounts."
+  },
+  {
+   "key": "missing_tv_shows",
+   "label": "Lack of TV Show Support",
+   "describe": "A recurring request to expand tracking and rating capabilities to include television series."
+  },
+  {
+   "key": "feature_requests",
+   "label": "Feature Gaps/Enhancements",
+   "describe": "Requests for specific functionality like collaborative lists, better search, or adding unlisted titles."
+  },
+  {
+   "key": "ui_and_ux_complaints",
+   "label": "Poor User Experience (UX)",
+   "describe": "Complaints regarding confusing navigation, clunky interfaces, or poor design elements."
+  },
+  {
+   "key": "data_privacy_concerns",
+   "label": "Privacy & Data Tracking",
+   "describe": "Concerns raised about data tracking, third-party sharing, and privacy policies."
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that are purely positive about the app's core functionality or concept."
+  }
+ ]
+}
