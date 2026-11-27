@@ -1774,5 +1774,375 @@
    ]
   }
  ],
- "dups": []
+ "dups": [],
+ "fixes": [
+  {
+   "key": "account_login_issues",
+   "label": "Login & Sync Issues",
+   "peak": {
+    "version": "4.12.3",
+    "n": 99,
+    "hits": 26,
+    "share": 0.263
+   },
+   "verdict": "fell",
+   "after": "4.12.5",
+   "latest": {
+    "version": "4.13.10",
+    "n": 13,
+    "hits": 0,
+    "share": 0.0
+   },
+   "series": [
+    {
+     "version": "4.8.9",
+     "n": 15,
+     "hits": 5,
+     "share": 0.333
+    },
+    {
+     "version": "4.10.0",
+     "n": 32,
+     "hits": 1,
+     "share": 0.031
+    },
+    {
+     "version": "4.11.3",
+     "n": 9,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.4",
+     "n": 6,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.5",
+     "n": 35,
+     "hits": 3,
+     "share": 0.086
+    },
+    {
+     "version": "4.12.1",
+     "n": 12,
+     "hits": 1,
+     "share": 0.083
+    },
+    {
+     "version": "4.12.3",
+     "n": 99,
+     "hits": 26,
+     "share": 0.263
+    },
+    {
+     "version": "4.12.5",
+     "n": 18,
+     "hits": 1,
+     "share": 0.056
+    },
+    {
+     "version": "4.12.6",
+     "n": 32,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.13.4",
+     "n": 13,
+     "hits": 1,
+     "share": 0.077
+    },
+    {
+     "version": "4.13.6",
+     "n": 10,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.13.10",
+     "n": 13,
+     "hits": 0,
+     "share": 0.0
+    }
+   ]
+  },
+  {
+   "key": "ad_intrusiveness",
+   "label": "Ad Overload/Intrusiveness",
+   "peak": {
+    "version": "4.12.5",
+    "n": 18,
+    "hits": 11,
+    "share": 0.611
+   },
+   "verdict": "easing",
+   "after": null,
+   "latest": {
+    "version": "4.13.10",
+    "n": 13,
+    "hits": 3,
+    "share": 0.231
+   },
+   "series": [
+    {
+     "version": "4.8.9",
+     "n": 15,
+     "hits": 1,
+     "share": 0.067
+    },
+    {
+     "version": "4.10.0",
+     "n": 32,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.3",
+     "n": 9,
+     "hits": 1,
+     "share": 0.111
+    },
+    {
+     "version": "4.11.4",
+     "n": 6,
+     "hits": 1,
+     "share": 0.167
+    },
+    {
+     "version": "4.11.5",
+     "n": 35,
+     "hits": 6,
+     "share": 0.171
+    },
+    {
+     "version": "4.12.1",
+     "n": 12,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.12.3",
+     "n": 99,
+     "hits": 5,
+     "share": 0.051
+    },
+    {
+     "version": "4.12.5",
+     "n": 18,
+     "hits": 11,
+     "share": 0.611
+    },
+    {
+     "version": "4.12.6",
+     "n": 32,
+     "hits": 4,
+     "share": 0.125
+    },
+    {
+     "version": "4.13.4",
+     "n": 13,
+     "hits": 2,
+     "share": 0.154
+    },
+    {
+     "version": "4.13.6",
+     "n": 10,
+     "hits": 3,
+     "share": 0.3
+    },
+    {
+     "version": "4.13.10",
+     "n": 13,
+     "hits": 3,
+     "share": 0.231
+    }
+   ]
+  },
+  {
+   "key": "crashes_and_bugs",
+   "label": "Stability & Bugs",
+   "peak": {
+    "version": "4.11.5",
+    "n": 35,
+    "hits": 14,
+    "share": 0.4
+   },
+   "verdict": "easing",
+   "after": null,
+   "latest": {
+    "version": "4.13.10",
+    "n": 13,
+    "hits": 1,
+    "share": 0.077
+   },
+   "series": [
+    {
+     "version": "4.8.9",
+     "n": 15,
+     "hits": 3,
+     "share": 0.2
+    },
+    {
+     "version": "4.10.0",
+     "n": 32,
+     "hits": 3,
+     "share": 0.094
+    },
+    {
+     "version": "4.11.3",
+     "n": 9,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.4",
+     "n": 6,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.5",
+     "n": 35,
+     "hits": 14,
+     "share": 0.4
+    },
+    {
+     "version": "4.12.1",
+     "n": 12,
+     "hits": 2,
+     "share": 0.167
+    },
+    {
+     "version": "4.12.3",
+     "n": 99,
+     "hits": 7,
+     "share": 0.071
+    },
+    {
+     "version": "4.12.5",
+     "n": 18,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.12.6",
+     "n": 32,
+     "hits": 4,
+     "share": 0.125
+    },
+    {
+     "version": "4.13.4",
+     "n": 13,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.13.6",
+     "n": 10,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.13.10",
+     "n": 13,
+     "hits": 1,
+     "share": 0.077
+    }
+   ]
+  },
+  {
+   "key": "ui_and_ux_complaints",
+   "label": "Poor User Experience (UX)",
+   "peak": {
+    "version": "4.12.6",
+    "n": 32,
+    "hits": 5,
+    "share": 0.156
+   },
+   "verdict": "open",
+   "after": null,
+   "latest": {
+    "version": "4.13.10",
+    "n": 13,
+    "hits": 3,
+    "share": 0.231
+   },
+   "series": [
+    {
+     "version": "4.8.9",
+     "n": 15,
+     "hits": 2,
+     "share": 0.133
+    },
+    {
+     "version": "4.10.0",
+     "n": 32,
+     "hits": 3,
+     "share": 0.094
+    },
+    {
+     "version": "4.11.3",
+     "n": 9,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.4",
+     "n": 6,
+     "hits": 0,
+     "share": 0.0
+    },
+    {
+     "version": "4.11.5",
+     "n": 35,
+     "hits": 4,
+     "share": 0.114
+    },
+    {
+     "version": "4.12.1",
+     "n": 12,
+     "hits": 3,
+     "share": 0.25
+    },
+    {
+     "version": "4.12.3",
+     "n": 99,
+     "hits": 16,
+     "share": 0.162
+    },
+    {
+     "version": "4.12.5",
+     "n": 18,
+     "hits": 1,
+     "share": 0.056
+    },
+    {
+     "version": "4.12.6",
+     "n": 32,
+     "hits": 5,
+     "share": 0.156
+    },
+    {
+     "version": "4.13.4",
+     "n": 13,
+     "hits": 2,
+     "share": 0.154
+    },
+    {
+     "version": "4.13.6",
+     "n": 10,
+     "hits": 3,
+     "share": 0.3
+    },
+    {
+     "version": "4.13.10",
+     "n": 13,
+     "hits": 3,
+     "share": 0.231
+    }
+   ]
+  }
+ ]
 }

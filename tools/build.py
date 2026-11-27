@@ -67,7 +67,7 @@ def main():
                       "store_rating": a["store"]["avg"], "store_rating_count": a["store"]["count"],
                       "written_reviews_read": a["window"]["n"], "window": f"last {a['window'].get('recent_label', '90 days')}",
                       "problems_ranked": sum(1 for t in a["themes"] if t.get("brief")), "incidents": len(a["bursts"]),
-                      "sample_only": bool(a.get("sample_only"))})
+                      "sample_only": bool(a.get("sample_only")), "fix_tracking": len(a.get("fixes", []))})
     import datetime as _dt
     (ROOT / "docs" / "data" / "index.json").write_text(json.dumps({"generated": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), "apps": index}, ensure_ascii=False, indent=1))
     data = {"apps": apps, "meta": META}

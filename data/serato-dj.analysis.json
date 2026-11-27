@@ -771,5 +771,135 @@
   }
  ],
  "bursts": [],
- "dups": []
+ "dups": [],
+ "fixes": [
+  {
+   "key": "feature_parity_vs_competitors",
+   "label": "Feature Gaps vs. Competitors",
+   "peak": {
+    "version": "5.0.0.1168",
+    "n": 48,
+    "hits": 15,
+    "share": 0.312
+   },
+   "verdict": "early",
+   "after": null,
+   "latest": {
+    "version": "5.1.0.20",
+    "n": 11,
+    "hits": 2,
+    "share": 0.182
+   },
+   "series": [
+    {
+     "version": "5.0.0.1168",
+     "n": 48,
+     "hits": 15,
+     "share": 0.312
+    },
+    {
+     "version": "5.1.0.20",
+     "n": 11,
+     "hits": 2,
+     "share": 0.182
+    }
+   ]
+  },
+  {
+   "key": "pricing_and_licensing",
+   "label": "Cost & Paywalls",
+   "peak": {
+    "version": "5.0.0.1168",
+    "n": 48,
+    "hits": 14,
+    "share": 0.292
+   },
+   "verdict": "early",
+   "after": null,
+   "latest": {
+    "version": "5.1.0.20",
+    "n": 11,
+    "hits": 2,
+    "share": 0.182
+   },
+   "series": [
+    {
+     "version": "5.0.0.1168",
+     "n": 48,
+     "hits": 14,
+     "share": 0.292
+    },
+    {
+     "version": "5.1.0.20",
+     "n": 11,
+     "hits": 2,
+     "share": 0.182
+    }
+   ]
+  },
+  {
+   "key": "library_management",
+   "label": "Music Library Access",
+   "peak": {
+    "version": "5.0.0.1168",
+    "n": 48,
+    "hits": 7,
+    "share": 0.146
+   },
+   "verdict": "early",
+   "after": null,
+   "latest": {
+    "version": "5.1.0.20",
+    "n": 11,
+    "hits": 2,
+    "share": 0.182
+   },
+   "series": [
+    {
+     "version": "5.0.0.1168",
+     "n": 48,
+     "hits": 7,
+     "share": 0.146
+    },
+    {
+     "version": "5.1.0.20",
+     "n": 11,
+     "hits": 2,
+     "share": 0.182
+    }
+   ]
+  },
+  {
+   "key": "hardware_compatibility",
+   "label": "Controller Support",
+   "peak": {
+    "version": "5.0.0.1168",
+    "n": 48,
+    "hits": 5,
+    "share": 0.104
+   },
+   "verdict": "early",
+   "after": null,
+   "latest": {
+    "version": "5.1.0.20",
+    "n": 11,
+    "hits": 0,
+    "share": 0.0
+   },
+   "series": [
+    {
+     "version": "5.0.0.1168",
+     "n": 48,
+     "hits": 5,
+     "share": 0.104
+    },
+    {
+     "version": "5.1.0.20",
+     "n": 11,
+     "hits": 0,
+     "share": 0.0
+    }
+   ]
+  }
+ ]
 }

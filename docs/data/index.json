@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27 08:24 UTC",
+ "generated": "2026-11-27 08:28 UTC",
  "apps": [
   {
    "slug": "letterboxd",
@@ -12,7 +12,8 @@
    "window": "last 90 days",
    "problems_ranked": 5,
    "incidents": 3,
-   "sample_only": false
+   "sample_only": false,
+   "fix_tracking": 4
   },
   {
    "slug": "serato-dj",
@@ -25,7 +26,8 @@
    "window": "last 90 days",
    "problems_ranked": 5,
    "incidents": 0,
-   "sample_only": false
+   "sample_only": false,
+   "fix_tracking": 4
   },
   {
    "slug": "befunky",
@@ -38,7 +40,8 @@
    "window": "last sample",
    "problems_ranked": 0,
    "incidents": 0,
-   "sample_only": true
+   "sample_only": true,
+   "fix_tracking": 0
   },
   {
    "slug": "visionn",
@@ -51,7 +54,8 @@
    "window": "last sample",
    "problems_ranked": 0,
    "incidents": 0,
-   "sample_only": true
+   "sample_only": true,
+   "fix_tracking": 0
   },
   {
    "slug": "stamped",
@@ -64,7 +68,8 @@
    "window": "last 12 months",
    "problems_ranked": 5,
    "incidents": 0,
-   "sample_only": false
+   "sample_only": false,
+   "fix_tracking": 0
   },
   {
    "slug": "kno",
@@ -77,7 +82,8 @@
    "window": "last 12 months",
    "problems_ranked": 0,
    "incidents": 0,
-   "sample_only": false
+   "sample_only": false,
+   "fix_tracking": 0
   },
   {
    "slug": "foursixty",
@@ -90,7 +96,8 @@
    "window": "last 12 months",
    "problems_ranked": 0,
    "incidents": 0,
-   "sample_only": false
+   "sample_only": false,
+   "fix_tracking": 0
   },
   {
    "slug": "oots-theme-updater",
@@ -103,7 +110,8 @@
    "window": "last 12 months",
    "problems_ranked": 1,
    "incidents": 0,
-   "sample_only": false
+   "sample_only": false,
+   "fix_tracking": 0
   }
  ]
 }

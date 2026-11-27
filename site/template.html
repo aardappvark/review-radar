@@ -85,6 +85,18 @@ tr.flag td{background:var(--accent-soft)}
 .bar span{display:block;height:100%;background:var(--accent)}
 .muted{color:var(--muted)}
 .method{font-size:14px;color:var(--muted)}
+.fix{border-top:1px solid var(--line);padding:14px 0 6px}
+.fix:first-of-type{border-top:0;padding-top:4px}
+.fix .row{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;justify-content:space-between}
+.fix h3{margin:0;font-size:16px}
+.bars{display:flex;align-items:flex-end;gap:6px;height:96px;margin-top:10px;overflow-x:auto;padding-bottom:2px}
+.bars .b{flex:0 0 auto;width:44px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bars .b i{display:block;width:26px;background:var(--bar);border-radius:4px 4px 0 0;min-height:2px}
+.bars .b.peak i{background:var(--accent)}
+.bars .b.after i{background:var(--ok)}
+.bars .b span{font-size:10.5px;color:var(--muted);margin-top:4px;white-space:nowrap}
+.bars .b em{font-style:normal;font-size:11px;font-variant-numeric:tabular-nums;margin-bottom:3px}
+.chip.ok{background:var(--ok-soft);color:var(--ok);font-weight:600}
 .method li{margin:4px 0}
 footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
 a{color:var(--accent)}
@@ -266,6 +278,25 @@ function show(i){
     h += `<tr class="${v.flag ? 'flag' : ''}"><td><b>${esc(v.version)}</b></td><td class="muted">${mdate(v.first)}${v.last !== v.first ? '–' + mdate(v.last) : ''}</td><td>${v.n}</td><td>${v.avg.toFixed(2)}</td><td>${d}</td><td>${pct(v.bug_share)}</td><td>${esc(v.top.join(', '))}</td></tr>`;
   });
   h += `</tbody></table></div>`;
+  }
+
+  if (a.fixes && a.fixes.length) {
+    const vtext = f => f.verdict === 'fell' ? `<span class="chip ok">fell after v${esc(f.after)}</span>`
+      : f.verdict === 'open' ? `<span class="chip up">still open</span>`
+      : f.verdict === 'easing' ? `<span class="chip">easing</span>` : `<span class="chip">too early to tell</span>`;
+    const said = f => f.verdict === 'fell' ? `${pct(f.peak.share)} of v${esc(f.peak.version)}'s reviews raised it; from v${esc(f.after)} on it stayed at ${pct(f.peak.share / 3)} or less (latest: ${pct(f.latest.share)}).`
+      : f.verdict === 'open' ? `${pct(f.peak.share)} on v${esc(f.peak.version)}, and still ${pct(f.latest.share)} on the latest release.`
+      : f.verdict === 'easing' ? `${pct(f.peak.share)} on v${esc(f.peak.version)}, down to ${pct(f.latest.share)} on the latest release.`
+      : `${pct(f.peak.share)} on v${esc(f.peak.version)}; not enough reviews of later releases yet.`;
+    h += `<h2>Did the fix work?</h2><p class="sub">Each complaint's share of a release's written reviews, release by release (releases with 5+ reviews). Orange is the most recent spike; green, the releases after it when the complaint fell away. A drop after a release is consistent with a fix, not proof of one.</p><div class="panel">`;
+    a.fixes.forEach(f => {
+      const max = Math.max(...f.series.map(s => s.share), 0.01);
+      const afterIdx = f.after ? f.series.findIndex(s => s.version === f.after) : -1;
+      h += `<div class="fix"><div class="row"><h3>${esc(f.label)}</h3>${vtext(f)}</div><p class="muted" style="margin:4px 0 0;font-size:14px">${said(f)}</p><div class="bars">` +
+        f.series.map((s, i) => `<div class="b ${s.version === f.peak.version ? 'peak' : (afterIdx >= 0 && i >= afterIdx && f.verdict === 'fell' ? 'after' : '')}" title="v${esc(s.version)}: ${s.hits} of ${s.n} reviews"><em>${pct(s.share)}</em><i style="height:${Math.round(70 * s.share / max)}%"></i><span>${esc(s.version)}</span></div>`).join('') +
+        `</div></div>`;
+    });
+    h += `</div>`;
   }
 
   h += `<h2>Every theme</h2><p class="sub">${fmt(a.window.n)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}, ${shop ? 'merchants in' : 'storefronts'} ${esc(a.window.countries.join(', '))}.</p><div class="panel tablewrap"><table>

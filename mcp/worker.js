@@ -22,6 +22,8 @@ const TOOLS = [
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "versions", description: "Written-review average per release, flagging releases that dropped half a star or more (App Store apps only).",
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
+  { name: "did_the_fix_work", description: "For an App Store app's complaints, their share of each release's reviews, release by release, with a verdict read from the numbers (fell after vX, easing, still open, too early). A drop is consistent with a fix, not proof.",
+    inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "themes", description: "Every complaint and praise theme in an app's reviews with recent and earlier counts and average stars.",
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "draft_reply", description: "A public reply ready to post to a real review, for one of an app's top problems (rank 1-5).",
@@ -84,6 +86,14 @@ async function callTool(name, args, ctx) {
       if (!a.versions?.length) return { app: a.name, versions: [], note: "This store does not publish a version with each review." };
       return { app: a.name, versions: a.versions.slice().reverse().map((v) => ({ version: v.version, first_seen: v.first, last_seen: v.last,
         reviews: v.n, average_stars: v.avg, change: v.delta, dropped_half_a_star: v.flag, reports_something_broken: v.bug_share, main_complaints: v.top })) };
+    }
+    case "did_the_fix_work": {
+      const a = await app(args, ctx);
+      if (!a.fixes?.length) return { app: a.name, tracked: [], note: a.sample_only ? a.sample_note : "Needs per-release reviews (App Store apps) and a complaint that spiked on some release." };
+      return { app: a.name, note: "Share of each release's written reviews (releases with 5+ reviews). A drop after a release is consistent with a fix, not proof of one.",
+        tracked: a.fixes.map((f) => ({ complaint: f.label, verdict: f.verdict === "fell" ? `fell after v${f.after}` : f.verdict === "early" ? "too early to tell" : f.verdict === "open" ? "still open" : "easing",
+          spike: { version: f.peak.version, share: f.peak.share, mentions: f.peak.hits, reviews: f.peak.n }, latest: { version: f.latest.version, share: f.latest.share },
+          by_release: f.series.map((x) => ({ version: x.version, share: x.share, mentions: x.hits, reviews: x.n })) })) };
     }
     case "themes": {
       const a = await app(args, ctx);
