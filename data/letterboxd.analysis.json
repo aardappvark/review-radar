@@ -135,6 +135,67 @@
     "reply_to": 2,
     "reply": "Thank you for being a part of the Letterboxd community. We are sorry to hear that the recent changes to our ad experience have impacted your enjoyment of the app. We appreciate your feedback regarding the visibility of ads and will share this with our product team.",
     "checked": true
+   },
+   "actions": {
+    "n": 25,
+    "specific": 20,
+    "noise": 5,
+    "requests": [
+     {
+      "request": "Remove unskippable video ads upon opening the app",
+      "count": 8,
+      "ids": [
+       "14808836088",
+       "14554342924",
+       "14549223527",
+       "14548885185",
+       "14548274059",
+       "14548012829",
+       "14544337880",
+       "14543643322"
+      ],
+      "quote": "Added unskippable video ads to the landing page that directly inhibits using the product as designed.",
+      "stars": 1
+     },
+     {
+      "request": "Stop full screen pop up ads from covering display",
+      "count": 5,
+      "ids": [
+       "14744513993",
+       "14723986399",
+       "14692903706",
+       "14648552994",
+       "14545781602"
+      ],
+      "quote": "I couldn't stand the sheer amount of ads: full screen pop ups, floating video players, embedded ads that float on scroll - and all of them with jarring visual movement …",
+      "stars": 1
+     },
+     {
+      "request": "Stop ads from obstructing screen or blocking lists",
+      "count": 5,
+      "ids": [
+       "14778078841",
+       "14757899992",
+       "14680668060",
+       "14553512701",
+       "14503070447"
+      ],
+      "quote": "I understand having ads but why do you have one that’s literally in the way and cannot be cancelled out of the screen? It literally blocks my list.",
+      "stars": 1
+     },
+     {
+      "request": "Remove ads that trigger when posting reviews",
+      "count": 1,
+      "ids": [
+       "14764579517"
+      ],
+      "quote": "… If you don’t pay them they will force you to watch a commercial when you press POST on your movie review.",
+      "stars": 1
+     }
+    ],
+    "direction": "Prioritize reducing ad intrusiveness by addressing unskippable video ads upon app launch and full-screen pop-ups, as these represent the largest share of specific complaints.",
+    "outcome": "Users will experience fewer interruptions to their app navigation and content viewing.",
+    "check": "The share of reviews mentioning unskippable video ads and full-screen pop-ups should decrease in subsequent releases."
    }
   },
   {
@@ -221,6 +282,58 @@
     "reply_to": 2,
     "reply": "Thank you for sharing this feedback. We understand that the refresh animation can be disruptive, and we appreciate you highlighting this as an accessibility concern. Please feel free to reach out to our support team to share more details.",
     "checked": true
+   },
+   "actions": {
+    "n": 17,
+    "specific": 12,
+    "noise": 5,
+    "requests": [
+     {
+      "request": "Add native support and scaling for iPhone Duo",
+      "count": 5,
+      "ids": [
+       "14826784961",
+       "14799416621",
+       "14797876679",
+       "14758901033",
+       "14757672746"
+      ],
+      "quote": "… Please add native support for iPhone Duo with proper scaling.",
+      "stars": 1
+     },
+     {
+      "request": "Stop the app from taking control of phone audio",
+      "count": 2,
+      "ids": [
+       "14760158473",
+       "14608054228"
+      ],
+      "quote": "I can’t listen to audiobooks or music never whenever I open this app, it takes control of my phone’s audio and stops it. Annoying!",
+      "stars": 2
+     },
+     {
+      "request": "Reduce frequency or size of ads",
+      "count": 2,
+      "ids": [
+       "14549223527",
+       "14503070447"
+      ],
+      "quote": "Been using this app for a few years no issues whatsoever works fine however recently there was a new update and it changes the way as presented. I used to be able to …",
+      "stars": 2
+     },
+     {
+      "request": "Remove the top left corner animation",
+      "count": 1,
+      "ids": [
+       "14796738797"
+      ],
+      "quote": "I don’t like the corner animation. Every time I refresh, it returns. It’s even on the website. The unnecessary motion is an accessibility issue! I don’t like it. Pls …",
+      "stars": 1
+     }
+    ],
+    "direction": "Prioritize implementing native support and scaling for iPhone Duo and addressing the issue of the app taking control of phone audio. These two requests represent the largest share of actionable feedback.",
+    "outcome": "Users will have a more seamless experience on foldable devices and more control over their device's audio playback.",
+    "check": "The share of reviews mentioning iPhone Duo scaling and audio control should decrease in subsequent releases."
    }
   },
   {
@@ -289,6 +402,53 @@
     "reply_to": 2,
     "reply": "We are sorry to hear about the connection issues you experienced while watching. We want the video store to be a seamless experience for you. Please reach out to our support team so we can look into this further.",
     "checked": true
+   },
+   "actions": {
+    "n": 7,
+    "specific": 5,
+    "noise": 2,
+    "requests": [
+     {
+      "request": "Fix video store streaming interruptions and buffering",
+      "count": 2,
+      "ids": [
+       "14802939639",
+       "14601634055"
+      ],
+      "quote": "STREAMING CONSTANTLY INTERRUPTED WITH BUFFERING/LATENCY ISSUES. WHAT AN EMBARRASSMENT FOR THE ARTISTS WHO RELY ON THIS PLATFORM TO SHOWCASE THEIR WORK. FIX …",
+      "stars": 1
+     },
+     {
+      "request": "Prevent phone overheating when using the app",
+      "count": 1,
+      "ids": [
+       "14691858347"
+      ],
+      "quote": "… After that I noticed my phone getting very hot. Tried again later but overheating happened again. Haven’t experienced that with any other app, so I’ve deleted it. No …",
+      "stars": 2
+     },
+     {
+      "request": "Fix black screen on startup for iOS 27",
+      "count": 1,
+      "ids": [
+       "14575047170"
+      ],
+      "quote": "Might be an issue with a new update, but the app just shows a black screen when opening now on iOS 27",
+      "stars": 1
+     },
+     {
+      "request": "Prevent app from erasing logged movie reviews",
+      "count": 1,
+      "ids": [
+       "14496318409"
+      ],
+      "quote": "Once in a while this app will wipe ALL of my logged movies. Spent years logging them just for all of them to disappear. Very sad, happened to me twice!",
+      "stars": 2
+     }
+    ],
+    "direction": "Start with the most-asked change: fix video store streaming interruptions and buffering (2 of 7 reviews).",
+    "outcome": "Fewer reviews raising this problem after the release that ships it.",
+    "check": "Watch this complaint's share of reviews in the next release on the \"Did the fix work?\" chart."
    }
   },
   {
@@ -351,6 +511,36 @@
     "reply_to": 0,
     "reply": "We are sorry to hear you're having trouble creating an account. Please reach out to our support team so we can look into this further and help you get started with Letterboxd.",
     "checked": true
+   },
+   "actions": {
+    "n": 4,
+    "specific": 4,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Fix account creation and login failures",
+      "count": 2,
+      "ids": [
+       "14830272317",
+       "14508083791"
+      ],
+      "quote": "… I kept my login info so it’s not me. I tried to verify and it’s “too late”. That’s ridiculous how can I not verify it now? Also I tried resetting the password and it …",
+      "stars": 1
+     },
+     {
+      "request": "Prevent random sign-outs and session timeouts",
+      "count": 2,
+      "ids": [
+       "14743007886",
+       "14542876374"
+      ],
+      "quote": "Put a lot of thought into making lists, reviews and recalling things I have watched only for my letterboxd to randomly sign out. I don't remember my password or username …",
+      "stars": 1
+     }
+    ],
+    "direction": "Prioritize fixing account creation and login failures, followed by addressing random sign-outs and session timeouts, to stabilize core user access.",
+    "outcome": "Users should be able to create accounts and remain logged in without unexpected session interruptions.",
+    "check": "The share of reviews mentioning login failures and random sign-outs should decrease relative to the total number of reviews."
    }
   },
   {
@@ -436,6 +626,56 @@
     "reply_to": 0,
     "reply": "Thank you for being a paid member and for sharing this feedback. We understand how important the 'where to watch' toggle is for your mobile experience. We appreciate you bringing this to our attention, and please feel free to reach out to our support team with any other thoughts.",
     "checked": "counts"
+   },
+   "actions": {
+    "n": 26,
+    "specific": 24,
+    "noise": 2,
+    "requests": [
+     {
+      "request": "Add TV shows and series to the app",
+      "count": 3,
+      "ids": [
+       "14776232185",
+       "14666375247",
+       "14562073135"
+      ],
+      "quote": "There are so many tv shows that I want to rate and see the ratings of others",
+      "stars": 5
+     },
+     {
+      "request": "Add movie age ratings and content warnings",
+      "count": 2,
+      "ids": [
+       "14551030772",
+       "14521655113"
+      ],
+      "quote": "i love this app and i think it’s so amazing, but i would like to see the actual rating of the movie. like R, or TV-14, or PG-13. yk? bc as someone who doesn’t like to …",
+      "stars": 5
+     },
+     {
+      "request": "Add iPhone Duo support",
+      "count": 2,
+      "ids": [
+       "14770464875",
+       "14747942155"
+      ],
+      "quote": "… Also, we need iPhone Duo support. Thanks!",
+      "stars": 4
+     },
+     {
+      "request": "Add 'Where to watch' toggle to mobile app",
+      "count": 1,
+      "ids": [
+       "14783012966"
+      ],
+      "quote": "Where to watch toggle is not available for the mobile app. This is so disappointing that this feature is not available even for the paid users. They only have this …",
+      "stars": 2
+     }
+    ],
+    "direction": "Prioritize adding TV shows and series to the app to address the most frequent specific feature request.",
+    "outcome": "Users will be able to track and log television content alongside films.",
+    "check": "The share of reviews requesting TV show support should decrease relative to the total number of feature requests."
    }
   },
   {

@@ -100,6 +100,26 @@
     "reply_to": 0,
     "reply": "We are sorry to hear about the issues with inventory logic and the update process. We take these reports seriously and would appreciate the chance to investigate this further. Please contact our support team so we can look into what happened with your site.",
     "checked": "counts"
+   },
+   "actions": {
+    "n": 6,
+    "specific": 1,
+    "noise": 5,
+    "requests": [
+     {
+      "request": "Fix site freezing when adding items exceeding stock",
+      "count": 1,
+      "ids": [
+       "2065829"
+      ],
+      "quote": "… When a customer tries to add more items than what's in stock, the entire site simply FREEZES instead of showing a proper message or limiting the quantity. This is a …",
+      "stars": 1
+     }
+    ],
+    "single": true,
+    "direction": "Each review asks for something different, so there is no single change to make first. Treat them as individual reports: reproduce any bug, and reply to feature requests asking what they need it for.",
+    "outcome": "Each reporter gets an answer, and any bug that reproduces is fixed before it spreads.",
+    "check": "If two or more reviews start asking for the same thing, it becomes a direction here on the next run."
    }
   },
   {

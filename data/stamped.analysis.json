@@ -130,6 +130,53 @@
     "reply_to": 1,
     "reply": "We are sorry to hear about your experience with our service and pricing. We value your feedback regarding our support availability and will share this with our team. If you would like to discuss your account further, please reach out to our support team.",
     "checked": "counts"
+   },
+   "actions": {
+    "n": 21,
+    "specific": 5,
+    "noise": 16,
+    "requests": [
+     {
+      "request": "Fix review requests stopping and pending in queue",
+      "count": 1,
+      "ids": [
+       "2277427"
+      ],
+      "quote": "… Each time, requests have built up in the pending queue and we have had to contact support. Support has then had to manually push the outstanding requests through, rather …",
+      "stars": 3
+     },
+     {
+      "request": "Enable CSV export of reviews for users",
+      "count": 1,
+      "ids": [
+       "2129310"
+      ],
+      "quote": "This app is buggy, slow and I cannot get any help from customer support to export all my reviews to a .csv file. The only option is to have customer support do it but I …",
+      "stars": 1
+     },
+     {
+      "request": "Improve chat functionality and remove AI chatbot",
+      "count": 1,
+      "ids": [
+       "2096231"
+      ],
+      "quote": "… Their chatbot only generates AI responses which isn't helpful!!!",
+      "stars": 1
+     },
+     {
+      "request": "Fix theme editor integration and app customization",
+      "count": 1,
+      "ids": [
+       "2010280"
+      ],
+      "quote": "… 1 Star for the app: I have a 2.0 theme and trying to set up was impossible; backend told me to edit in theme editor-> theme editor told me to edit in backend...round and …",
+      "stars": 5
+     }
+    ],
+    "single": true,
+    "direction": "Each review asks for something different, so there is no single change to make first. Treat them as individual reports: reproduce any bug, and reply to feature requests asking what they need it for.",
+    "outcome": "Each reporter gets an answer, and any bug that reproduces is fixed before it spreads.",
+    "check": "If two or more reviews start asking for the same thing, it becomes a direction here on the next run."
    }
   },
   {
@@ -192,6 +239,35 @@
     "reply_to": 0,
     "reply": "We are sorry to hear about this experience with your recent charges. We want to ensure our billing process is transparent and easy to manage. Please reach out to our support team so we can look into your account details and help resolve this for you.",
     "checked": true
+   },
+   "actions": {
+    "n": 4,
+    "specific": 2,
+    "noise": 2,
+    "requests": [
+     {
+      "request": "Clarify billing cancellation process during uninstallation",
+      "count": 1,
+      "ids": [
+       "2402392"
+      ],
+      "quote": "… This distinction was not clear during the uninstallation process. A merchant should not have to pay for an app they removed and no longer use. I have contacted Stamped …",
+      "stars": 1
+     },
+     {
+      "request": "Fix review request delivery and display bugs",
+      "count": 1,
+      "ids": [
+       "2342399"
+      ],
+      "quote": "… Review requests weren't sending for months—meaning we lost a lot of customer reviews—and we also noticed bugs with how reviews were displaying. When we reached out, we …",
+      "stars": 1
+     }
+    ],
+    "single": true,
+    "direction": "Each review asks for something different, so there is no single change to make first. Treat them as individual reports: reproduce any bug, and reply to feature requests asking what they need it for.",
+    "outcome": "Each reporter gets an answer, and any bug that reproduces is fixed before it spreads.",
+    "check": "If two or more reviews start asking for the same thing, it becomes a direction here on the next run."
    }
   },
   {
@@ -252,6 +328,35 @@
     "reply_to": 0,
     "reply": "We are sorry to hear about your experience with the uninstallation process and the issues with your review requests. Please reach out to our support team so we can look into your account details and help resolve this.",
     "checked": true
+   },
+   "actions": {
+    "n": 3,
+    "specific": 3,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Improve customer support responsiveness",
+      "count": 2,
+      "ids": [
+       "2195754",
+       "2129310"
+      ],
+      "quote": "… Judge me, loox, you name it, have instant customer support...avoid this app at all cost",
+      "stars": 1
+     },
+     {
+      "request": "Fix review request sending and display bugs",
+      "count": 1,
+      "ids": [
+       "2342399"
+      ],
+      "quote": "… Review requests weren't sending for months—meaning we lost a lot of customer reviews—and we also noticed bugs with how reviews were displaying. When we reached out, we …",
+      "stars": 1
+     }
+    ],
+    "direction": "Prioritize fixing the review request sending and display bugs, then address the need for improved customer support responsiveness.",
+    "outcome": "Users will experience reliable automated review workflows and faster resolutions to their inquiries.",
+    "check": "The share of reviews mentioning bugs and support responsiveness should decrease in future releases."
    }
   },
   {
@@ -294,6 +399,26 @@
     "reply_to": 0,
     "reply": "Thank you for being a loyal customer for over 10 years. We are sorry to hear about the performance issues you are experiencing with the app. Please contact our support team so we can look into this for you.",
     "checked": true
+   },
+   "actions": {
+    "n": 2,
+    "specific": 1,
+    "noise": 1,
+    "requests": [
+     {
+      "request": "Fix slow loading of review rating widgets",
+      "count": 1,
+      "ids": [
+       "1981957"
+      ],
+      "quote": "… Over the past year, the review rating widgets have been loading extremely slowly, often requiring multiple page refreshes before they appear. This issue has intensified …",
+      "stars": 1
+     }
+    ],
+    "single": true,
+    "direction": "Each review asks for something different, so there is no single change to make first. Treat them as individual reports: reproduce any bug, and reply to feature requests asking what they need it for.",
+    "outcome": "Each reporter gets an answer, and any bug that reproduces is fixed before it spreads.",
+    "check": "If two or more reviews start asking for the same thing, it becomes a direction here on the next run."
    }
   },
   {
@@ -345,6 +470,35 @@
     "reply_to": 1,
     "reply": "We are sorry to hear about the display issue with your star ratings. Please reach out to our support team so we can look into this specific instance for you.",
     "checked": true
+   },
+   "actions": {
+    "n": 3,
+    "specific": 2,
+    "noise": 1,
+    "requests": [
+     {
+      "request": "Fix review requests stuck in pending queue",
+      "count": 1,
+      "ids": [
+       "2277427"
+      ],
+      "quote": "… Each time, requests have built up in the pending queue and we have had to contact support. Support has then had to manually push the outstanding requests through, rather …",
+      "stars": 3
+     },
+     {
+      "request": "Fix 5 star ratings displaying as question marks",
+      "count": 1,
+      "ids": [
+       "2050841"
+      ],
+      "quote": "My 5 stars are showing up as question marks.",
+      "stars": 1
+     }
+    ],
+    "single": true,
+    "direction": "Each review asks for something different, so there is no single change to make first. Treat them as individual reports: reproduce any bug, and reply to feature requests asking what they need it for.",
+    "outcome": "Each reporter gets an answer, and any bug that reproduces is fixed before it spreads.",
+    "check": "If two or more reviews start asking for the same thing, it becomes a direction here on the next run."
    }
   },
   {

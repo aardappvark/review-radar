@@ -9,3 +9,4 @@ __pycache__/
 EMAIL_DRAFT.md
 data/wait-apple.log
 data/translations.json
+EMAIL_FINAL.txt

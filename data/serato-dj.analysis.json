@@ -116,6 +116,59 @@
     "reply_to": 1,
     "reply": "We hear your frustration regarding the subscription model for features you have previously purchased. We appreciate you sharing this feedback with us, as it helps us understand the impact on our long-term users. Please feel free to reach out to our support team to discuss your account details.",
     "checked": true
+   },
+   "actions": {
+    "n": 16,
+    "specific": 14,
+    "noise": 2,
+    "requests": [
+     {
+      "request": "Lower subscription price point",
+      "count": 5,
+      "ids": [
+       "14698967783",
+       "14693579818",
+       "14692727965",
+       "14689778149",
+       "14687227753"
+      ],
+      "quote": "Justify $150 for a phone application?",
+      "stars": 2
+     },
+     {
+      "request": "Allow existing desktop owners to use app without subscription",
+      "count": 4,
+      "ids": [
+       "14779719750",
+       "14698762857",
+       "14689917145",
+       "14686849302"
+      ],
+      "quote": "… This really could have been cool but in no world am I paying a subscription fee for something you already made me purchase once before. Rekordbox all day long after this …",
+      "stars": 1
+     },
+     {
+      "request": "Add Flip mode and multiple streaming services",
+      "count": 1,
+      "ids": [
+       "14765491232"
+      ],
+      "quote": "… The app has no flip , no way to get multiple streaming services to use. The app is also heavy IoS uses. So my phone has to be on 10 mms to perform without sound having …",
+      "stars": 3
+     },
+     {
+      "request": "Add Native music Sync and video capabilities",
+      "count": 1,
+      "ids": [
+       "14703591116"
+      ],
+      "quote": "The App costs 275% more than DJAY and offers 2750% less features, there’s no Native music Sync, only cloud sign in, no video capabilities, still using the old crate …",
+      "stars": 1
+     }
+    ],
+    "direction": "Prioritize investigating a lower subscription price point and a way for existing desktop owners to access the app without a subscription to address the primary cost-related complaints. We should also track the requests for Flip mode, multiple streaming services, and Native music Sync/video capabilities as secondary roadmap considerations.",
+    "outcome": "Users will feel the app is more accessible and provides better value relative to their existing hardware investments.",
+    "check": "The success will be measured by a decrease in the share of reviews citing cost and paywalls in subsequent releases."
    }
   },
   {
@@ -201,6 +254,53 @@
     "reply_to": 0,
     "reply": "Thank you for sharing your feedback. We understand your concerns regarding the current feature set and the transition to a subscription model. We value your long-term support of Serato and invite you to contact our support team to discuss your experience further.",
     "checked": true
+   },
+   "actions": {
+    "n": 17,
+    "specific": 12,
+    "noise": 5,
+    "requests": [
+     {
+      "request": "Enable access to local Apple Music library",
+      "count": 2,
+      "ids": [
+       "14711544190",
+       "14694045342"
+      ],
+      "quote": "… The main thing though was that I couldn’t even access my local music! That’s crazy! It was so easy to import in djay.",
+      "stars": 2
+     },
+     {
+      "request": "Offer a free trial before charging",
+      "count": 1,
+      "ids": [
+       "14807992155"
+      ],
+      "quote": "… I used to own the suits for my 1000sr in years for similar reason I haven’t used Serato in years and upon downloading the app got charged immediately with no trial super …",
+      "stars": 1
+     },
+     {
+      "request": "Allow DVS use without a subscription",
+      "count": 1,
+      "ids": [
+       "14779719750"
+      ],
+      "quote": "… This really could have been cool but in no world am I paying a subscription fee for something you already made me purchase once before. Rekordbox all day long after this …",
+      "stars": 1
+     },
+     {
+      "request": "Add Flip and multiple streaming services",
+      "count": 1,
+      "ids": [
+       "14765491232"
+      ],
+      "quote": "… The app has no flip , no way to get multiple streaming services to use. The app is also heavy IoS uses. So my phone has to be on 10 mms to perform without sound having …",
+      "stars": 3
+     }
+    ],
+    "direction": "Prioritize implementing local Apple Music library access and investigating the addition of Flip and more streaming services to address the most frequent feature gap requests.",
+    "outcome": "Users will have more integrated ways to access their existing music collections and streaming options within the app.",
+    "check": "The share of reviews requesting local library access and additional streaming services should decrease relative to the total number of reviews."
    }
   },
   {
@@ -272,6 +372,55 @@
     "reply_to": 1,
     "reply": "Thank you for sharing your feedback. We are sorry to hear you are having trouble accessing your iTunes library. Please reach out to our support team so we can look into this specific issue further.",
     "checked": true
+   },
+   "actions": {
+    "n": 9,
+    "specific": 9,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Allow access to iTunes and Apple Music libraries",
+      "count": 4,
+      "ids": [
+       "14779947772",
+       "14711544190",
+       "14695938993",
+       "14694045342"
+      ],
+      "quote": "… The main thing though was that I couldn’t even access my local music! That’s crazy! It was so easy to import in djay.",
+      "stars": 2
+     },
+     {
+      "request": "Fix Master Output playing only through iPhone speakers",
+      "count": 1,
+      "ids": [
+       "14806994060"
+      ],
+      "quote": "No matter what I try, the Master Output only plays thru my phone speakers on my iPhone 17. And sound STILL drops out every few minutes. Good luck trying to navigate your …",
+      "stars": 1
+     },
+     {
+      "request": "Allow editing and removing library categories like genre/key",
+      "count": 1,
+      "ids": [
+       "14741709022"
+      ],
+      "quote": "They still needs dj library to be able to add or remove song titles and be able to remove unwanted categories charts such like genre, or key ect if they made that change …",
+      "stars": 5
+     },
+     {
+      "request": "Add native music sync and video capabilities",
+      "count": 1,
+      "ids": [
+       "14703591116"
+      ],
+      "quote": "The App costs 275% more than DJAY and offers 2750% less features, there’s no Native music Sync, only cloud sign in, no video capabilities, still using the old crate …",
+      "stars": 1
+     }
+    ],
+    "direction": "Prioritize implementing access to iTunes and Apple Music libraries to address the largest segment of specific user requests.",
+    "outcome": "Users will be able to seamlessly integrate their existing Apple music collections into the Serato DJ interface.",
+    "check": "The share of reviews regarding music library access should decrease relative to the total number of reviews."
    }
   },
   {
@@ -336,6 +485,53 @@
     "reply_to": 2,
     "reply": "Thank you for sharing your feedback regarding Rane Four support. We understand how important it is to use your latest gear with Serato. Please reach out to our support team so we can gather more details about your setup.",
     "checked": "partial: happening"
+   },
+   "actions": {
+    "n": 5,
+    "specific": 5,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Add HID mode support",
+      "count": 1,
+      "ids": [
+       "14762508418"
+      ],
+      "quote": "Dont waste your money unless they add HID it’s mostly worthless to pay the premium price for a product that is incomplete… you can’t use it without control vinyl or a …",
+      "stars": 2
+     },
+     {
+      "request": "Add support for Korg Kaoss DJ",
+      "count": 1,
+      "ids": [
+       "14742583828"
+      ],
+      "quote": "Would have made an immediate purchase, but Korg Kaoss DJ controller is not supported. Funnily they call it obsolete on their website, yet they support Vestax that went …",
+      "stars": 2
+     },
+     {
+      "request": "Add support for Rane Four",
+      "count": 1,
+      "ids": [
+       "14715423380"
+      ],
+      "quote": "… I will change my review once I can use my rane four.",
+      "stars": 1
+     },
+     {
+      "request": "Fix FLX10 jog wheel display and audio driver error",
+      "count": 1,
+      "ids": [
+       "14695631530"
+      ],
+      "quote": "… I am very disappointed to see that the jog wheel displays on my FLX10 are not working with this app. It’s so close to being great. They say “no audio driver” despite …",
+      "stars": 3
+     }
+    ],
+    "single": true,
+    "direction": "Each review asks for something different, so there is no single change to make first. Treat them as individual reports: reproduce any bug, and reply to feature requests asking what they need it for.",
+    "outcome": "Each reporter gets an answer, and any bug that reproduces is fixed before it spreads.",
+    "check": "If two or more reviews start asking for the same thing, it becomes a direction here on the next run."
    }
   },
   {
@@ -386,6 +582,26 @@
     "reply_to": 0,
     "reply": "We are sorry to hear you are experiencing issues with your Master Output. Please contact our support team so we can look into this routing behavior with your specific hardware setup.",
     "checked": "partial: happening"
+   },
+   "actions": {
+    "n": 2,
+    "specific": 2,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Fix Master Output playing only through phone speakers",
+      "count": 2,
+      "ids": [
+       "14806994060",
+       "14716065089"
+      ],
+      "quote": "… Audio was playing through the speakers perfectly fine a few days ago, but now it only plays through my phone. I’ve tried to reset, and just about everything else. This …",
+      "stars": 2
+     }
+    ],
+    "direction": "Investigate and resolve the bug causing the Master Output to play exclusively through phone speakers, as reported in 2 reviews.",
+    "outcome": "Users should be able to route Master Output to external hardware instead of being restricted to phone speakers.",
+    "check": "The share of reviews reporting Master Output audio bugs should decrease from 2 in the current release."
    }
   },
   {

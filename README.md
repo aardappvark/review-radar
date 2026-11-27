@@ -15,6 +15,7 @@ python3 tools/fetch.py      # apps.json: Apple's review feed (500 per storefront
 python3 tools/tag.py        # local gemma4 (Ollama): theme list, then 0-2 themes + bug flag + gist per review
 python3 tools/analyse.py    # themes and trend, version regressions, bursts, copy-paste text
 python3 tools/brief.py      # local gemma4 26B drafts the top-5 cards; numbers checked against the data
+python3 tools/actions.py    # per problem: specific asks vs vague noise, grouped and counted, then direction / outcome / check
 python3 tools/build.py      # one self-contained docs/index.html (served by GitHub Pages)
 ```
 
@@ -32,6 +33,7 @@ Needs Python 3.10+ and [Ollama](https://ollama.com) with `gemma4` and `gemma4:26
 | Dig into the numbers | Star mix (this period vs the last), written reviews and average stars by month, reviewer countries, three-word reviews, median length, and publisher reply rate on Shopify. |
 | Translations | Quotes not in English are shown translated first (local model), with "tap for original"; an "In other languages" panel counts and samples them. |
 | Copy-paste | Near-identical text across different reviews (3-word shingles, Jaccard ≥ 0.6). |
+| Action points | For each problem the local model sorts its reviews into *specific* (names something a team could act on: a feature, a device, a screen, a price, a bug with circumstances) and *noise* ("bad UI", "worse than before"), and groups the specific ones into requests. The code counts from the review ids it returns. A direction, expected outcome and check are drafted from those counts; a draft with a number not in them, or that doesn't lead with the most-asked request, is sent back. When no two reviews ask for the same thing, the card says so instead of inventing a direction. |
 | Briefs | Drafted by the local model. Any number it writes that isn't in the data sends the card back, then falls back to a plain sentence. |
 
 ## Limits

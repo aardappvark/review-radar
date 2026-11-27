@@ -92,6 +92,27 @@
     "reply_to": 2,
     "reply": "We hear your frustration regarding the recent changes to our feature availability. We understand that the shift to a subscription model is a significant change from your previous experience. If you would like to discuss this further, please reach out to our support team.",
     "checked": true
+   },
+   "actions": {
+    "n": 4,
+    "specific": 3,
+    "noise": 1,
+    "requests": [
+     {
+      "request": "Revert features previously included for free to free tier",
+      "count": 3,
+      "ids": [
+       "14686264722",
+       "14213312242",
+       "13858553388"
+      ],
+      "quote": "used to be good back in the day, now almost every useful feature that used to be free is now paywalled and locked to premium. sad to see what one of my favorite editing …",
+      "stars": 1
+     }
+    ],
+    "direction": "Revert the specific features that were previously included in the free tier back to the free tier to address the 3 reviews requesting this change.",
+    "outcome": "Users will no longer report frustration regarding the loss of previously free functionality.",
+    "check": "The share of reviews mentioning feature paywalls should decrease relative to the total number of reviews."
    }
   },
   {
@@ -142,6 +163,26 @@
     "reply_to": 0,
     "reply": "Thank you for sharing your feedback. We understand your frustration regarding the changes to our feature availability and the transition of certain tools to our premium tier. We value your long-term support and invite you to contact our support team to discuss your experience further.",
     "checked": true
+   },
+   "actions": {
+    "n": 2,
+    "specific": 2,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Revert paywalled features to free access",
+      "count": 2,
+      "ids": [
+       "14686264722",
+       "14213312242"
+      ],
+      "quote": "used to be good back in the day, now almost every useful feature that used to be free is now paywalled and locked to premium. sad to see what one of my favorite editing …",
+      "stars": 1
+     }
+    ],
+    "direction": "Start with the most-asked change: revert paywalled features to free access (2 of 2 reviews).",
+    "outcome": "Fewer reviews raising this problem after the release that ships it.",
+    "check": "Watch this complaint's share of reviews in the next release on the \"Did the fix work?\" chart."
    }
   },
   {
@@ -192,6 +233,26 @@
     "reply_to": 0,
     "reply": "We are sorry to hear about your experience with these charges. We want to ensure our billing process is clear and easy to manage. Please contact our support team so we can look into your account details and assist you directly.",
     "checked": true
+   },
+   "actions": {
+    "n": 2,
+    "specific": 2,
+    "noise": 0,
+    "requests": [
+     {
+      "request": "Send payment notifications and receipts for charges",
+      "count": 2,
+      "ids": [
+       "14214442056",
+       "14186799545"
+      ],
+      "quote": "… They have also failed to respond to the predatory pricing activities of refusing to send charge notifications (no receipts ever sent)",
+      "stars": 1
+     }
+    ],
+    "direction": "Implement automated payment notifications and receipts for all charges to address the 2 reviews requesting better billing transparency.",
+    "outcome": "Users will no longer report missing documentation for their transactions.",
+    "check": "The share of reviews mentioning missing receipts or notifications should drop to zero."
    }
   },
   {
