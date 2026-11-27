@@ -13,6 +13,10 @@ def mdate(d):
 
 
 def callout(a):
+    if a.get("sample_only"):
+        low = sum(1 for q in a["sample"] if q["stars"] <= 2)
+        return (f"The App Store shows <b>{a['store']['avg']:.2f}★</b> from {a['store']['count']:,} ratings. Apple's review feed is down, so this is "
+                f"only the {len(a['sample'])} reviews Apple puts on the page ({low} of them at 1–2★): a sample to read, not enough to rank problems.")
     gap = a["store"]["avg"] - a["written_avg_recent"]
     top = next((t for t in a["themes"] if t["key"] != "praise" and t["n_recent"] > 0), None)
     happy = lambda t: t.get("pos_recent", 0) >= 2 * max(t["low_recent"], 1)   # raised mostly in 4-5 star reviews
@@ -62,7 +66,8 @@ def main():
         index.append({"slug": a["slug"], "app": a["name"], "company": a.get("company"), "store": a.get("store_kind"),
                       "store_rating": a["store"]["avg"], "store_rating_count": a["store"]["count"],
                       "written_reviews_read": a["window"]["n"], "window": f"last {a['window'].get('recent_label', '90 days')}",
-                      "problems_ranked": sum(1 for t in a["themes"] if t.get("brief")), "incidents": len(a["bursts"])})
+                      "problems_ranked": sum(1 for t in a["themes"] if t.get("brief")), "incidents": len(a["bursts"]),
+                      "sample_only": bool(a.get("sample_only"))})
     import datetime as _dt
     (ROOT / "docs" / "data" / "index.json").write_text(json.dumps({"generated": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), "apps": index}, ensure_ascii=False, indent=1))
     data = {"apps": apps, "meta": META}

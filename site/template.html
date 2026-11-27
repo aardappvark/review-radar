@@ -199,6 +199,19 @@ function show(i){
   [...tabs.children].forEach((b, j) => b.setAttribute('aria-selected', String(i === j)));
   const a = D.apps[i];
   const hasPrior = a.window.prior_n > 0;
+  if (a.sample_only) {
+    let x = `<div class="kpis">
+      <div class="kpi"><div class="v">${a.store.avg.toFixed(2)}★</div><div class="l">App Store rating (${fmt(a.store.count)} ratings, US)</div></div>
+      <div class="kpi"><div class="v">${a.sample.length}</div><div class="l">reviews Apple shows on the page (a sample)</div></div>
+      <div class="kpi"><div class="v">${a.written_avg_recent != null ? a.written_avg_recent.toFixed(1) + '★' : '–'}</div><div class="l">average of that sample</div></div>
+      <div class="kpi"><div class="v">v${esc(a.store.version)}</div><div class="l">current version, released ${mdate(a.store.version_date)}</div></div></div>`;
+    x += `<div class="callout">${a.callout}</div>`;
+    x += `<h2>A sample, not an analysis</h2><p class="sub">${esc(a.sample_note)}</p><div class="panel"><div class="quotes">` +
+      a.sample.map(q => `<div class="q"><div class="meta"><span class="stars">${stars(q.stars)}</span> · ${esc(q.date)}${q.developer_replied ? ' · the developer replied' : ''}</div><b>${esc(q.title)}</b> ${esc(q.text)}</div>`).join('') +
+      `</div></div>`;
+    $('#app').innerHTML = x;
+    return;
+  }
   const L = a.window.recent_label || '90 days';
   const shop = a.store_kind === 'shopify';
   const top = a.themes.filter(t => t.brief);

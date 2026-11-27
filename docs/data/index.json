@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27 06:44 UTC",
+ "generated": "2026-11-27 08:24 UTC",
  "apps": [
   {
    "slug": "letterboxd",
@@ -11,7 +11,8 @@
    "written_reviews_read": 700,
    "window": "last 90 days",
    "problems_ranked": 5,
-   "incidents": 3
+   "incidents": 3,
+   "sample_only": false
   },
   {
    "slug": "serato-dj",
@@ -23,7 +24,34 @@
    "written_reviews_read": 59,
    "window": "last 90 days",
    "problems_ranked": 5,
-   "incidents": 0
+   "incidents": 0,
+   "sample_only": false
+  },
+  {
+   "slug": "befunky",
+   "app": "BeFunky",
+   "company": "BeFunky",
+   "store": "apple",
+   "store_rating": 4.68,
+   "store_rating_count": 11006,
+   "written_reviews_read": 10,
+   "window": "last sample",
+   "problems_ranked": 0,
+   "incidents": 0,
+   "sample_only": true
+  },
+  {
+   "slug": "visionn",
+   "app": "Visionn",
+   "company": "BeFunky",
+   "store": "apple",
+   "store_rating": 3.91,
+   "store_rating_count": 209,
+   "written_reviews_read": 10,
+   "window": "last sample",
+   "problems_ranked": 0,
+   "incidents": 0,
+   "sample_only": true
   },
   {
    "slug": "stamped",
@@ -35,7 +63,8 @@
    "written_reviews_read": 108,
    "window": "last 12 months",
    "problems_ranked": 5,
-   "incidents": 0
+   "incidents": 0,
+   "sample_only": false
   },
   {
    "slug": "kno",
@@ -47,7 +76,8 @@
    "written_reviews_read": 83,
    "window": "last 12 months",
    "problems_ranked": 0,
-   "incidents": 0
+   "incidents": 0,
+   "sample_only": false
   },
   {
    "slug": "foursixty",
@@ -59,7 +89,8 @@
    "written_reviews_read": 24,
    "window": "last 12 months",
    "problems_ranked": 0,
-   "incidents": 0
+   "incidents": 0,
+   "sample_only": false
   },
   {
    "slug": "oots-theme-updater",
@@ -71,7 +102,8 @@
    "written_reviews_read": 148,
    "window": "last 12 months",
    "problems_ranked": 1,
-   "incidents": 0
+   "incidents": 0,
+   "sample_only": false
   }
  ]
 }

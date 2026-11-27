@@ -59,6 +59,8 @@ async function callTool(name, args, ctx) {
     }
     case "top_problems": {
       const a = await app(args, ctx);
+      if (a.sample_only) return { app: a.name, sample_only: true, note: a.sample_note, store_rating: a.store?.avg,
+        sample: a.sample.map((q) => ({ stars: q.stars, date: q.date, title: q.title, text: q.text })) };
       return {
         app: a.name, company: a.company, store: a.store_kind, window: `last ${label(a)}`,
         store_rating: a.store?.avg, written_reviews_average: a.written_avg_recent,
