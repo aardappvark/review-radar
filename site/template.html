@@ -387,6 +387,16 @@ function show(i){
     }
   }
 
+  if (a.world && a.world.countries && a.world.countries.length) {
+    const w = a.world;
+    h += `<h2>Around the world</h2><p class="sub">${esc(a.tab || a.name)} in ${w.countries.length} more countries' App Stores: ${fmt(w.n)} recent reviews, in their own languages. ${esc(w.note)}</p>`;
+    h += `<div class="panel tablewrap"><table><thead><tr><th>Country</th><th>Reviews</th><th>Avg</th><th>1–2★</th><th>Top complaint</th></tr></thead><tbody>` +
+      w.countries.map(c => `<tr><td><b>${esc(c.country)}</b>${c.n < 20 ? ' <span class="muted" style="font-size:12px">small sample</span>' : ''}</td><td>${c.n}</td><td>${c.avg.toFixed(2)}★</td><td>${pct(c.low_share)}</td><td>${c.top_complaint ? esc(c.top_complaint) + ` <span class="muted">(${c.top_n})</span>` : '<span class="muted">–</span>'}</td></tr>`).join('') +
+      `</tbody></table></div>`;
+    if (w.examples.length) h += `<div class="panel" style="margin-top:14px"><h3 style="margin:0 0 8px;font-size:15px">What unhappy reviewers say, translated</h3><div class="quotes">` +
+      w.examples.map(e => `<div class="q"><div class="meta">${stars(e.stars)} · ${esc(e.cc)} · ${mdate(e.date)}</div>${qbody(e)}</div>`).join('') + `</div></div>`;
+  }
+
   h += `<h2>Every theme</h2><p class="sub">${fmt(a.window.n)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}, ${shop ? 'merchants in' : 'storefronts'} ${esc(a.window.countries.join(', '))}.</p><div class="panel tablewrap"><table>
     <thead><tr><th>Theme</th><th>Last ${L}</th><th>Share</th>${hasPrior ? `<th>Prior ${L}</th>` : ''}<th>Avg</th>${hasPrior ? '<th>All in window</th>' : ''}</tr></thead><tbody>`;
   a.themes.forEach(t => {

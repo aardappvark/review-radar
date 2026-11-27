@@ -3,19 +3,21 @@
  "name": "Visionn",
  "company": "BeFunky",
  "store_kind": "apple",
- "sample_only": true,
- "generated": "2026-11-27 08:23 UTC",
+ "generated": "2026-11-27 09:20 UTC",
  "window": {
-  "from": "2016-12-08",
-  "to": "2022-09-20",
-  "n": 10,
-  "recent_n": 10,
+  "from": "2019-01-20",
+  "to": "2026-11-27",
+  "n": 52,
+  "recent_n": 1,
   "prior_n": 0,
+  "recent_days": 365,
+  "recent_label": "12 months",
   "countries": [
+   "AU",
+   "CA",
+   "GB",
    "US"
-  ],
-  "recent_days": 0,
-  "recent_label": "sample"
+  ]
  },
  "store": {
   "avg": 3.91,
@@ -23,104 +25,1481 @@
   "version": "2.2.0",
   "version_date": "2022-09-08",
   "released": "2016-10-20",
+  "notes": "In this release, we fixed a few bugs and made several performance improvements.",
   "store": "apple",
   "url": "https://apps.apple.com/us/app/visionn/id1142803226"
  },
- "written_avg_recent": 4.3,
- "bug_share_recent": null,
- "sample": [
+ "written_avg_recent": 1,
+ "bug_share_recent": 0.0,
+ "themes": [
   {
-   "id": "6897528082",
-   "stars": 4,
-   "date": "2021-01-21",
-   "title": "THIS IS NOT A BAD APP",
-   "text": "So what I will say about this application is that I feel as though you get what you pay for. It will do what it says. My expectations coming into using this app were somewhat his and I personally was a little disappointed with the results. But before I ran here to leave a bad review or bash on the people who programmed it, I reflected and thought for a second. The 2 dollars that I spent on this app gave me 2 dollar quality results. And for that I cannot be mad because again, I got what I paid for. Not I think that they can improve this greatly. Firstly improve the quality of the ‘paint/art’ picture quality. If that’s some then I think that’s solve a LOT of issue.",
-   "developer_replied": false
+   "key": "misleading_marketing",
+   "label": "Misleading Advertising",
+   "describe": "Several reviews state that the results do not match the high-quality examples shown in the App Store.",
+   "n": 8,
+   "n_recent": 1,
+   "n_prior": 0,
+   "low_recent": 1,
+   "pos_recent": 0,
+   "avg": 1.62,
+   "avg_recent": 1,
+   "bug_share": 0.0,
+   "last_seen": "2025-12-14",
+   "share_recent": 1.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2025-12-14",
+     "version": "",
+     "cc": "US",
+     "title": "Are the images shown from this app?",
+     "text": "At least two of the images shown by the seller for this app display painting effects that are not in the app, at least not in the app I have received. …"
+    }
+   ],
+   "gists": [
+    "App results do not match the high-quality marketing images shown."
+   ],
+   "ids_recent": [
+    "13512725483"
+   ]
   },
   {
-   "id": "7089004765",
-   "stars": 4,
-   "date": "2021-03-11",
-   "title": "Can’t find these effects anywhere else",
-   "text": "Sometimes, I’m looking for a special something to put the defining mark on a project, and Visionn can do it when other apps feel kind of homogenized. It’s fun. I just wish there were glide bars to ease back on an effect occasionally. Overall, it’s a great find.",
-   "developer_replied": false
+   "key": "limited_filters_options",
+   "label": "Limited Content/Filters",
+   "describe": "Users frequently complain that the number of available filters or effects is too small or basic.",
+   "n": 12,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 2.25,
+   "avg_recent": null,
+   "bug_share": 0.0,
+   "last_seen": "2022-07-24",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 2,
+     "date": "2022-07-24",
+     "version": "",
+     "cc": "US",
+     "title": "No thanks",
+     "text": "Just a few boring cartoon-style effects, either real-time or applied to photos in your Camera Roll. Not worth taking up space on my iPad."
+    },
+    {
+     "stars": 1,
+     "date": "2020-07-10",
+     "version": "",
+     "cc": "US",
+     "title": "Do not buy !",
+     "text": "I spent two dollars on this , because I thought it was a cartoon editor. This app doesn’t have no menu or edit tools. It only has 4 filters and they are all low quality. …"
+    },
+    {
+     "stars": 1,
+     "date": "2020-07-01",
+     "version": "",
+     "cc": "US",
+     "title": "Don’t buy this!!",
+     "text": "This app should be free with its limited filters! Give me my $1.99 back!"
+    }
+   ],
+   "gists": [
+    "Effects are boring and limited; not worth keeping on the device.",
+    "App has few, low-quality filters and no editing tools.",
+    "Wants a refund because the app's filters are limited.",
+    "Many free apps offer similar functionality; limited unique effects.",
+    "Effects are basic and don't match advertised results.",
+    "Disappointed; feels like it is not worth the cost due to few filters.",
+    "Output is blurry; needs filter adjustment and more options.",
+    "Filters are limited, and marketing examples are misleading.",
+    "Filters are basic, controls are hard to use, and free options exist.",
+    "Too few options available; user regrets paying for the app."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "1498275079",
-   "stars": 5,
-   "date": "2016-12-08",
-   "title": "Wonderful App!",
-   "text": "I really been having fun with this app! Initially had some issues with crashing but it seems like they have fixed that, and dropped some more great filter effects.  Unlike most other basic editing apps it does some beautiful real time effects on video (with the option for photos as well). I've been having fun throwing these on videos I've been shooting on my iPhone and GoPro.  Keep up the great stuff!",
-   "developer_replied": false
+   "key": "lack_of_customization",
+   "label": "No Fine-Tuning Controls",
+   "describe": "A major recurring complaint is the inability to adjust the intensity or parameters of the applied effects.",
+   "n": 4,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 1.75,
+   "avg_recent": null,
+   "bug_share": 0.0,
+   "last_seen": "2022-07-13",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2022-07-13",
+     "version": "",
+     "cc": "US",
+     "title": "Not even close to the pics in the App Store",
+     "text": "The images don't come out as good as it shows in the App Store samples. They are a lot more cartoonist/distorted. The app lacks the function to adjust the intensity of the filter. …"
+    },
+    {
+     "stars": 1,
+     "date": "2021-04-13",
+     "version": "",
+     "cc": "AU",
+     "title": "Don’t buy",
+     "text": "Ugh. Nothing like what I wanted. It distorts the picture too much to be able to use it. There needs to be an option to make the lines in the filters smaller."
+    },
+    {
+     "stars": 1,
+     "date": "2019-12-13",
+     "version": "",
+     "cc": "CA",
+     "title": "Disappointed",
+     "text": "It does not work like promised. It is simply filters that you can get anywhere. Not a realistic cartoon like it shows. …"
+    }
+   ],
+   "gists": [
+    "Output is worse than samples; needs filter intensity adjustment slider.",
+    "Distorts pictures too much; needs smaller filter line options.",
+    "Does not work as advertised; lacks filter intensity control."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "3244889125",
-   "stars": 3,
-   "date": "2018-09-29",
-   "title": "Very cool and simple app but....",
-   "text": "I really like the simplicity and although there are only a few filters they are really great. Only issue I have is all the videos have this weird black box thing that glitches in and out all over the video. This doesn’t show in their App Store video so I’m wondering how it can be turned off or if it’s just that....a glitch. Unfortunately that makes it unusable . Maybe I’m missing something and the devs can help here?",
-   "developer_replied": true
+   "key": "inability_to_use_old_photos",
+   "label": "Photo Import Restriction",
+   "describe": "Users are frustrated that the app only allows taking new photos and cannot edit existing ones from the camera roll.",
+   "n": 4,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 1,
+   "avg_recent": null,
+   "bug_share": 0.5,
+   "last_seen": "2022-03-05",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2022-03-05",
+     "version": "",
+     "cc": "US",
+     "title": "Blah",
+     "text": "Donated 2 Bucks! I wanted to use this with pics from my camera roll, however when I select a picture there are no options for anything, except the option to Save the photo I already had. …"
+    },
+    {
+     "stars": 1,
+     "date": "2020-04-05",
+     "version": "",
+     "cc": "US",
+     "title": "You can’t use old photos",
+     "text": "You can only take new pics - can’t stylize old photos. Do not recommend waste of money"
+    },
+    {
+     "stars": 1,
+     "date": "2019-09-23",
+     "version": "",
+     "cc": "US",
+     "title": "Does not work",
+     "text": "Just bought this app and won’t let me load all my photos to edit, just a few here and there but only about 10% of my camera roll. Avoid this scam"
+    }
+   ],
+   "gists": [
+    "Cannot use photos from camera roll; options are missing.",
+    "Cannot apply effects to existing photos from the camera roll.",
+    "App won't load most photos from the camera roll for editing.",
+    "App only opens camera and cannot use existing photos from the album."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "4359190897",
-   "stars": 2,
-   "date": "2019-06-23",
-   "title": "Some cool features, but disappointed",
-   "text": "I was looking for an app to make cool animated pictures. It does that for the most part, but the pictures end up turning out blurry and not high quality at all. I wish there was a way to adjust how much of the filter you want to put on one picture. I was also kind of disappointed with the lack of other filters they had and the ability to adjust those. Was it worth $2 not really!",
-   "developer_replied": true
+   "key": "poor_output_quality",
+   "label": "Low Resolution/Blurriness",
+   "describe": "Users report that the final output images or videos are blurry, low resolution, or distorted.",
+   "n": 9,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 1.44,
+   "avg_recent": null,
+   "bug_share": 0.0,
+   "last_seen": "2021-04-13",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2021-04-13",
+     "version": "",
+     "cc": "AU",
+     "title": "Don’t buy",
+     "text": "Ugh. Nothing like what I wanted. It distorts the picture too much to be able to use it. There needs to be an option to make the lines in the filters smaller."
+    },
+    {
+     "stars": 1,
+     "date": "2021-04-01",
+     "version": "",
+     "cc": "GB",
+     "title": "Terrible!",
+     "text": "Most basic photo app I’ve used. Edits look like original ones for any phone years ago. Wish I could get my money back to be honest. Don’t make the same mistake I did"
+    },
+    {
+     "stars": 1,
+     "date": "2020-07-10",
+     "version": "",
+     "cc": "US",
+     "title": "Do not buy !",
+     "text": "I spent two dollars on this , because I thought it was a cartoon editor. This app doesn’t have no menu or edit tools. It only has 4 filters and they are all low quality. …"
+    }
+   ],
+   "gists": [
+    "Distorts pictures too much; needs smaller filter line options.",
+    "Edits look basic; feels like older phone apps.",
+    "App has few, low-quality filters and no editing tools.",
+    "Output is blurry and gross; do not download this app.",
+    "Output is blurry; needs filter adjustment and more options.",
+    "Effects do not match advertised quality; poor value.",
+    "Animated photos become blurry; free apps offer better quality.",
+    "Images get distorted; other apps are better value."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "9102165763",
-   "stars": 5,
-   "date": "2022-09-20",
-   "title": "Fantastic",
-   "text": "This is an excellent phone editing app. It does artistic touch is better than anything I can think of. There are a dozen or so, and I think there’s probably something for almost everyone. Burnside, Monte Villa, and Belmont are always perfect.",
-   "developer_replied": false
+   "key": "free_alternatives_available",
+   "label": "Better Free Alternatives",
+   "describe": "Many reviewers feel the app's functionality is already available for free on other platforms.",
+   "n": 9,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 1.22,
+   "avg_recent": null,
+   "bug_share": 0.0,
+   "last_seen": "2021-04-01",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2021-04-01",
+     "version": "",
+     "cc": "GB",
+     "title": "Terrible!",
+     "text": "Most basic photo app I’ve used. Edits look like original ones for any phone years ago. Wish I could get my money back to be honest. Don’t make the same mistake I did"
+    },
+    {
+     "stars": 1,
+     "date": "2020-07-01",
+     "version": "",
+     "cc": "US",
+     "title": "Don’t buy this!!",
+     "text": "This app should be free with its limited filters! Give me my $1.99 back!"
+    },
+    {
+     "stars": 1,
+     "date": "2020-05-19",
+     "version": "",
+     "cc": "GB",
+     "title": "Do not purchase this app.",
+     "text": "There are dozens of free apps that do everything this does, and more. It has 12 effects, half of them do the same thing so you're essentially only got 5/6 effects. I'm expecting a refund."
+    }
+   ],
+   "gists": [
+    "Edits look basic; feels like older phone apps.",
+    "Feels like a waste of money; not what was expected.",
+    "Wants a refund because the app's filters are limited.",
+    "Many free apps offer similar functionality; limited unique effects.",
+    "Considers the app basic and not worth the money.",
+    "Does not work as advertised; lacks filter intensity control.",
+    "Disappointed; expected more artistic changes, should be free.",
+    "Animated photos become blurry; free apps offer better quality.",
+    "Images get distorted; other apps are better value."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "8477443439",
-   "stars": 5,
-   "date": "2022-03-20",
-   "title": "Love this app",
-   "text": "I was so bummed when I realized my “Philm” app was no longer, but then I found this app. I love the artistic effects to my photos.  For future updates, it would be cool to have a few  filters that have more color.",
-   "developer_replied": false
+   "key": "technical_bugs_glitches",
+   "label": "Bugs and Glitches",
+   "describe": "Specific technical issues mentioned include black squares appearing on videos or the app failing to load photos.",
+   "n": 1,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 1,
+   "avg_recent": null,
+   "bug_share": 1.0,
+   "last_seen": "2019-03-02",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2019-03-02",
+     "version": "",
+     "cc": "US",
+     "title": "Does Not Work!",
+     "text": "When I select a photo to edit, it doesn't do anything, and the only option it comes up with is 'Share'."
+    }
+   ],
+   "gists": [
+    "Selecting a photo to edit results in no action, only a share option."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "5185533820",
-   "stars": 5,
-   "date": "2019-11-23",
-   "title": "Photo to Art",
-   "text": "I love this app. It's very simple to use, but only has a handful of filters. I play with it for a few days, then forget about it for awhile, and am super excited when I go back to it. It's perfect for making your photos look like paintings.",
-   "developer_replied": false
+   "key": "poor_user_experience",
+   "label": "Poor UX/Workflow",
+   "describe": "Complaints about the overall user experience, such as the app being difficult to use or requiring external editing.",
+   "n": 5,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 1.6,
+   "avg_recent": null,
+   "bug_share": 0.6,
+   "last_seen": "2022-03-05",
+   "share_recent": 0.0,
+   "quotes": [
+    {
+     "stars": 1,
+     "date": "2022-03-05",
+     "version": "",
+     "cc": "US",
+     "title": "Blah",
+     "text": "Donated 2 Bucks! I wanted to use this with pics from my camera roll, however when I select a picture there are no options for anything, except the option to Save the photo I already had. …"
+    },
+    {
+     "stars": 1,
+     "date": "2020-12-06",
+     "version": "",
+     "cc": "GB",
+     "title": "I am disgusted",
+     "text": "This app appeared on my phone as a result of the redirect from an online site, it then used my TouchID to purchase with no warning and my vibrate didn’t even go off until after the purchase …"
+    },
+    {
+     "stars": 1,
+     "date": "2019-04-25",
+     "version": "",
+     "cc": "US",
+     "title": "Horrible.",
+     "text": "This is the second time I have tried to publish a review and I am furious that I wasted my money on this app. …"
+    }
+   ],
+   "gists": [
+    "Cannot use photos from camera roll; options are missing.",
+    "Unauthorized purchase using TouchID without warning or vibration.",
+    "Filters are basic, controls are hard to use, and free options exist.",
+    "Selecting a photo to edit results in no action, only a share option."
+   ],
+   "ids_recent": []
   },
   {
-   "id": "3515849330",
-   "stars": 5,
-   "date": "2018-12-10",
-   "title": "Great stuff!",
-   "text": "Hi guys, I looove this product! Use it on a daily basis. I’ve noticed though that when I try to post slow motion videos, it doesn’t work. I just get the message “preparing slow-mo...”. Might there be an update to fix this issue? I’d truly do stand by this product!De’Eric",
-   "developer_replied": false
-  },
-  {
-   "id": "1632859155",
-   "stars": 5,
-   "date": "2017-06-04",
-   "title": "Terrific App",
-   "text": "It is a quick, solid, as advertised graphic program that is easy and fun. The choice ways to modify your photos are all quite different and effective. It's hard to pick which ones I like to use the most. Nice job, guys.",
-   "developer_replied": false
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that express genuine satisfaction with the app's core functionality.",
+   "n": 15,
+   "n_recent": 0,
+   "n_prior": 0,
+   "low_recent": 0,
+   "pos_recent": 0,
+   "avg": 4.8,
+   "avg_recent": null,
+   "bug_share": 0.0,
+   "last_seen": "2022-11-07",
+   "share_recent": 0.0,
+   "quotes": [],
+   "gists": [],
+   "ids_recent": []
   }
  ],
- "sample_note": "These are the reviews Apple shows on the App Store page: chosen by Apple, some years old. Apple's review feed has returned empty lists for every app since 27 Nov 2026, so this app gets the full analysis when it returns.",
- "themes": [],
  "versions": [],
- "series": [],
+ "series": [
+  {
+   "d": "2026-06-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-03",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-16",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-29",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-06-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-03",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-16",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-29",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-07-31",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-03",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-16",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-29",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-08-31",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-03",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-16",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-29",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-09-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-03",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-16",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-27",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-28",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-29",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-30",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-10-31",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-01",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-02",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-03",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-04",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-05",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-06",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-07",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-08",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-09",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-10",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-11",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-12",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-13",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-14",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-15",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-16",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-17",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-18",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-19",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-20",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-21",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-22",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-23",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-24",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-25",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-26",
+   "n": 0,
+   "low": 0
+  },
+  {
+   "d": "2026-11-27",
+   "n": 0,
+   "low": 0
+  }
+ ],
  "bursts": [],
  "dups": [],
  "fixes": [],
- "stats": null,
+ "stats": {
+  "window_label": "12 months",
+  "stars": {
+   "recent": [
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "prior": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "monthly": [
+   {
+    "month": "2025-06",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-07",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-08",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-09",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-10",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-11",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-12",
+    "n": 1,
+    "avg": 1,
+    "low_share": 1.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-01",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-02",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-03",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-04",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-05",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-06",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-07",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-08",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-09",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-10",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-11",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   }
+  ],
+  "countries": [
+   {
+    "name": "United States",
+    "n": 37
+   },
+   {
+    "name": "Canada",
+    "n": 6
+   },
+   {
+    "name": "Australia",
+    "n": 5
+   },
+   {
+    "name": "United Kingdom",
+    "n": 4
+   }
+  ],
+  "countries_total": 52,
+  "short_share": 0.038,
+  "median_words": 21,
+  "written": 52,
+  "recent_written": 1,
+  "replies": {
+   "all": 0.346,
+   "n": 52,
+   "low": 0.6,
+   "low_n": 30,
+   "recent": 0.0,
+   "recent_n": 1
+  }
+ },
  "other_languages": {
   "count": 0,
-  "of": 0,
+  "of": 52,
   "by_language": {},
   "examples": []
  }

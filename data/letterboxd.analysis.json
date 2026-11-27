@@ -2343,5 +2343,243 @@
     "text_en": "The interface is super old, they should update it with Liquid Glass, besides the app is not very easy to understand"
    }
   ]
+ },
+ "world": {
+  "countries": [
+   {
+    "cc": "fr",
+    "country": "France",
+    "n": 100,
+    "avg": 3.38,
+    "low_share": 0.26,
+    "top_complaint": "Poor User Experience (UX)",
+    "top_n": 14,
+    "since": "2025-04-10"
+   },
+   {
+    "cc": "tr",
+    "country": "Türkiye",
+    "n": 100,
+    "avg": 3.19,
+    "low_share": 0.35,
+    "top_complaint": "Stability & Bugs",
+    "top_n": 11,
+    "since": "2022-11-29"
+   },
+   {
+    "cc": "de",
+    "country": "Germany",
+    "n": 100,
+    "avg": 3.35,
+    "low_share": 0.31,
+    "top_complaint": "Poor User Experience (UX)",
+    "top_n": 10,
+    "since": "2021-08-09"
+   },
+   {
+    "cc": "it",
+    "country": "Italy",
+    "n": 100,
+    "avg": 3.47,
+    "low_share": 0.27,
+    "top_complaint": "Poor User Experience (UX)",
+    "top_n": 8,
+    "since": "2019-07-14"
+   },
+   {
+    "cc": "mx",
+    "country": "Mexico",
+    "n": 100,
+    "avg": 3.99,
+    "low_share": 0.16,
+    "top_complaint": "Login & Sync Issues",
+    "top_n": 6,
+    "since": "2018-01-13"
+   },
+   {
+    "cc": "es",
+    "country": "Spain",
+    "n": 100,
+    "avg": 3.7,
+    "low_share": 0.15,
+    "top_complaint": "Feature Gaps/Enhancements",
+    "top_n": 7,
+    "since": "2021-06-18"
+   },
+   {
+    "cc": "br",
+    "country": "Brazil",
+    "n": 100,
+    "avg": 2.91,
+    "low_share": 0.39,
+    "top_complaint": "Feature Gaps/Enhancements",
+    "top_n": 17,
+    "since": "2025-04-29"
+   },
+   {
+    "cc": "nl",
+    "country": "Netherlands",
+    "n": 56,
+    "avg": 3.64,
+    "low_share": 0.179,
+    "top_complaint": "Login & Sync Issues",
+    "top_n": 3,
+    "since": "2016-03-15"
+   },
+   {
+    "cc": "se",
+    "country": "Sweden",
+    "n": 38,
+    "avg": 3.87,
+    "low_share": 0.184,
+    "top_complaint": "Poor User Experience (UX)",
+    "top_n": 2,
+    "since": "2016-03-16"
+   },
+   {
+    "cc": "pl",
+    "country": "Poland",
+    "n": 36,
+    "avg": 3.11,
+    "low_share": 0.417,
+    "top_complaint": "Login & Sync Issues",
+    "top_n": 6,
+    "since": "2016-12-26"
+   },
+   {
+    "cc": "jp",
+    "country": "Japan",
+    "n": 8,
+    "avg": 3.12,
+    "low_share": 0.375,
+    "top_complaint": "Ad Overload/Intrusiveness",
+    "top_n": 2,
+    "since": "2016-03-16"
+   },
+   {
+    "cc": "kr",
+    "country": "South Korea",
+    "n": 4,
+    "avg": 4.75,
+    "low_share": 0.0,
+    "top_complaint": null,
+    "top_n": 0,
+    "since": "2025-02-10"
+   }
+  ],
+  "n": 842,
+  "examples": [
+   {
+    "stars": 1,
+    "date": "2026-11-23",
+    "cc": "Türkiye",
+    "lang": "tr",
+    "language": "Turkish",
+    "title": "izlediğimiz filmler görünmüyor",
+    "title_en": "The movies we watched are not visible",
+    "text": "önceden izlediğimiz tümm filmleri afişleriyle görebiliyorduk şimdi yalnızca yeni eklediklerimiz görünüyor?? eski haline getirin lütfen",
+    "text_en": "We could see all the movies we watched before with their posters, now only the newly added ones are visible?? Please revert it to the old way"
+   },
+   {
+    "stars": 2,
+    "date": "2026-11-23",
+    "cc": "Germany",
+    "lang": "de",
+    "language": "German",
+    "title": "Liquid Glass?!",
+    "title_en": "",
+    "text": "Leute wird sind fast in 2027, wo bleibt Liquid Glass. Die App wirkt wie ein Fremdkörper auf dem iPad und iPhone…",
+    "text_en": "People are almost in 2027, where is Liquid Glass. The app looks like a foreign object on the iPad and iPhone..."
+   },
+   {
+    "stars": 1,
+    "date": "2026-11-07",
+    "cc": "Türkiye",
+    "lang": "tr",
+    "language": "Turkish",
+    "title": ".",
+    "title_en": "",
+    "text": "Error veriyor sürekli",
+    "text_en": "It keeps giving an error"
+   },
+   {
+    "stars": 1,
+    "date": "2026-11-02",
+    "cc": "Spain",
+    "lang": "es",
+    "language": "Spanish",
+    "title": "Decepción",
+    "title_en": "Disappointment",
+    "text": "Por culpa de la cosas más fácil del mundo que es que esté traducida esta aplicación es malisima…",
+    "text_en": "Because of the easiest things in the world that is that this application is terrible..."
+   },
+   {
+    "stars": 2,
+    "date": "2026-10-12",
+    "cc": "Spain",
+    "lang": "es",
+    "language": "Spanish",
+    "title": "Poner la aplicación en español.",
+    "title_en": "Put the application in Spanish.",
+    "text": "La aplicación esta bien pero estaría mucho mejor si estuviera en español, tenéis a medio mundo menos al español.",
+    "text_en": "The application is good but it would be much better if it were in Spanish, you have half the world speaking Spanish."
+   },
+   {
+    "stars": 1,
+    "date": "2026-10-11",
+    "cc": "Italy",
+    "lang": "it",
+    "language": "Italian",
+    "title": "Letterboxd",
+    "title_en": "",
+    "text": "L’app funziona bene. Il problema e’ come si presenta. Mai aggiornata. Grafica orrenda. Ma quando si decideranno a rifarla da zero ? Peccato.",
+    "text_en": "The app works well. The problem is how it looks. Never updated. Horrible graphics. But when will they decide to redo it from scratch? A pity."
+   },
+   {
+    "stars": 1,
+    "date": "2026-10-05",
+    "cc": "France",
+    "lang": "fr",
+    "language": "French",
+    "title": "Moche et design mal fait",
+    "title_en": "Ugly and poorly designed",
+    "text": "UI/UX à revoir complètement, c’est très laid et difficile à utiliser. De plus certains films ne s’affichent pas dans le journal et sur le profil sans qu’on sache pourquoi.",
+    "text_en": "UI/UX needs to be completely revised, it is very ugly and difficult to use. Furthermore, some movies do not appear in the journal and on the profile without us knowing why."
+   },
+   {
+    "stars": 1,
+    "date": "2026-09-29",
+    "cc": "Italy",
+    "lang": "it",
+    "language": "Italian",
+    "title": "Doesn’t work",
+    "title_en": "",
+    "text": "Come detto da altri, questi hanno grossi problemi di server. Pessima",
+    "text_en": "As others said, these have big server problems. Terrible"
+   },
+   {
+    "stars": 1,
+    "date": "2026-09-19",
+    "cc": "Brazil",
+    "lang": "pt",
+    "language": "Portuguese",
+    "title": "BUG A BOO",
+    "title_en": "",
+    "text": "gente o app ta entregue às baratas! melhorem!",
+    "text_en": "Guys, this app has been abandoned! Do better!"
+   },
+   {
+    "stars": 2,
+    "date": "2026-09-14",
+    "cc": "Brazil",
+    "lang": "pt",
+    "language": "Portuguese",
+    "title": "Propagandas demais",
+    "title_en": "Too much propaganda",
+    "text": "Ótimo proposta, mas tem alguns problemas de usabilidade. Na nova versão toca um vídeo automaticamente ao abrir o app.",
+    "text_en": "Great proposal, but there are some usability problems. In the new version, it plays a video automatically when opening the app."
+   }
+  ],
+  "note": "The most recent reviews (up to 100) in each country's App Store, read through the iTunes store's review endpoint and tagged with the same themes as the English analysis above, which they don't change."
  }
 }

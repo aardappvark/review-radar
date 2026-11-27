@@ -86,8 +86,14 @@ _APPS = json.loads((ROOT.parent / "apps.json").read_text())
 APPS = {a["slug"]: f"{a['name']} {'iOS' if a['store'] == 'apple' else 'Shopify'}" for a in _APPS}  # e.g. "Letterboxd iOS"
 
 if __name__ == "__main__":
-    only = sys.argv[1:] or list(APPS)
+    intl = sys.argv[1:2] == ["--intl"]   # tag the international reviews with the app's existing theme list
+    only = (sys.argv[2:] if intl else sys.argv[1:]) or list(APPS)
     for slug in only:
+        if intl:
+            rows = json.loads((ROOT / f"{slug}.intl.reviews.json").read_text())
+            th = json.loads((ROOT / f"{slug}.themes.json").read_text())
+            classify(f"{slug}.intl", APPS[slug], rows, th)
+            continue
         rows = json.loads((ROOT / f"{slug}.reviews.json").read_text())
         th = discover(slug, APPS[slug], rows)
         print(json.dumps([t["label"] for t in th["themes"]]))

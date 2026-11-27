@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27 08:53 UTC",
+ "generated": "2026-11-27 09:31 UTC",
  "apps": [
   {
    "slug": "letterboxd",
@@ -36,11 +36,11 @@
    "store": "apple",
    "store_rating": 4.68,
    "store_rating_count": 11006,
-   "written_reviews_read": 10,
-   "window": "last sample",
-   "problems_ranked": 0,
+   "written_reviews_read": 55,
+   "window": "last 12 months",
+   "problems_ranked": 3,
    "incidents": 0,
-   "sample_only": true,
+   "sample_only": false,
    "fix_tracking": 0
   },
   {
@@ -50,11 +50,11 @@
    "store": "apple",
    "store_rating": 3.91,
    "store_rating_count": 209,
-   "written_reviews_read": 10,
-   "window": "last sample",
+   "written_reviews_read": 52,
+   "window": "last 12 months",
    "problems_ranked": 0,
    "incidents": 0,
-   "sample_only": true,
+   "sample_only": false,
    "fix_tracking": 0
   },
   {

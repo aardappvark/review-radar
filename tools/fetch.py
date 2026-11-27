@@ -29,11 +29,11 @@ def get(url, as_json=False):
             time.sleep(2 * (attempt + 1))
 
 
-def apple(app):
+def apple(app, countries=None, pages=10):
     seen, rows = set(), []
-    for cc in COUNTRIES:
+    for cc in countries or COUNTRIES:
         got = 0
-        for n in range(1, 11):
+        for n in range(1, pages + 1):
             d = get(f"https://itunes.apple.com/{cc}/rss/customerreviews/page={n}/id={app['id']}/sortBy=mostRecent/json", as_json=True)
             entries = (d or {}).get("feed", {}).get("entry", [])
             if isinstance(entries, dict):
@@ -51,6 +51,49 @@ def apple(app):
                              "title": e.get("title", {}).get("label", ""), "body": e.get("content", {}).get("label", "")})
                 got += 1
             time.sleep(0.3)
+        print(f"  {app['slug']} {cc}: {got}")
+    return rows
+
+
+# Apple's storefront ids for the iTunes review endpoint (X-Apple-Store-Front).
+STOREFRONT = {"us": 143441, "gb": 143444, "ca": 143455, "au": 143460, "nz": 143461, "ie": 143449, "br": 143503, "de": 143443,
+              "fr": 143442, "es": 143454, "mx": 143468, "it": 143450, "jp": 143462, "nl": 143452, "se": 143456, "pl": 143478,
+              "tr": 143480, "kr": 143466}
+
+
+def itunes(app, countries=None, max_per_country=500, since=None):
+    """The iTunes store's own review endpoint (the RSS feed went empty on 27 Nov 2026). 50 per request, newest first,
+    with developer responses; no app version. Reviewer names are dropped."""
+    rows, seen = [], set()
+    hdr = {"User-Agent": "iTunes/12.12.10 (Macintosh; OS X 13.6) AppleWebKit/7616.1.27.211.1"}
+    for cc in countries or COUNTRIES:
+        got, start = 0, 0
+        while start < max_per_country:
+            url = (f"https://itunes.apple.com/WebObjects/MZStore.woa/wa/userReviewsRow?id={app['id']}&displayable-kind=11"
+                   f"&startIndex={start}&endIndex={start + 50}&sort=0&appVersion=all")
+            batch = []
+            for attempt in range(3):
+                try:
+                    req = urllib.request.Request(url, headers=dict(hdr, **{"X-Apple-Store-Front": f"{STOREFRONT[cc]},29"}))
+                    with urllib.request.urlopen(req, timeout=25) as r:
+                        batch = json.load(r).get("userReviewList", [])
+                    break
+                except Exception as e:  # noqa: BLE001
+                    if attempt == 2:
+                        print(f"  ! {app['slug']} {cc} @{start}: {e}", file=sys.stderr)
+                    time.sleep(2 * (attempt + 1))
+            for x in batch:
+                rid = str(x.get("userReviewId"))
+                if rid in seen:
+                    continue
+                seen.add(rid)
+                rows.append({"id": rid, "cc": cc, "rating": int(x.get("rating", 0)), "version": "", "date": x.get("date", ""),
+                             "title": x.get("title", "") or "", "body": x.get("body", "") or "", "replied": bool(x.get("developerResponse"))})
+                got += 1
+            time.sleep(1.0)
+            if len(batch) < 50 or (since and batch and batch[-1].get("date", "") < since):
+                break
+            start += 50
         print(f"  {app['slug']} {cc}: {got}")
     return rows
 
@@ -94,9 +137,24 @@ def shopify(app):
 
 
 def main():
+    if sys.argv[1:2] == ["--intl"]:
+        # International storefronts (apps.json "intl_countries"): the 100 most recent per country, kept apart from the
+        # English-storefront analysis so its published figures don't move. Feeds the "Around the world" section.
+        for slug in sys.argv[2:]:
+            app = APPS[slug]
+            rows = itunes(app, app.get("intl_countries", []), max_per_country=100)
+            rows.sort(key=lambda r: r["date"], reverse=True)
+            (OUT / f"{slug}.intl.reviews.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1))
+            print(f"{slug} (international): {len(rows)} reviews from {len(app.get('intl_countries', []))} storefronts")
+        return
     for slug in sys.argv[1:] or list(APPS):
         app = APPS[slug]
-        rows = apple(app) if app["store"] == "apple" else shopify(app)
+        if app["store"] == "shopify":
+            rows = shopify(app)
+        elif app.get("source") == "itunes":
+            rows = itunes(app, since=app.get("window_start"))
+        else:
+            rows = apple(app)
         rows.sort(key=lambda r: r["date"], reverse=True)
         (OUT / f"{slug}.reviews.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1))
         print(f"{slug}: {len(rows)} reviews, {rows[-1]['date'][:10] if rows else '-'} .. {rows[0]['date'][:10] if rows else '-'}")

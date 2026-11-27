@@ -1,8 +1,8 @@
 [
-  {"slug": "letterboxd", "name": "Letterboxd", "company": "Letterboxd", "store": "apple", "id": 1054271011, "window_start": "2025-03-01", "tab": "Letterboxd"},
+  {"slug": "letterboxd", "name": "Letterboxd", "company": "Letterboxd", "store": "apple", "id": 1054271011, "window_start": "2025-03-01", "tab": "Letterboxd", "intl_countries": ["br", "de", "fr", "es", "mx", "it", "jp", "nl", "se", "pl", "tr", "kr"]},
   {"slug": "serato-dj", "name": "Serato DJ", "company": "Serato", "store": "apple", "id": 6754231707, "window_start": "2026-10-01", "tab": "Serato DJ"},
-  {"slug": "befunky", "name": "BeFunky", "company": "BeFunky", "store": "apple", "id": 442716817, "window_start": "2025-03-01", "tab": "BeFunky"},
-  {"slug": "visionn", "name": "Visionn", "company": "BeFunky", "store": "apple", "id": 1142803226, "window_start": "2019-01-01", "tab": "Visionn"},
+  {"slug": "befunky", "name": "BeFunky", "company": "BeFunky", "store": "apple", "id": 442716817, "window_start": "2024-01-01", "tab": "BeFunky", "source": "itunes"},
+  {"slug": "visionn", "name": "Visionn", "company": "BeFunky", "store": "apple", "id": 1142803226, "window_start": "2019-01-01", "tab": "Visionn", "source": "itunes"},
   {"slug": "stamped", "name": "Stamped Product Reviews & UGC", "company": "Stamped", "store": "shopify", "id": "product-reviews-addon", "window_start": "2025-03-01", "tab": "Stamped"},
   {"slug": "kno", "name": "KNO Post Purchase Surveys", "company": "KNO Commerce", "store": "shopify", "id": "knocommerce", "window_start": "2023-01-01", "tab": "KNO"},
   {"slug": "foursixty", "name": "Foursixty Shoppable Social UGC", "company": "Foursixty", "store": "shopify", "id": "foursixty", "window_start": "2023-01-01", "tab": "Foursixty"},

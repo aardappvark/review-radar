@@ -20,7 +20,7 @@ def ask(prompt):
 
 
 VERSION = re.compile(r"\bv?(\d+\.\d+\.\d+(?:\.\d+)?)\b")
-PROMISE = re.compile(r"\b(we are|we're|our team is|team is) (looking into|working on|investigating|fixing|adding|planning)|\bwe will\b|\bwe'll\b|\bcoming soon\b|\bin the next (update|release)\b", re.I)
+PROMISE = re.compile(r"\b(we are|we're|our team is|team is)\s+(\w+\s+)?(looking into|working|investigating|fixing|adding|planning)|\bwe will\b|\bwe'll\b|\bcoming soon\b|\bin the next (update|release)\b", re.I)
 FIELDS = ("headline", "happening", "where_to_look", "action", "reply")
 
 

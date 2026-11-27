@@ -1,0 +1,49 @@
+{
+ "themes": [
+  {
+   "key": "limited_filters_options",
+   "label": "Limited Content/Filters",
+   "describe": "Users frequently complain that the number of available filters or effects is too small or basic."
+  },
+  {
+   "key": "lack_of_customization",
+   "label": "No Fine-Tuning Controls",
+   "describe": "A major recurring complaint is the inability to adjust the intensity or parameters of the applied effects."
+  },
+  {
+   "key": "inability_to_use_old_photos",
+   "label": "Photo Import Restriction",
+   "describe": "Users are frustrated that the app only allows taking new photos and cannot edit existing ones from the camera roll."
+  },
+  {
+   "key": "misleading_marketing",
+   "label": "Misleading Advertising",
+   "describe": "Several reviews state that the results do not match the high-quality examples shown in the App Store."
+  },
+  {
+   "key": "poor_output_quality",
+   "label": "Low Resolution/Blurriness",
+   "describe": "Users report that the final output images or videos are blurry, low resolution, or distorted."
+  },
+  {
+   "key": "free_alternatives_available",
+   "label": "Better Free Alternatives",
+   "describe": "Many reviewers feel the app's functionality is already available for free on other platforms."
+  },
+  {
+   "key": "technical_bugs_glitches",
+   "label": "Bugs and Glitches",
+   "describe": "Specific technical issues mentioned include black squares appearing on videos or the app failing to load photos."
+  },
+  {
+   "key": "poor_user_experience",
+   "label": "Poor UX/Workflow",
+   "describe": "Complaints about the overall user experience, such as the app being difficult to use or requiring external editing."
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that express genuine satisfaction with the app's core functionality."
+  }
+ ]
+}

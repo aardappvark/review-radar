@@ -1,0 +1,49 @@
+{
+ "themes": [
+  {
+   "key": "paywall_and_monetization",
+   "label": "Paywall/Monetization",
+   "describe": "Users are highly frustrated by the shift to subscription models locking away previously free features."
+  },
+  {
+   "key": "bugs_and_crashes",
+   "label": "Bugs & Crashes",
+   "describe": "Frequent reports of the app crashing, glitching, or failing to complete basic tasks like saving or collaging."
+  },
+  {
+   "key": "feature_loss_or_change",
+   "label": "Feature Loss/Change",
+   "describe": "Users miss or complain about the removal, renaming, or significant degradation of old, beloved features."
+  },
+  {
+   "key": "usability_and_ui",
+   "label": "Usability & UI",
+   "describe": "Complaints regarding the app becoming overly complicated, difficult to navigate, or having poor text/layout controls."
+  },
+  {
+   "key": "billing_and_refunds",
+   "label": "Billing & Refunds",
+   "describe": "Issues related to unexpected charges, difficulty canceling subscriptions, or getting refunds."
+  },
+  {
+   "key": "compatibility_and_updates",
+   "label": "Compatibility & Updates",
+   "describe": "Problems arising from updates, including device incompatibility or the app simply not working after an update."
+  },
+  {
+   "key": "core_functionality_failure",
+   "label": "Core Functionality Failure",
+   "describe": "The app fails at fundamental tasks like saving photos, adding images, or performing basic edits."
+  },
+  {
+   "key": "customer_support",
+   "label": "Customer Support",
+   "describe": "Negative experiences with customer service regarding support requests or billing disputes."
+  },
+  {
+   "key": "praise",
+   "label": "Praise",
+   "describe": "Reviews that express general satisfaction with the app's functionality."
+  }
+ ]
+}

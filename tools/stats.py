@@ -76,7 +76,7 @@ def main(slug):
         "written": len(written), "recent_written": len(rec_written),
         "replies": None,
     }
-    if meta["store"] == "shopify" and rows and "replied" in rows[0]:
+    if rows and "replied" in rows[0]:  # Shopify pages and the iTunes endpoint both carry public replies
         low = [r for r in rows if r["rating"] <= 2]
         out["replies"] = {"all": round(sum(r["replied"] for r in rows) / len(rows), 3), "n": len(rows),
                           "low": round(sum(r["replied"] for r in low) / len(low), 3) if low else None, "low_n": len(low),

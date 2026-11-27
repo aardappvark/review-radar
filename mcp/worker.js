@@ -101,7 +101,7 @@ async function callTool(name, args, ctx) {
     case "review_stats": {
       const a = await app(args, ctx);
       if (!a.stats) return { app: a.name, note: a.sample_note || "No statistics for this app yet." };
-      return { app: a.name, window: `last ${label(a)}`, ...a.stats, other_languages: a.other_languages };
+      return { app: a.name, window: `last ${label(a)}`, ...a.stats, other_languages: a.other_languages, around_the_world: a.world || undefined };
     }
     case "themes": {
       const a = await app(args, ctx);
