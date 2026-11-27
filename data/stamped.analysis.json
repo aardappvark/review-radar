@@ -1407,5 +1407,243 @@
  ],
  "bursts": [],
  "dups": [],
- "fixes": []
+ "fixes": [],
+ "stats": {
+  "window_label": "12 months",
+  "stars": {
+   "recent": [
+    9,
+    1,
+    1,
+    0,
+    32
+   ],
+   "prior": [
+    9,
+    0,
+    0,
+    1,
+    55
+   ]
+  },
+  "monthly": [
+   {
+    "month": "2025-06",
+    "n": 6,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-07",
+    "n": 9,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-08",
+    "n": 7,
+    "avg": 4.43,
+    "low_share": 0.143,
+    "broken_share": 0.143
+   },
+   {
+    "month": "2025-09",
+    "n": 5,
+    "avg": 4.2,
+    "low_share": 0.2,
+    "broken_share": 0.2
+   },
+   {
+    "month": "2025-10",
+    "n": 5,
+    "avg": 3.4,
+    "low_share": 0.4,
+    "broken_share": 0.4
+   },
+   {
+    "month": "2025-11",
+    "n": 7,
+    "avg": 2.71,
+    "low_share": 0.571,
+    "broken_share": 0.571
+   },
+   {
+    "month": "2025-12",
+    "n": 8,
+    "avg": 4.62,
+    "low_share": 0.125,
+    "broken_share": 0.125
+   },
+   {
+    "month": "2026-01",
+    "n": 3,
+    "avg": 3.67,
+    "low_share": 0.333,
+    "broken_share": 0.333
+   },
+   {
+    "month": "2026-02",
+    "n": 4,
+    "avg": 4,
+    "low_share": 0.25,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-03",
+    "n": 2,
+    "avg": 3,
+    "low_share": 0.5,
+    "broken_share": 0.5
+   },
+   {
+    "month": "2026-04",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-05",
+    "n": 3,
+    "avg": 2.33,
+    "low_share": 0.667,
+    "broken_share": 0.333
+   },
+   {
+    "month": "2026-06",
+    "n": 3,
+    "avg": 3.67,
+    "low_share": 0.333,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-07",
+    "n": 1,
+    "avg": 3,
+    "low_share": 0.0,
+    "broken_share": 1.0
+   },
+   {
+    "month": "2026-08",
+    "n": 1,
+    "avg": 1,
+    "low_share": 1.0,
+    "broken_share": 1.0
+   },
+   {
+    "month": "2026-09",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-10",
+    "n": 8,
+    "avg": 4.5,
+    "low_share": 0.125,
+    "broken_share": 0.125
+   },
+   {
+    "month": "2026-11",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   }
+  ],
+  "countries": [
+   {
+    "name": "United States",
+    "n": 49
+   },
+   {
+    "name": "Canada",
+    "n": 12
+   },
+   {
+    "name": "Australia",
+    "n": 11
+   },
+   {
+    "name": "United Kingdom",
+    "n": 10
+   },
+   {
+    "name": "Thailand",
+    "n": 2
+   },
+   {
+    "name": "Italy",
+    "n": 2
+   },
+   {
+    "name": "France",
+    "n": 2
+   },
+   {
+    "name": "Spain",
+    "n": 2
+   }
+  ],
+  "countries_total": 108,
+  "short_share": 0.055,
+  "median_words": 28,
+  "written": 91,
+  "recent_written": 37,
+  "replies": {
+   "all": 0.046,
+   "n": 108,
+   "low": 0.263,
+   "low_n": 19,
+   "recent": 0.07,
+   "recent_n": 43
+  }
+ },
+ "other_languages": {
+  "count": 3,
+  "of": 91,
+  "by_language": {
+   "Spanish": 1,
+   "German": 1,
+   "French": 1
+  },
+  "examples": [
+   {
+    "stars": 1,
+    "date": "2026-06-27",
+    "cc": "Chile",
+    "lang": "es",
+    "language": "Spanish",
+    "title": "",
+    "title_en": "",
+    "text": "No funciona, sumamente lenta",
+    "text_en": "It doesn't work, extremely slow"
+   },
+   {
+    "stars": 5,
+    "date": "2025-09-19",
+    "cc": "Germany",
+    "lang": "de",
+    "language": "German",
+    "title": "",
+    "title_en": "",
+    "text": "Sehr hilfreich. Meine Probleme wurden ernst genommen und sofort durch den Kundensupport behoben. Vielen Dank",
+    "text_en": "Very helpful. My problems were taken seriously and immediately resolved by customer support. Thank you very much"
+   },
+   {
+    "stars": 5,
+    "date": "2025-05-07",
+    "cc": "France",
+    "lang": "fr",
+    "language": "French",
+    "title": "",
+    "title_en": "",
+    "text": "Service client qui a rapidement répondu à ma demande pour enlever une bannière.\nConseils précis\nMerci",
+    "text_en": "Customer service who quickly responded to my request to remove a banner. Precise advice. Thank you"
+   }
+  ]
+ }
 }

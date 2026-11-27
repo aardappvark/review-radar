@@ -1108,5 +1108,231 @@
  ],
  "bursts": [],
  "dups": [],
- "fixes": []
+ "fixes": [],
+ "stats": {
+  "window_label": "12 months",
+  "stars": {
+   "recent": [
+    0,
+    0,
+    0,
+    1,
+    32
+   ],
+   "prior": [
+    1,
+    0,
+    0,
+    0,
+    13
+   ]
+  },
+  "monthly": [
+   {
+    "month": "2025-06",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-07",
+    "n": 1,
+    "avg": 1,
+    "low_share": 1.0,
+    "broken_share": 1.0
+   },
+   {
+    "month": "2025-08",
+    "n": 3,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-09",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-10",
+    "n": 3,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-11",
+    "n": 3,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-12",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-01",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-02",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-03",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-04",
+    "n": 9,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-05",
+    "n": 12,
+    "avg": 4.92,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-06",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-07",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-08",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-09",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-10",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-11",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   }
+  ],
+  "countries": [
+   {
+    "name": "United States",
+    "n": 62
+   },
+   {
+    "name": "Germany",
+    "n": 8
+   },
+   {
+    "name": "United Kingdom",
+    "n": 4
+   },
+   {
+    "name": "Canada",
+    "n": 2
+   },
+   {
+    "name": "Not given",
+    "n": 1
+   },
+   {
+    "name": "France",
+    "n": 1
+   },
+   {
+    "name": "Chile",
+    "n": 1
+   },
+   {
+    "name": "Sweden",
+    "n": 1
+   }
+  ],
+  "countries_total": 83,
+  "short_share": 0.026,
+  "median_words": 30,
+  "written": 77,
+  "recent_written": 28,
+  "replies": {
+   "all": 0.024,
+   "n": 83,
+   "low": 1.0,
+   "low_n": 2,
+   "recent": 0.0,
+   "recent_n": 33
+  }
+ },
+ "other_languages": {
+  "count": 2,
+  "of": 77,
+  "by_language": {
+   "Spanish": 1,
+   "French": 1
+  },
+  "examples": [
+   {
+    "stars": 5,
+    "date": "2026-04-07",
+    "cc": "Chile",
+    "lang": "es",
+    "language": "Spanish",
+    "title": "",
+    "title_en": "",
+    "text": "Muy buena aplicacion , facil de manejar , perfecta para la etapa en la que estamos =)recomendada",
+    "text_en": "Very good application, easy to use, perfect for the stage we are at =)recommended"
+   },
+   {
+    "stars": 5,
+    "date": "2024-04-22",
+    "cc": "United States",
+    "lang": "fr",
+    "language": "French",
+    "title": "",
+    "title_en": "",
+    "text": "Très bonne expérience, les données sont faciles à lire et à analyser\nLes équipes sont très réactives",
+    "text_en": "Very good experience, the data is easy to read and analyze. The teams are very responsive."
+   }
+  ]
+ }
 }

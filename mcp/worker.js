@@ -24,6 +24,8 @@ const TOOLS = [
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "did_the_fix_work", description: "For an App Store app's complaints, their share of each release's reviews, release by release, with a verdict read from the numbers (fell after vX, easing, still open, too early). A drop is consistent with a fix, not proof.",
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
+  { name: "review_stats", description: "The statistics behind an app's reviews: star mix this period vs the one before, written reviews and average stars per month (18 months), reviewer countries, share of three-word reviews, median length, publisher reply rate (Shopify), and reviews in other languages with English translations.",
+    inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "themes", description: "Every complaint and praise theme in an app's reviews with recent and earlier counts and average stars.",
     inputSchema: { type: "object", properties: { app: APP_ARG }, required: ["app"], additionalProperties: false } },
   { name: "draft_reply", description: "A public reply ready to post to a real review, for one of an app's top problems (rank 1-5).",
@@ -70,7 +72,8 @@ async function callTool(name, args, ctx) {
           rank: i + 1, theme: t.label, headline: t.brief.headline, what_people_report: t.brief.happening,
           where_to_look: t.brief.where_to_look, smallest_next_step: t.brief.action,
           reviews: t.n_recent, one_or_two_stars: t.low_recent, previous_period: t.n_prior, average_stars: t.avg_recent,
-          evidence: t.quotes.map((q) => ({ stars: q.stars, date: q.date, version: q.version || undefined, text: q.text })),
+          evidence: t.quotes.map((q) => ({ stars: q.stars, date: q.date, version: q.version || undefined, text: q.text_en || q.text,
+            original: q.text_en ? q.text : undefined, translated_from: q.language || undefined })),
         })),
         note: "Drafted by a local model; every number and version is checked against the data. Reviews are a loud minority: they show where to look.",
       };
@@ -94,6 +97,11 @@ async function callTool(name, args, ctx) {
         tracked: a.fixes.map((f) => ({ complaint: f.label, verdict: f.verdict === "fell" ? `fell after v${f.after}` : f.verdict === "early" ? "too early to tell" : f.verdict === "open" ? "still open" : "easing",
           spike: { version: f.peak.version, share: f.peak.share, mentions: f.peak.hits, reviews: f.peak.n }, latest: { version: f.latest.version, share: f.latest.share },
           by_release: f.series.map((x) => ({ version: x.version, share: x.share, mentions: x.hits, reviews: x.n })) })) };
+    }
+    case "review_stats": {
+      const a = await app(args, ctx);
+      if (!a.stats) return { app: a.name, note: a.sample_note || "No statistics for this app yet." };
+      return { app: a.name, window: `last ${label(a)}`, ...a.stats, other_languages: a.other_languages };
     }
     case "themes": {
       const a = await app(args, ctx);

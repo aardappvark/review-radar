@@ -8,3 +8,4 @@ __pycache__/
 # Private: application notes
 EMAIL_DRAFT.md
 data/wait-apple.log
+data/translations.json

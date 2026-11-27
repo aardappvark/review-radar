@@ -314,7 +314,10 @@
      "version": "",
      "cc": "ITALY",
      "title": "",
-     "text": "My mala mi experiencia, esta aplicación no hace un upload del tema nuevo sino que solamente hace una simple copia sin ningún de los cambios previos echos por nosotros, a parte no hay opcion …"
+     "text": "My mala mi experiencia, esta aplicación no hace un upload del tema nuevo sino que solamente hace una simple copia sin ningún de los cambios previos echos por nosotros, a parte no hay opcion …",
+     "lang": "es",
+     "language": "Spanish",
+     "text_en": "My bad experience, this application does not upload the new theme but only makes a simple copy without any of the previous changes made by us, besides there is no option ..."
     },
     {
      "stars": 1,
@@ -1274,5 +1277,242 @@
  ],
  "bursts": [],
  "dups": [],
- "fixes": []
+ "fixes": [],
+ "stats": {
+  "window_label": "12 months",
+  "stars": {
+   "recent": [
+    1,
+    0,
+    1,
+    1,
+    29
+   ],
+   "prior": [
+    2,
+    0,
+    0,
+    3,
+    34
+   ]
+  },
+  "monthly": [
+   {
+    "month": "2025-06",
+    "n": 3,
+    "avg": 4.67,
+    "low_share": 0.0,
+    "broken_share": 0.333
+   },
+   {
+    "month": "2025-07",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-08",
+    "n": 5,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.2
+   },
+   {
+    "month": "2025-09",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-10",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-11",
+    "n": 2,
+    "avg": 2.5,
+    "low_share": 0.5,
+    "broken_share": 0.5
+   },
+   {
+    "month": "2025-12",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-01",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-02",
+    "n": 5,
+    "avg": 3.8,
+    "low_share": 0.2,
+    "broken_share": 0.2
+   },
+   {
+    "month": "2026-03",
+    "n": 3,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.667
+   },
+   {
+    "month": "2026-04",
+    "n": 3,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-05",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-06",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-07",
+    "n": 3,
+    "avg": 4.67,
+    "low_share": 0.0,
+    "broken_share": 0.333
+   },
+   {
+    "month": "2026-08",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-09",
+    "n": 3,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-10",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-11",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   }
+  ],
+  "countries": [
+   {
+    "name": "United States",
+    "n": 68
+   },
+   {
+    "name": "Canada",
+    "n": 15
+   },
+   {
+    "name": "United Kingdom",
+    "n": 13
+   },
+   {
+    "name": "Australia",
+    "n": 7
+   },
+   {
+    "name": "France",
+    "n": 5
+   },
+   {
+    "name": "Norway",
+    "n": 4
+   },
+   {
+    "name": "Germany",
+    "n": 4
+   },
+   {
+    "name": "New Zealand",
+    "n": 3
+   }
+  ],
+  "countries_total": 148,
+  "short_share": 0.053,
+  "median_words": 28,
+  "written": 132,
+  "recent_written": 26,
+  "replies": {
+   "all": 0.878,
+   "n": 148,
+   "low": 0.941,
+   "low_n": 17,
+   "recent": 0.5,
+   "recent_n": 32
+  }
+ },
+ "other_languages": {
+  "count": 3,
+  "of": 132,
+  "by_language": {
+   "French": 2,
+   "Spanish": 1
+  },
+  "examples": [
+   {
+    "stars": 5,
+    "date": "2025-10-28",
+    "cc": "France",
+    "lang": "fr",
+    "language": "French",
+    "title": "",
+    "title_en": "",
+    "text": "J’utilise Theme Updater & Backups depuis plusieurs mois et j’en suis très satisfait. La mise à jour du thème se fait en quelques clics sans perdre mes personnalisations, ce qui me fait gagner énormément de temps. Les sauvegardes automatiques sont un vrai plus pour travailler en toute sécurité.\nLe support est réactif et professionnel. Je recommande cette application à tous ceux qui utilisent un thème premium Shopify !",
+    "text_en": "I have been using Theme Updater & Backups for several months and I am very satisfied with it. Theme updating is done in a few clicks without losing my customizations, which saves me a huge amount of time. Automatic backups are a real plus for working safely. The support is responsive and professional. I recommend this application to everyone who uses a premium Shopify theme!"
+   },
+   {
+    "stars": 5,
+    "date": "2024-12-04",
+    "cc": "France",
+    "lang": "fr",
+    "language": "French",
+    "title": "",
+    "title_en": "",
+    "text": "Avec ce theme sobre et incroyablement efficace il y'a une équipe technique qui assure le support avec panache. bravo et merci",
+    "text_en": "With this sober and incredibly effective theme, there is a technical team that provides support with flair. bravo and thank you"
+   },
+   {
+    "stars": 1,
+    "date": "2024-05-02",
+    "cc": "Italy",
+    "lang": "es",
+    "language": "Spanish",
+    "title": "",
+    "title_en": "",
+    "text": "My mala mi experiencia, esta aplicación no hace un upload del tema nuevo sino que solamente hace una simple copia sin ningún de los cambios previos echos por nosotros, a parte no hay opcion de cancelar el upgrade y se tiene que eliminar si no quieres que te cobren! un timo en todo regla!",
+    "text_en": "My bad experience, this application does not upload the new theme but only makes a simple copy without any of the previous changes we made, besides there is no option to cancel the upgrade and you have to delete it if you don't want them to charge you! A complete scam!"
+   }
+  ]
+ }
 }

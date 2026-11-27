@@ -85,6 +85,23 @@ tr.flag td{background:var(--accent-soft)}
 .bar span{display:block;height:100%;background:var(--accent)}
 .muted{color:var(--muted)}
 .method{font-size:14px;color:var(--muted)}
+.qb .or{display:none}
+.qb.orig .en{display:none}
+.qb.orig .or{display:inline}
+.tg{border:0;background:var(--chip);color:var(--muted);border-radius:999px;font:inherit;font-size:11.5px;padding:2px 9px;margin-left:4px;cursor:pointer;white-space:nowrap}
+.tg:hover{color:var(--ink)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stats .panel h3{margin:0 0 2px;font-size:15px}
+.stats .panel .sub{margin:0 0 8px;font-size:13px;color:var(--muted)}
+.stats svg{display:block;width:100%;height:auto}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
+.tile{background:var(--chip);border-radius:12px;padding:10px 12px}
+.tile .v{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.tile .l{font-size:12.5px;color:var(--muted)}
+.hbar{display:grid;grid-template-columns:120px 1fr 44px;gap:8px;align-items:center;font-size:13px;margin:5px 0}
+.hbar .t{height:10px;border-radius:5px;background:var(--chip);overflow:hidden}
+.hbar .t span{display:block;height:100%;background:var(--accent)}
+@media (max-width:760px){.stats{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}}
 .fix{border-top:1px solid var(--line);padding:14px 0 6px}
 .fix:first-of-type{border-top:0;padding-top:4px}
 .fix .row{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;justify-content:space-between}
@@ -178,6 +195,54 @@ function trendChip(t, L){
   return r > 0 ? `<span class="chip up">▲ ${Math.round(r*100)}% vs prior ${L}</span>` : `<span class="chip down">▼ ${Math.round(-r*100)}% vs prior ${L}</span>`;
 }
 
+function qbody(x){
+  if (!x.text_en) return `${x.title ? `<b>${esc(x.title)}</b> ` : ''}${esc(x.text)}`;
+  const tt = x.title_en || x.title;
+  return `<span class="qb"><span class="en">${tt ? `<b>${esc(tt)}</b> ` : ''}${esc(x.text_en)}</span><span class="or" lang="${esc(x.lang)}" dir="auto">${x.title ? `<b>${esc(x.title)}</b> ` : ''}${esc(x.text)}</span> <button class="tg" type="button" data-l="${esc(x.language)}">Translated from ${esc(x.language)} · tap for original</button></span>`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.tg'); if (!b) return;
+  const q = b.closest('.qb'); const o = q.classList.toggle('orig');
+  b.textContent = o ? `Original (${b.dataset.l}) · tap for English` : `Translated from ${b.dataset.l} · tap for original`;
+});
+
+function cssv(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+function starsSVG(st, L){
+  const W = 440, H = 170, pad = {l: 30, r: 8, t: 12, b: 26};
+  const tot = arr => arr.reduce((a, b) => a + b, 0) || 1;
+  const rp = st.recent.map(v => v / tot(st.recent)), pp = st.prior.map(v => v / tot(st.prior));
+  const hasPrior = st.prior.some(v => v);
+  const max = Math.max(...rp, ...(hasPrior ? pp : [0]), 0.05);
+  const gw = (W - pad.l - pad.r) / 5, bw = hasPrior ? gw * 0.32 : gw * 0.5;
+  const y = v => pad.t + (H - pad.t - pad.b) * (1 - v / max);
+  let g = '';
+  for (let i = 0; i < 5; i++) {
+    const X = pad.l + i * gw + gw / 2;
+    if (hasPrior) g += `<rect x="${X - bw - 1}" y="${y(pp[i])}" width="${bw}" height="${y(0) - y(pp[i])}" fill="${cssv('--bar')}"><title>${i + 1}★ previous ${L}: ${st.prior[i]}</title></rect>`;
+    g += `<rect x="${hasPrior ? X + 1 : X - bw / 2}" y="${y(rp[i])}" width="${bw}" height="${y(0) - y(rp[i])}" fill="${i < 2 ? cssv('--bar-low') : cssv('--accent')}" opacity="${i < 2 ? 1 : 0.55}"><title>${i + 1}★ last ${L}: ${st.recent[i]}</title></rect>`;
+    g += `<text x="${X}" y="${H - 8}" font-size="12" text-anchor="middle" fill="${cssv('--muted')}">${i + 1}★</text>`;
+    g += `<text x="${hasPrior ? X + 1 + bw / 2 : X}" y="${y(rp[i]) - 4}" font-size="10.5" text-anchor="middle" fill="${cssv('--ink')}">${Math.round(rp[i] * 100)}%</text>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Star mix">${g}</svg>`;
+}
+function monthlySVG(m){
+  const W = 440, H = 170, pad = {l: 28, r: 28, t: 12, b: 26};
+  const max = Math.max(...m.map(x => x.n), 3);
+  const bw = (W - pad.l - pad.r) / m.length;
+  const y = v => pad.t + (H - pad.t - pad.b) * (1 - v / max);
+  const ys = v => pad.t + (H - pad.t - pad.b) * (1 - (v - 1) / 4);
+  let g = '', pts = [];
+  m.forEach((x, i) => {
+    const X = pad.l + i * bw;
+    if (x.n) g += `<rect x="${X + 1}" y="${y(x.n)}" width="${Math.max(1, bw - 2)}" height="${y(0) - y(x.n)}" fill="${cssv('--bar')}"><title>${x.month}: ${x.n} written reviews${x.avg != null ? ', avg ' + x.avg + '★' : ''}</title></rect>`;
+    if (x.avg != null) pts.push(`${X + bw / 2},${ys(x.avg)}`);
+    if (i % 3 === 0) g += `<text x="${X + bw / 2}" y="${H - 8}" font-size="10.5" text-anchor="middle" fill="${cssv('--muted')}">${new Date(x.month + '-01T00:00:00Z').toLocaleDateString('en-US', {month: 'short', year: '2-digit', timeZone: 'UTC'})}</text>`;
+  });
+  if (pts.length > 1) g += `<polyline points="${pts.join(' ')}" fill="none" stroke="${cssv('--accent')}" stroke-width="2"/>`;
+  g += `<text x="${pad.l - 4}" y="${y(max) + 4}" font-size="10" text-anchor="end" fill="${cssv('--muted')}">${max}</text><text x="${W - pad.r + 4}" y="${ys(5) + 4}" font-size="10" fill="${cssv('--accent')}">5★</text><text x="${W - pad.r + 4}" y="${ys(1) + 4}" font-size="10" fill="${cssv('--accent')}">1★</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Written reviews per month and average stars">${g}</svg>`;
+}
+
 function chart(a){
   const s = a.series, W = 900, H = 170, pad = {l: 28, r: 8, t: 14, b: 22};
   const max = Math.max(4, ...s.map(x => x.n));
@@ -219,7 +284,7 @@ function show(i){
       <div class="kpi"><div class="v">v${esc(a.store.version)}</div><div class="l">current version, released ${mdate(a.store.version_date)}</div></div></div>`;
     x += `<div class="callout">${a.callout}</div>`;
     x += `<h2>A sample, not an analysis</h2><p class="sub">${esc(a.sample_note)}</p><div class="panel"><div class="quotes">` +
-      a.sample.map(q => `<div class="q"><div class="meta"><span class="stars">${stars(q.stars)}</span> · ${esc(q.date)}${q.developer_replied ? ' · the developer replied' : ''}</div><b>${esc(q.title)}</b> ${esc(q.text)}</div>`).join('') +
+      a.sample.map(q => `<div class="q"><div class="meta"><span class="stars">${stars(q.stars)}</span> · ${esc(q.date)}${q.developer_replied ? ' · the developer replied' : ''}</div>${qbody(q)}</div>`).join('') +
       `</div></div>`;
     $('#app').innerHTML = x;
     return;
@@ -250,7 +315,7 @@ function show(i){
         <div><div class="h">Smallest next step</div><p>${esc(b.action)}</p></div>
       </div>
       <details><summary>Evidence and a reply ready to post</summary>
-        <div class="quotes">${t.quotes.map(x => `<div class="q"><div class="meta"><span class="stars">${stars(x.stars)}</span> · v${esc(x.version)} · ${esc(x.cc)} · ${mdate(x.date)}</div><b>${esc(x.title)}</b> ${esc(x.text)}</div>`).join('')}</div>
+        <div class="quotes">${t.quotes.map(x => `<div class="q"><div class="meta"><span class="stars">${stars(x.stars)}</span> · v${esc(x.version)} · ${esc(x.cc)} · ${mdate(x.date)}</div>${qbody(x)}</div>`).join('')}</div>
         ${q ? `<div class="reply"><button class="copy" type="button">Copy</button><div class="meta">Drafted reply to “${esc(q.title)}”</div><span class="rtext">${esc(b.reply)}</span></div>` : ''}
       </details>
     </article>`;
@@ -263,7 +328,7 @@ function show(i){
     a.bursts.forEach(b => {
       h += `<div class="incident"><div class="date">${mdate(b.date)}${b.version ? `<small>v${esc(b.version)}</small>` : ''}</div><div>
         <b>${b.n} reviews in one day</b> (${b.low} at 1–2★), mostly <b>${esc(b.theme)}</b>.${b.first ? ` First one at ${b.first}` : ''}${b.alert_at ? `; a three-report alert would have fired at <b>${b.alert_at}</b>` : ''}.
-        <div class="quotes">${b.quotes.map(x => `<div class="q"><div class="meta">${stars(x.stars)} · ${esc(x.cc)}</div><b>${esc(x.title)}</b> ${esc(x.text)}</div>`).join('')}</div></div></div>`;
+        <div class="quotes">${b.quotes.map(x => `<div class="q"><div class="meta">${stars(x.stars)} · ${esc(x.cc)}</div>${qbody(x)}</div>`).join('')}</div></div></div>`;
     });
   } else {
     h += `<p class="muted" style="margin:12px 0 0">No day stood out after launch week. ${esc(a.no_burst_note || '')}</p>`;
@@ -299,6 +364,29 @@ function show(i){
     h += `</div>`;
   }
 
+  if (a.stats) {
+    const s = a.stats, rp = s.replies;
+    h += `<h2>Dig into the numbers</h2><p class="sub">The statistics behind ${esc(a.tab || a.name)}'s ${fmt(s.written)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}.</p><div class="stats">`;
+    h += `<div class="panel"><h3>Star mix</h3><p class="sub">Share of reviews at each star, last ${esc(L)}${s.stars.prior.some(v => v) ? ` (colour) against the ${esc(L)} before (grey)` : ''}.</p>${starsSVG(s.stars, L)}</div>`;
+    h += `<div class="panel"><h3>Every month</h3><p class="sub">Written reviews per month (bars) and their average stars (line), last 18 months.</p>${monthlySVG(s.monthly)}</div>`;
+    h += `<div class="panel"><h3>Where reviewers are</h3><p class="sub">${shop ? "The merchant's country" : 'App Store storefront (six English-language storefronts read)'}.</p>` +
+      s.countries.map(c => `<div class="hbar"><span>${esc(c.name)}</span><span class="t"><span style="width:${Math.round(100 * c.n / s.countries[0].n)}%"></span></span><span class="muted">${fmt(c.n)}</span></div>`).join('') + `</div>`;
+    h += `<div class="panel"><h3>How people write</h3><p class="sub">${rp ? 'And how often the publisher answers in public.' : 'Apple’s feed carries no publisher replies, so reply rates are Shopify-only.'}</p><div class="tiles">` +
+      `<div class="tile"><div class="v">${s.short_share != null ? pct(s.short_share) : '–'}</div><div class="l">say three words or fewer</div></div>` +
+      `<div class="tile"><div class="v">${s.median_words ?? '–'}</div><div class="l">words in a typical review (median)</div></div>` +
+      (rp ? `<div class="tile"><div class="v">${pct(rp.all)}</div><div class="l">get a public reply (${fmt(rp.n)} reviews)</div></div>` +
+            (rp.low != null ? `<div class="tile"><div class="v">${pct(rp.low)}</div><div class="l">of 1–2★ reviews get a reply (${fmt(rp.low_n)})</div></div>` : '')
+          : `<div class="tile"><div class="v">${a.bug_share_recent != null ? pct(a.bug_share_recent) : '–'}</div><div class="l">report something broken, last ${esc(L)}</div></div>`) +
+      `</div></div>`;
+    h += `</div>`;
+    const ol = a.other_languages;
+    if (ol && ol.of) {
+      const langs = Object.entries(ol.by_language).map(([k, v]) => `${esc(k)} ${v}`).join(', ');
+      h += `<div class="panel" style="margin-top:14px"><h3 style="margin:0 0 2px;font-size:15px">In other languages</h3><p class="sub" style="margin:0 0 8px;font-size:13px">${ol.count ? `${ol.count} of ${fmt(ol.of)} written reviews are in another language (${langs}), translated by a local model. Tap to see the original.` : `All ${fmt(ol.of)} written reviews read are in English.`}${a.store_kind === 'apple' ? ' Only English-language storefronts were read for this app.' : ''}</p>` +
+        (ol.examples.length ? `<div class="quotes">` + ol.examples.map(e => `<div class="q"><div class="meta">${stars(e.stars)} · ${esc(e.cc)} · ${mdate(e.date)}</div>${qbody(e)}</div>`).join('') + `</div>` : '') + `</div>`;
+    }
+  }
+
   h += `<h2>Every theme</h2><p class="sub">${fmt(a.window.n)} written reviews since ${mdate(a.window.from)} ${new Date(a.window.from).getUTCFullYear()}, ${shop ? 'merchants in' : 'storefronts'} ${esc(a.window.countries.join(', '))}.</p><div class="panel tablewrap"><table>
     <thead><tr><th>Theme</th><th>Last ${L}</th><th>Share</th>${hasPrior ? `<th>Prior ${L}</th>` : ''}<th>Avg</th>${hasPrior ? '<th>All in window</th>' : ''}</tr></thead><tbody>`;
   a.themes.forEach(t => {
@@ -308,7 +396,7 @@ function show(i){
 
   if (a.dups.length) {
     h += `<h2>Copy-paste reviews</h2><p class="sub">Different reviews with near-identical text, often a campaign or a bot.</p><div class="panel">`;
-    a.dups.forEach(d => { h += `<div class="q" style="margin-bottom:10px"><div class="meta">${Math.round(d.jaccard*100)}% overlap</div>${stars(d.a.stars)} ${esc(d.a.cc)} ${mdate(d.a.date)}: ${esc(d.a.text)}<br>${stars(d.b.stars)} ${esc(d.b.cc)} ${mdate(d.b.date)}: ${esc(d.b.text)}</div>`; });
+    a.dups.forEach(d => { h += `<div class="q" style="margin-bottom:10px"><div class="meta">${Math.round(d.jaccard*100)}% overlap</div>${stars(d.a.stars)} ${esc(d.a.cc)} ${mdate(d.a.date)}: ${qbody(d.a)}<br>${stars(d.b.stars)} ${esc(d.b.cc)} ${mdate(d.b.date)}: ${qbody(d.b)}</div>`; });
     h += `</div>`;
   }
 

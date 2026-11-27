@@ -962,5 +962,205 @@
  ],
  "bursts": [],
  "dups": [],
- "fixes": []
+ "fixes": [],
+ "stats": {
+  "window_label": "12 months",
+  "stars": {
+   "recent": [
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "prior": [
+    0,
+    0,
+    0,
+    0,
+    6
+   ]
+  },
+  "monthly": [
+   {
+    "month": "2025-06",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-07",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-08",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-09",
+    "n": 2,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-10",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2025-11",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2025-12",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-01",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-02",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-03",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-04",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-05",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-06",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-07",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-08",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-09",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   },
+   {
+    "month": "2026-10",
+    "n": 1,
+    "avg": 5,
+    "low_share": 0.0,
+    "broken_share": 0.0
+   },
+   {
+    "month": "2026-11",
+    "n": 0,
+    "avg": null,
+    "low_share": null,
+    "broken_share": null
+   }
+  ],
+  "countries": [
+   {
+    "name": "Australia",
+    "n": 7
+   },
+   {
+    "name": "United States",
+    "n": 6
+   },
+   {
+    "name": "United Kingdom",
+    "n": 5
+   },
+   {
+    "name": "Canada",
+    "n": 2
+   },
+   {
+    "name": "Germany",
+    "n": 1
+   },
+   {
+    "name": "Ireland",
+    "n": 1
+   },
+   {
+    "name": "Netherlands",
+    "n": 1
+   },
+   {
+    "name": "Hong Kong SAR",
+    "n": 1
+   }
+  ],
+  "countries_total": 24,
+  "short_share": 0.0,
+  "median_words": 55,
+  "written": 24,
+  "recent_written": 1,
+  "replies": {
+   "all": 0.0,
+   "n": 24,
+   "low": null,
+   "low_n": 0,
+   "recent": 0.0,
+   "recent_n": 1
+  }
+ },
+ "other_languages": {
+  "count": 0,
+  "of": 24,
+  "by_language": {},
+  "examples": []
+ }
 }

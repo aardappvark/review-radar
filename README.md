@@ -6,7 +6,7 @@ Live: https://aardappvark.github.io/review-radar/
 
 First version built in one sitting (27 Nov 2026, 1:53–2:28 pm Melbourne) on Letterboxd and Serato DJ, then extended the same day to every Tiny company with public app reviews: Stamped, KNO, Foursixty and Out of the Sandbox (Shopify App Store). BeFunky and Visionn show the 10 reviews Apple puts on the App Store page (a sample, not an analysis) until Apple's review feed, empty for every app since 27 Nov, returns; `tools/wait_for_apple.sh` then runs the full pipeline. Independent; not affiliated with Tiny or any of these companies.
 
-**For agents:** `claude mcp add --transport http review-radar https://review-radar.aardappvark.workers.dev/mcp` (source in `mcp/`; tools: list_apps, top_problems, incidents, versions, did_the_fix_work, themes, draft_reply).
+**For agents:** `claude mcp add --transport http review-radar https://review-radar.aardappvark.workers.dev/mcp` (source in `mcp/`; tools: list_apps, top_problems, incidents, versions, did_the_fix_work, review_stats, themes, draft_reply).
 
 ## Run it
 
@@ -29,6 +29,8 @@ Needs Python 3.10+ and [Ollama](https://ollama.com) with `gemma4` and `gemma4:26
 | Incidents | A day with at least five times the normal count (and at least six reviews) is flagged; launch week is skipped. The alert time is when the third matching low-star review landed. |
 | Versions | Written-review average per release, flagged when it drops half a star or more. |
 | Did the fix work? | Each complaint's share of each release's reviews; the most recent spike is tracked, and the verdict (fell after vX, easing, still open, too early) is read from the numbers. A drop is consistent with a fix, not proof. |
+| Dig into the numbers | Star mix (this period vs the last), written reviews and average stars by month, reviewer countries, three-word reviews, median length, and publisher reply rate on Shopify. |
+| Translations | Quotes not in English are shown translated first (local model), with "tap for original"; an "In other languages" panel counts and samples them. |
 | Copy-paste | Near-identical text across different reviews (3-word shingles, Jaccard ≥ 0.6). |
 | Briefs | Drafted by the local model. Any number it writes that isn't in the data sends the card back, then falls back to a plain sentence. |
 

@@ -2144,5 +2144,204 @@
     }
    ]
   }
- ]
+ ],
+ "stats": {
+  "window_label": "90 days",
+  "stars": {
+   "recent": [
+    35,
+    9,
+    10,
+    20,
+    25
+   ],
+   "prior": [
+    31,
+    12,
+    14,
+    18,
+    33
+   ]
+  },
+  "monthly": [
+   {
+    "month": "2025-06",
+    "n": 34,
+    "avg": 3.59,
+    "low_share": 0.235,
+    "broken_share": 0.294
+   },
+   {
+    "month": "2025-07",
+    "n": 31,
+    "avg": 3.58,
+    "low_share": 0.258,
+    "broken_share": 0.226
+   },
+   {
+    "month": "2025-08",
+    "n": 28,
+    "avg": 3.57,
+    "low_share": 0.179,
+    "broken_share": 0.179
+   },
+   {
+    "month": "2025-09",
+    "n": 15,
+    "avg": 3.07,
+    "low_share": 0.467,
+    "broken_share": 0.2
+   },
+   {
+    "month": "2025-10",
+    "n": 34,
+    "avg": 3,
+    "low_share": 0.471,
+    "broken_share": 0.176
+   },
+   {
+    "month": "2025-11",
+    "n": 38,
+    "avg": 2.74,
+    "low_share": 0.474,
+    "broken_share": 0.184
+   },
+   {
+    "month": "2025-12",
+    "n": 62,
+    "avg": 2.35,
+    "low_share": 0.597,
+    "broken_share": 0.145
+   },
+   {
+    "month": "2026-01",
+    "n": 31,
+    "avg": 2.74,
+    "low_share": 0.452,
+    "broken_share": 0.097
+   },
+   {
+    "month": "2026-02",
+    "n": 36,
+    "avg": 3,
+    "low_share": 0.417,
+    "broken_share": 0.222
+   },
+   {
+    "month": "2026-03",
+    "n": 29,
+    "avg": 3.76,
+    "low_share": 0.241,
+    "broken_share": 0.276
+   },
+   {
+    "month": "2026-04",
+    "n": 21,
+    "avg": 3.52,
+    "low_share": 0.238,
+    "broken_share": 0.19
+   },
+   {
+    "month": "2026-05",
+    "n": 47,
+    "avg": 3.21,
+    "low_share": 0.34,
+    "broken_share": 0.362
+   },
+   {
+    "month": "2026-06",
+    "n": 24,
+    "avg": 3.79,
+    "low_share": 0.167,
+    "broken_share": 0.25
+   },
+   {
+    "month": "2026-07",
+    "n": 25,
+    "avg": 3.08,
+    "low_share": 0.44,
+    "broken_share": 0.16
+   },
+   {
+    "month": "2026-08",
+    "n": 60,
+    "avg": 2.83,
+    "low_share": 0.467,
+    "broken_share": 0.45
+   },
+   {
+    "month": "2026-09",
+    "n": 38,
+    "avg": 2.92,
+    "low_share": 0.447,
+    "broken_share": 0.132
+   },
+   {
+    "month": "2026-10",
+    "n": 30,
+    "avg": 3.2,
+    "low_share": 0.367,
+    "broken_share": 0.067
+   },
+   {
+    "month": "2026-11",
+    "n": 28,
+    "avg": 2.54,
+    "low_share": 0.536,
+    "broken_share": 0.143
+   }
+  ],
+  "countries": [
+   {
+    "name": "United States",
+    "n": 497
+   },
+   {
+    "name": "United Kingdom",
+    "n": 94
+   },
+   {
+    "name": "Canada",
+    "n": 66
+   },
+   {
+    "name": "Australia",
+    "n": 33
+   },
+   {
+    "name": "Ireland",
+    "n": 6
+   },
+   {
+    "name": "New Zealand",
+    "n": 4
+   }
+  ],
+  "countries_total": 700,
+  "short_share": 0.046,
+  "median_words": 28,
+  "written": 700,
+  "recent_written": 99,
+  "replies": null
+ },
+ "other_languages": {
+  "count": 1,
+  "of": 700,
+  "by_language": {
+   "Spanish": 1
+  },
+  "examples": [
+   {
+    "stars": 2,
+    "date": "2026-08-16",
+    "cc": "us",
+    "lang": "es",
+    "language": "Spanish",
+    "title": "Reseña",
+    "title_en": "",
+    "text": "La interfaz es súper antigua, deberían actualizar con Liquid Glass, además la app no es muy fácil de entender",
+    "text_en": "The interface is super old, they should update it with Liquid Glass, besides the app is not very easy to understand"
+   }
+  ]
+ }
 }

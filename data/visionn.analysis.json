@@ -116,5 +116,12 @@
  "series": [],
  "bursts": [],
  "dups": [],
- "fixes": []
+ "fixes": [],
+ "stats": null,
+ "other_languages": {
+  "count": 0,
+  "of": 0,
+  "by_language": {},
+  "examples": []
+ }
 }

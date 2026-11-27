@@ -26,6 +26,8 @@ while [ $i -lt 48 ]; do  # every 15 minutes for up to 12 hours
     $PY -I tools/analyse.py $SLUGS >> "$LOG" 2>&1 && \
     $PY -I tools/brief.py $SLUGS >> "$LOG" 2>&1 && \
     $PY -I tools/fixes.py $SLUGS >> "$LOG" 2>&1 && \
+    $PY -I tools/stats.py $SLUGS >> "$LOG" 2>&1 && \
+    $PY -I tools/translate.py $SLUGS >> "$LOG" 2>&1 && \
     $PY -I tools/build.py >> "$LOG" 2>&1
     echo "$(date '+%H:%M') DONE (local only; review before publishing)" >> "$LOG"
     exit 0

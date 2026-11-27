@@ -86,7 +86,8 @@ def shopify(app):
             else:  # layout not recognised: keep the stars only, so a store name can never be stored as text
                 text, country = "", ""
             rows.append({"id": rid, "cc": country, "rating": int(stars.group(1)), "version": "",
-                         "date": f"{d}T12:00:00-07:00", "date_only": True, "title": "", "body": text})
+                         "date": f"{d}T12:00:00-07:00", "date_only": True, "title": "", "body": text,
+                         "replied": bool(re.search(r'data-reply-id="\d+"', b))})  # the publisher answered publicly
         time.sleep(1.0)
     print(f"  {app['slug']}: {len(rows)} reviews from {n} pages")
     return rows
