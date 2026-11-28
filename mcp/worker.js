@@ -158,15 +158,48 @@ async function rpc(msg, ctx) {
   }
 }
 
+// What a person sees on opening the server's address in a browser (mail apps turn the
+// address in "claude mcp add ..." into a link). Agents never get this: they POST, or GET
+// with Accept: text/event-stream, and keep the protocol's 405.
+const HELP_HTML = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Review Radar · MCP server</title><meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230c0914' stroke='%2314f195' stroke-width='2'/%3E%3Cpath d='M16 16 L16 4 A12 12 0 0 1 27 12 Z' fill='%2314f195'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#050407;--s1:#0c0914;--t:#f2eeff;--t2:#b7aed1;--t3:#7f77a0;--g:#14f195;--line:rgba(242,238,255,.12)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(800px 460px at 10% 0%,rgba(153,69,255,.14),transparent 60%),radial-gradient(700px 380px at 90% 20%,rgba(20,241,149,.07),transparent 70%),var(--bg);color:var(--t);font:16px/1.6 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+main{max-width:760px;margin:0 auto;padding:clamp(48px,9vw,96px) 24px}
+.k{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g)}.k:before{content:"";width:28px;height:2px;border-radius:2px;background:currentColor}
+h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.045em;line-height:1;margin:18px 0 18px}
+p{color:var(--t2);margin:0 0 14px}
+pre{margin:22px 0;border:1px solid var(--line);border-radius:16px;background:#08060e;padding:16px 18px;font:13.5px/1.6 ui-monospace,"SF Mono",Menlo,monospace;color:#d9d2ee;white-space:pre-wrap;word-break:break-all}
+pre .c{color:var(--t3)}pre .s{color:var(--g)}
+ul{color:var(--t2);padding-left:20px}li{margin:4px 0}code{color:var(--t)}
+a.btn{display:inline-flex;margin-top:18px;padding:13px 22px;border-radius:999px;background:var(--g);color:#03140b;font-weight:700;text-decoration:none}
+</style></head><body><main>
+<div class="k">Review Radar · MCP server</div>
+<h1>This address is for AI agents.</h1>
+<p>It's a Model Context Protocol server: Claude and other agents can query everything Review Radar found about Tiny's apps. There's nothing to see here in a browser. Add it to Claude Code with:</p>
+<pre><span class="c"># then ask: "what's wrong with Letterboxd this week, and what should the team do first?"</span>
+claude mcp add --transport http review-radar <span class="s">https://review-radar.aardappvark.workers.dev/mcp</span></pre>
+<p>Eight tools, all read-only:</p>
+<ul><li><code>list_apps</code>, <code>top_problems</code> (with action points), <code>incidents</code>, <code>versions</code></li>
+<li><code>did_the_fix_work</code>, <code>review_stats</code>, <code>themes</code>, <code>draft_reply</code></li></ul>
+<a class="btn" href="https://aardappvark.github.io/review-radar/">Open Review Radar</a>
+</main></body></html>`;
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
+    if (url.pathname === "/" && request.method === "GET" && /text\/html/.test(request.headers.get("Accept") || ""))
+      return new Response(HELP_HTML, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300", ...CORS } });
     if (url.pathname === "/" && request.method === "GET") {
       return new Response("Review Radar MCP server. Add it with:\n  claude mcp add --transport http review-radar https://review-radar.aardappvark.workers.dev/mcp\nWeb: https://aardappvark.github.io/review-radar/\n",
         { headers: { "Content-Type": "text/plain; charset=utf-8", ...CORS } });
     }
     if (url.pathname !== "/mcp") return new Response("Not found", { status: 404, headers: CORS });
+    if (request.method === "GET" && /text\/html/.test(request.headers.get("Accept") || "") && !/text\/event-stream/.test(request.headers.get("Accept") || ""))
+      return new Response(HELP_HTML, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300", ...CORS } });
     if (request.method !== "POST") return new Response(JSON.stringify({ error: "POST JSON-RPC to /mcp (stateless)" }), { status: 405, headers: { "Content-Type": "application/json", Allow: "POST", ...CORS } });
     let body;
     try { body = await request.json(); } catch { return Response.json({ jsonrpc: "2.0", id: null, error: { code: -32700, message: "parse error" } }, { status: 400, headers: CORS }); }
