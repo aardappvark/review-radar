@@ -214,7 +214,10 @@ footer p{max-width:560px;margin-top:10px}
 
 @media (max-width:980px){
   .links{display:none}
-  .hero .photo{width:100%;opacity:.28;-webkit-mask-image:linear-gradient(0deg,transparent,#000 60%);mask-image:linear-gradient(0deg,transparent,#000 60%)}
+  /* Phones and tablets: the photo is a band across the top, not stretched behind the whole hero
+     (cover-scaling a portrait to the hero's full height zoomed into a blurry slice). */
+  .hero{padding-top:clamp(190px,44vw,300px)}
+  .hero .photo{width:100%;height:clamp(260px,62vw,420px);object-position:50% 24%;opacity:.7;-webkit-mask-image:linear-gradient(180deg,#000 35%,transparent 100%);mask-image:linear-gradient(180deg,#000 35%,transparent 100%)}
   .kpis{grid-template-columns:repeat(2,1fr)}
   .grid3,.how .grid,.stats,.origin .grid,.acts .plan,.fleet .top{grid-template-columns:1fr}
   .art{aspect-ratio:16/10}
