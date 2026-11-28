@@ -165,13 +165,14 @@ const HELP_HTML = `<!doctype html><html lang="en"><head><meta charset="utf-8"><m
 <title>Review Radar · MCP server</title><meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230c0914' stroke='%2314f195' stroke-width='2'/%3E%3Cpath d='M16 16 L16 4 A12 12 0 0 1 27 12 Z' fill='%2314f195'/%3E%3C/svg%3E">
 <style>
+@font-face{font-family:Manrope;src:url(https://aardappvark.github.io/review-radar/assets/manrope.ttf) format('truetype');font-weight:200 800;font-display:swap}
 :root{--bg:#050407;--s1:#0c0914;--t:#f2eeff;--t2:#b7aed1;--t3:#7f77a0;--g:#14f195;--line:rgba(242,238,255,.12)}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(800px 460px at 10% 0%,rgba(153,69,255,.14),transparent 60%),radial-gradient(700px 380px at 90% 20%,rgba(20,241,149,.07),transparent 70%),var(--bg);color:var(--t);font:16px/1.6 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
 main{max-width:760px;margin:0 auto;padding:clamp(48px,9vw,96px) 24px}
 .k{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g)}.k:before{content:"";width:28px;height:2px;border-radius:2px;background:currentColor}
 h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.045em;line-height:1;margin:18px 0 18px}
 p{color:var(--t2);margin:0 0 14px}
-pre{margin:22px 0;border:1px solid var(--line);border-radius:16px;background:#08060e;padding:16px 18px;font:13.5px/1.6 ui-monospace,"SF Mono",Menlo,monospace;color:#d9d2ee;white-space:pre-wrap;word-break:break-all}
+pre{margin:22px 0;border:1px solid var(--line);border-radius:16px;background:#08060e;padding:16px 18px;font:13.5px/1.6 ui-monospace,"SF Mono",Menlo,monospace;color:#d9d2ee;white-space:pre-wrap;overflow-wrap:anywhere}
 pre .c{color:var(--t3)}pre .s{color:var(--g)}
 ul{color:var(--t2);padding-left:20px}li{margin:4px 0}code{color:var(--t)}
 a.btn{display:inline-flex;margin-top:18px;padding:13px 22px;border-radius:999px;background:var(--g);color:#03140b;font-weight:700;text-decoration:none}
